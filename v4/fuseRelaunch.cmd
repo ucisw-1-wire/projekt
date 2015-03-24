@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/PROJEKT/v4/modulTB_isim_beh.exe" -prj "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/PROJEKT/v4/modulTB_beh.prj" "work.modulTB" 

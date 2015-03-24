@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/Studia/UCiSW/v2/v2/modulTB_isim_beh.exe" -prj "D:/Studia/UCiSW/v2/v2/modulTB_beh.prj" "work.modulTB" 

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/XilinxPrj/PROJEKT/v3/modul.xst" -ofn "C:/XilinxPrj/PROJEKT/v3/modul.syr" 

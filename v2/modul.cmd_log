@@ -1,0 +1,4 @@
+vhdtdtfi -lib work modul.vhd -prj v2 -o modul.spl -module modul -template d:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e modul.spl D:/Studia/UCiSW/v2/v2/modul.sym 
+vhdtdtfi -lib work modul.vhd -prj v2 -o modul.spl -module modul -template d:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e modul.spl D:/Studia/UCiSW/v2/v2/modul.sym 
