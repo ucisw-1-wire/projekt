@@ -8,4 +8,5 @@ v4 - d³ubanie 20.03.2015 (psotor)
 	
 	rskiba - jesli masz chwile to zrób z tych dwóch modu³ów jakiœ schematic i spróbuj to zasymulowaæ, za chwile jadê do domu -> w domu brak ISE
 				(oczywiscie najpierw skopiuj ca³oœæ do nowego forlderu 'v5' ¿eby niczego nie zespuæ, a przy okazji bêdziemy mieæ zachowane kolejne wersje)
+					(to git wiec myslaem ze wlasnie po to jest zeby cofac miedzy wersjami w razie czego xD , Œredniowiecze :P )
 				
