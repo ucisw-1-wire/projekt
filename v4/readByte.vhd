@@ -46,6 +46,7 @@ Port(
 
 end readByte;
 
+
 architecture Behavioral of readByte is
 
 begin
