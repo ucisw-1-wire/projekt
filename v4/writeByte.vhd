@@ -42,7 +42,7 @@ entity writeByte is
 			  busy : out STD_LOGIC
 			  );
 			  
-end sendByte;
+end writeByte;
 
 architecture Behavioral of writeByte is
 
@@ -106,8 +106,9 @@ begin
 				elsif data(write_counter) = '1' then
 					writeOne <= '1';
 				end if;
-				write_couter <= write_counter + 1;
-				
+				write_counter <= write_counter + 1;
+			when others =>	--	wymaga do syntezy, wiec niech robi cokolwiek
+				writeOne <= '0';
 		end case;
 	
 	end process;
@@ -117,7 +118,7 @@ begin
 		if rising_edge(clk) then
 			present_state <= next_state;
 			if next_state = idle then 
-				write_counter := 0;
+				write_counter <= 0;
 			end if;
 		end if;
 	end process;

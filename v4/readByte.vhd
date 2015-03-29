@@ -33,15 +33,15 @@ entity readByte is
 
 Port(
 		--OUTPUTS
-		R_data : out STD_LOGIC_VECTOR ( 7 downto 0 ) ; --data recived 
-		Ready : out STD_LOGIC ; -- 1 clk sig for done reciving byte
-		Read_bit : out STD_LOGIC_VECTOR ; -- sends command to read one bit 
-		o_busy : out STD_LOGIC ; --bussy reading 
+		data : out STD_LOGIC_VECTOR ( 7 downto 0 ) ; --data recived 
+		--Ready : out STD_LOGIC ; -- 1 clk sig for done reciving byte
+		read_bit : out STD_LOGIC ; -- sends command to read one bit 
+		busy : out STD_LOGIC ; --bussy reading 
 		--INPUTS 
 		clk : in STD_LOGIC ;
-		busy : in STD_LOGIC ;
+		isBusy : in STD_LOGIC ;
 		readBit_detecion : in STD_LOGIC ; -- readed bit
-		Rx_start : in STD_LOGIC  --start reciving whole byte 
+		start : in STD_LOGIC  --start reciving whole byte 
 );
 
 end readByte;
@@ -71,9 +71,9 @@ architecture Behavioral of readByte is
 	
 begin
 
-	o_busy <= '0' WHEN present_state = idle ELSE '1';
+	busy <= '0' WHEN present_state = idle ELSE '1';
 
-	next_state_process : process(present_state, Rx_start, clk ) is
+	next_state_process : process(present_state, start, clk ) is
 	begin 
 		--gdy nic sie nie dzieje niech zostanie w aktualnym stanie 
 		next_state<=present_state;
@@ -81,19 +81,19 @@ begin
 		case present_state is 
 		--------------------------------
 				when idle =>
-					if Rx_start = '1' then
+					if start = '1' then
 						next_state <= readBit ;
 					end if;
 		--------------------------------
 				when reading =>
 					if read_counter > 7 then
 						next_state <= done ;
-					elsif busy= '0' then        -- Takie male zabezpieczenie zeby przepisac wartosc gdy
+					elsif isBusy= '0' then        -- Takie male zabezpieczenie zeby przepisac wartosc gdy
 						next_state <= readBit  ; -- faktycznie skoczy sie czytanie bitu to przepismy 
 					end if ;							 -- i wyslemy nowe polecenie odczyania
 		--------------------------------
 				when readBit =>
-						if busy= '0' then
+						if isBusy= '0' then
 						next_state <= reading ;
 						end if ;
 		--------------------------------
@@ -105,22 +105,24 @@ begin
 
 input_process: process(present_state) is
 begin
-	Ready <= '0' ;
-   Read_bit <= '0' ;
+	--ready <= '0' ;
+   read_bit <= '0' ;
 
 	case present_state is 
 	
 		when readBit =>
-			Read_bit <='1' ;
+			read_bit <='1' ;
 			
 		when reading =>
 			read_buffor(read_counter) <= readBit_detecion ;
 			read_counter <= read_counter + 1 ;
 				
 		when done =>
-		Ready <= '1' ;
-		R_data <= read_buffor ;
-		read_counter <= 0 ;
+			--Ready <= '1' ;
+			data <= read_buffor ;
+			read_counter <= 0 ;
+		when others =>
+			read_bit <='0';
 	end case ;
 
 end process ;
@@ -129,6 +131,9 @@ clock: process (clk) is
 	begin
 		if rising_edge(clk) then
 			present_state <= next_state;
+			if next_state = idle then 
+				read_counter <= 0;
+			end if;
 		-- zerowanie licznika nastepuje po skonczeniu czytania 
 		-- moze o jeden stan jest za duzo ale tak jakos jest przejrzyscie
 		-- w tych modulach opieramy sie glownie o flage bussy wiec nic wiecej 

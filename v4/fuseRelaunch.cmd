@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/PROJEKT/v4/modulTB_isim_beh.exe" -prj "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/PROJEKT/v4/modulTB_beh.prj" "work.modulTB" 
+-intstyle "ise" -incremental -o "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/svn/trunk/v4/testSchema_testSchema_sch_tb_isim_beh.exe" -prj "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/svn/trunk/v4/testSchema_testSchema_sch_tb_beh.prj" "work.testSchema_testSchema_sch_tb" 
