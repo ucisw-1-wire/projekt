@@ -75,20 +75,24 @@ begin
 			-----------------------
 			when waitForBusy =>
 				if isBusy = '0' then
-					next_state <= writeBit;
+					if write_counter = 8 then
+						next_state <= idle;
+					else 	
+						next_state <= writeBit;
+					end if;
 				end if;
 			-----------------------
 			when writeBit =>
-				if write_counter = 8 then
-					next_state <= idle;
-				else
+				--if write_counter = 8 then -- zeby odczekalo jeszcze na zakonczenie ostatniego bitu - kiedy jest 8 to nie czeka
+				--	next_state <= idle;
+				--else
 					next_state <= waitForBusy;
 					------------ PYTANIE -------
 					--- czy w tym stanie powinien jawnie czekac 70 us 
 					--- czy tylko wystawic jedynke na linie sterujaca modulu '0' '1' 
 					--- i przejsc do waitForBusy, bo busy ustawi sie od razu, wiec w sumie ten stan moze trwac 1 cykl 
 					--------------------------
-				end if;
+				--end if;
 		end case;
 	end process;
 	
@@ -107,6 +111,8 @@ begin
 					writeOne <= '1';
 				end if;
 				write_counter <= write_counter + 1;
+			when idle =>
+				write_counter <= 0;
 			when others =>	--	wymaga do syntezy, wiec niech robi cokolwiek
 				writeOne <= '0';
 		end case;
@@ -117,9 +123,9 @@ begin
 	begin
 		if rising_edge(clk) then
 			present_state <= next_state;
-			if next_state = idle then 
-				write_counter <= 0;
-			end if;
+			--if next_state = idle then 
+			--	write_counter <= 0;
+			--end if;
 		end if;
 	end process;
 		

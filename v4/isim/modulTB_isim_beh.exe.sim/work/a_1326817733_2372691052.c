@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/PROJEKT/v4/modulTB.vhd";
+static const char *ng0 = "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/svn/trunk/v4/modulTB.vhd";
 
 
 

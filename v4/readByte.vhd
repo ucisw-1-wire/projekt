@@ -55,7 +55,7 @@ architecture Behavioral of readByte is
 	
 	idle ,
 	readBit,
-	reading,
+	waitForBusy,
 	done
 	);
 	-------------- STANY ----------------
@@ -66,7 +66,7 @@ architecture Behavioral of readByte is
 	signal next_state : stan := idle ;
 	
 	signal read_counter : integer range 0 to 10 := 0 ;
-	signal read_buffor : STD_LOGIC_VECTOR (7 downto 0 ) := x"00" ;
+	signal read_buffor : STD_LOGIC_VECTOR (7 downto 0 ) := "11111111" ; -- ustawilem tak, zeby w TB widziec jak wpisuja sie kolejne zera, bo nie chcialo mi sie jakos bardziej sterowac wire_in...
 	
 	
 begin
@@ -85,16 +85,18 @@ begin
 						next_state <= readBit ;
 					end if;
 		--------------------------------
-				when reading =>
-					if read_counter > 7 then
-						next_state <= done ;
-					elsif isBusy= '0' then        -- Takie male zabezpieczenie zeby przepisac wartosc gdy
-						next_state <= readBit  ; -- faktycznie skoczy sie czytanie bitu to przepismy 
+				when waitForBusy =>
+					if isBusy = '0' then
+						if read_counter = 8 then
+							next_state <= done ;
+						else        -- Takie male zabezpieczenie zeby przepisac wartosc gdy
+							next_state <= readBit  ; -- faktycznie skoczy sie czytanie bitu to przepismy 
+						end if;
 					end if ;							 -- i wyslemy nowe polecenie odczyania
 		--------------------------------
 				when readBit =>
 						if isBusy= '0' then
-						next_state <= reading ;
+						next_state <= waitForBusy ;
 						end if ;
 		--------------------------------
 				when done =>
@@ -113,7 +115,7 @@ begin
 		when readBit =>
 			read_bit <='1' ;
 			
-		when reading =>
+		when waitForBusy =>
 			read_buffor(read_counter) <= readBit_detecion ;
 			read_counter <= read_counter + 1 ;
 				
@@ -131,9 +133,9 @@ clock: process (clk) is
 	begin
 		if rising_edge(clk) then
 			present_state <= next_state;
-			if next_state = idle then 
-				read_counter <= 0;
-			end if;
+			--if next_state = idle then 
+			--	read_counter <= 0;
+			--end if;
 		-- zerowanie licznika nastepuje po skonczeniu czytania 
 		-- moze o jeden stan jest za duzo ale tak jakos jest przejrzyscie
 		-- w tych modulach opieramy sie glownie o flage bussy wiec nic wiecej 

@@ -1,29 +1,22 @@
-Running: d:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/svn/trunk/v4/testSchema_testSchema_sch_tb_isim_beh.exe -prj D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/svn/trunk/v4/testSchema_testSchema_sch_tb_beh.prj work.testSchema_testSchema_sch_tb 
+Running: d:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/svn/trunk/v4/modulTB_isim_beh.exe -prj D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/svn/trunk/v4/modulTB_beh.prj work.modulTB 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/svn/trunk/v4/writeByte.vhd" into library work
-Parsing VHDL file "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/svn/trunk/v4/readByte.vhd" into library work
 Parsing VHDL file "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/svn/trunk/v4/modul.vhd" into library work
-Parsing VHDL file "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/svn/trunk/v4/testSchema.vhf" into library work
-Parsing VHDL file "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/svn/trunk/v4/testSchema_TB.vhd" into library work
+Parsing VHDL file "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/svn/trunk/v4/modulTB.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
-Compiling package vcomponents
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
-Compiling architecture behavioral of entity writeByte [writebyte_default]
-Compiling architecture behavioral of entity readByte [readbyte_default]
 Compiling architecture behavioral of entity modul [modul_default]
-Compiling architecture behavioral of entity testSchema [testschema_default]
-Compiling architecture behavioral of entity testschema_testschema_sch_tb
+Compiling architecture behavior of entity modultb
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 15 VHDL Units
-Built simulation executable D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/svn/trunk/v4/testSchema_testSchema_sch_tb_isim_beh.exe
-Fuse Memory Usage: 49696 KB
-Fuse CPU Usage: 857 ms
+Compiled 8 VHDL Units
+Built simulation executable D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/svn/trunk/v4/modulTB_isim_beh.exe
+Fuse Memory Usage: 38504 KB
+Fuse CPU Usage: 670 ms
