@@ -1,2 +1,8 @@
-EN modul NULL "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/PROJEKT/v4/modul.vhd" sub00/vhpl00 1426872982
-AR modul behavioral "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/PROJEKT/v4/modul.vhd" sub00/vhpl01 1426872983
+EN testschema NULL "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/testSchema.vhf" sub00/vhpl06 1428450049
+EN readbyte NULL "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/readByte.vhd" sub00/vhpl04 1428450045
+EN modul NULL "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/modul.vhd" sub00/vhpl00 1428450047
+AR writebyte behavioral "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/writeByte.vhd" sub00/vhpl03 1428450044
+AR testschema behavioral "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/testSchema.vhf" sub00/vhpl07 1428450050
+EN writebyte NULL "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/writeByte.vhd" sub00/vhpl02 1428450043
+AR readbyte behavioral "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/readByte.vhd" sub00/vhpl05 1428450046
+AR modul behavioral "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/modul.vhd" sub00/vhpl01 1428450048

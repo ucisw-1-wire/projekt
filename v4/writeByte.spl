@@ -1,0 +1,10 @@
+[Inputs]
+clk
+isBusy
+start
+=data[7:0]=
+[Outputs]
+writeOne
+writeZero
+busy
+[BiDir]

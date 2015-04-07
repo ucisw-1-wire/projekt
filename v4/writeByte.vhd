@@ -49,7 +49,8 @@ architecture Behavioral of writeByte is
 	type stan is (
 		idle,
 		waitForBusy,
-		writeBit
+		writeBit,
+		increment
 		);
 	---------   STANY   -------------
 	signal present_state : stan := idle;
@@ -86,37 +87,43 @@ begin
 				--if write_counter = 8 then -- zeby odczekalo jeszcze na zakonczenie ostatniego bitu - kiedy jest 8 to nie czeka
 				--	next_state <= idle;
 				--else
-					next_state <= waitForBusy;
+					if isBusy = '1' then
+						next_state <= increment;
+					end if;
 					------------ PYTANIE -------
 					--- czy w tym stanie powinien jawnie czekac 70 us 
 					--- czy tylko wystawic jedynke na linie sterujaca modulu '0' '1' 
 					--- i przejsc do waitForBusy, bo busy ustawi sie od razu, wiec w sumie ten stan moze trwac 1 cykl 
 					--------------------------
 				--end if;
+			when increment =>
+					next_state <= waitForBusy;
 		end case;
 	end process;
 	
-	output_process: process(present_state) is
+	output_process: process(clk, present_state) is
 	begin
-	
-		writeOne <= '0';
-		writeZero <= '0';
-	
-		case present_state is
-			when writeBit =>
-				if data(write_counter) = '0' then
-					writeZero <= '1';
+		if rising_edge(clk) then
+			writeOne <= '0';
+			writeZero <= '0';
+			
+			case present_state is
+				when writeBit =>
+					if data(write_counter) = '0' then
+						writeZero <= '1';
+						
+					elsif data(write_counter) = '1' then
+						writeOne <= '1';
+					end if;
 					
-				elsif data(write_counter) = '1' then
-					writeOne <= '1';
-				end if;
-				write_counter <= write_counter + 1;
-			when idle =>
-				write_counter <= 0;
-			when others =>	--	wymaga do syntezy, wiec niech robi cokolwiek
-				writeOne <= '0';
-		end case;
-	
+				when idle =>
+					write_counter <= 0;
+				when increment =>
+					write_counter <= write_counter + 1;
+				when others =>	--	wymaga do syntezy, wiec niech robi cokolwiek
+					writeOne <= '0';
+			end case;
+		end if;
 	end process;
 	
 	clock: process (clk) is
