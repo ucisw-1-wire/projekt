@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-04-08T00:52:32</DateModified>
+  <DateModified>2015-04-08T08:55:13</DateModified>
   <ModuleName>testSchema</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/iseconfig/testSchema.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/lab/Downloads/projekt-master/projekt-master/v4/iseconfig/testSchema.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/lab/Downloads/projekt-master/projekt-master/v4\</ImplementationReportsDirectory>
   <DateInitialized>2015-03-30T01:10:02</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

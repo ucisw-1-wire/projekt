@@ -10,7 +10,7 @@
 /*  \___\/\___\                                                    */
 /***********************************************************************/
 
-/* This file is designed for use with ISim build 0x7708f090 */
+/* This file is designed for use with ISim build 0x8ef4fb42 */
 
 #define XSI_HIDE_SYMBOL_SPEC true
 #include "xsi.h"
@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/testSchema.vhf";
+static const char *ng0 = "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema.vhf";
 
 
 
@@ -37,15 +37,15 @@ static void work_a_2746045213_3212880686_p_0(char *t0)
 
 LAB0:    xsi_set_current_line(80, ng0);
 
-LAB3:    t1 = (t0 + 8298);
+LAB3:    t1 = (t0 + 5662);
     t3 = (8U != 8U);
     if (t3 == 1)
         goto LAB5;
 
-LAB6:    t4 = (t0 + 4816);
-    t5 = (t4 + 56U);
+LAB6:    t4 = (t0 + 2772);
+    t5 = (t4 + 32U);
     t6 = *((char **)t5);
-    t7 = (t6 + 56U);
+    t7 = (t6 + 40U);
     t8 = *((char **)t7);
     memcpy(t8, t1, 8U);
     xsi_driver_first_trans_delta(t4, 0U, 8U, 0LL);

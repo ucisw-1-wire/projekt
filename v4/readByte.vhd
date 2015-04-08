@@ -56,6 +56,7 @@ architecture Behavioral of readByte is
 	idle ,
 	readBit,
 	waitForBusy,
+	waitForRead,
 	done
 	);
 	-------------- STANY ----------------
@@ -65,15 +66,15 @@ architecture Behavioral of readByte is
 	signal present_state : stan := idle ;
 	signal next_state : stan := idle ;
 	
-	signal read_counter : integer range 0 to 10 := 0 ;
-	signal read_buffor : STD_LOGIC_VECTOR (7 downto 0 ) := "11111111" ; -- ustawilem tak, zeby w TB widziec jak wpisuja sie kolejne zera, bo nie chcialo mi sie jakos bardziej sterowac wire_in...
+	signal read_counter : integer range -1 to 10 := -1 ;
+	signal read_buffor : STD_LOGIC_VECTOR (7 downto 0 ) := "00000000" ; -- ustawilem tak, zeby w TB widziec jak wpisuja sie kolejne zera, bo nie chcialo mi sie jakos bardziej sterowac wire_in...
 	
 	
 begin
 
 	busy <= '0' WHEN present_state = idle ELSE '1';
 
-	next_state_process : process(present_state, start, clk ) is
+	next_state_process : process(present_state, start, clk, isBusy, read_counter, readBit_detecion ) is
 	begin 
 		--gdy nic sie nie dzieje niech zostanie w aktualnym stanie 
 		next_state<=present_state;
@@ -82,12 +83,12 @@ begin
 		--------------------------------
 				when idle =>
 					if start = '1' then
-						next_state <= readBit ;
+						next_state <= waitForBusy ;
 					end if;
 		--------------------------------
 				when waitForBusy =>
 					if isBusy = '0' then
-						if read_counter = 8 then
+						if read_counter = 7 then
 							next_state <= done ;
 						else        -- Takie male zabezpieczenie zeby przepisac wartosc gdy
 							next_state <= readBit  ; -- faktycznie skoczy sie czytanie bitu to przepismy 
@@ -95,9 +96,14 @@ begin
 					end if ;							 -- i wyslemy nowe polecenie odczyania
 		--------------------------------
 				when readBit =>
-						if isBusy= '0' then
-						next_state <= waitForBusy ;
-						end if ;
+						--if isBusy= '0' then
+						next_state <= waitForRead ;
+						--end if ;
+		--------------------------------
+				when waitForRead =>
+					--if isBusy = '0' then
+						next_state <= waitForBusy;
+					--end if;
 		--------------------------------
 				when done =>
 					next_state <= idle ;
@@ -105,29 +111,50 @@ begin
 			end case ;
 	end process;
 
-input_process: process(present_state) is
+input_process: process(clk, present_state) is
 begin
 	--ready <= '0' ;
-   read_bit <= '0' ;
-
-	case present_state is 
+   
 	
-		when readBit =>
-			read_bit <='1' ;
-			
-		when waitForBusy =>
-			read_buffor(read_counter) <= readBit_detecion ;
-			read_counter <= read_counter + 1 ;
+	if rising_edge (clk) then
+		read_bit <= '0' ;
+		read_counter <= read_counter;
+		read_buffor <= read_buffor;
+		case present_state is 
+		
+			when readBit =>
+				read_bit <='1' ;
 				
-		when done =>
-			--Ready <= '1' ;
-			data <= read_buffor ;
-			read_counter <= 0 ;
-		when others =>
-			read_bit <='0';
-	end case ;
-
+			when waitForBusy =>
+				if read_counter >= 0 then
+					read_buffor(read_counter) <= readBit_detecion ;
+				end if;
+				--read_counter <= read_counter + 1 ;
+				
+			when waitForRead =>
+				read_counter <= read_counter + 1 ;
+				--read_buffor(read_counter) <= readBit_detecion ;
+					
+			when done =>
+				--Ready <= '1' ;
+				--data <= read_buffor ;
+				read_counter <= 0 ;
+			when others =>
+				read_bit <='0';
+				read_buffor <= "00000000";
+				--data <= "00000000";
+				read_counter <= -1;
+		end case ;
+	end if;
 end process ;
+
+process (clk) is
+begin
+	if rising_edge(clk) and present_state = done then
+		data <= read_buffor;
+	end if;
+
+end process;
 
 clock: process (clk) is
 	begin

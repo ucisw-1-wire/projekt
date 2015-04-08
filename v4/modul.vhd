@@ -63,8 +63,12 @@ architecture Behavioral of modul is
 	--------   STANY     -------------
 	signal present_state : stan :=idle ;
 	signal next_state :stan := idle ;
+	
 	--------   ZEGAR     -------------
 	signal clock_counter : STD_LOGIC_VECTOR(15 downto 0 ) := "0000000000000000";
+	--signal readBit_detecion_buff : STD_LOGIC := '0';
+	
+	
 	
 begin
 	
@@ -162,47 +166,67 @@ begin
 busy <= '0' WHEN PRESENT_STATE = IDLE ELSE '1';
 
 -------------------------------------------------------
-output_process : process(present_state) is
+output_process : process(present_state, wire_in) is
+
+
 begin
 
-	readBit_detecion <= '0';
 	wire_out<='1';
+	
 
 	case present_state is
 		when idle =>
 			wire_out<='1';
 			
 		when write_1A =>
+			
 			wire_out<='0';
 		when write_1B =>
+			
 			wire_out<='1';
 			
-			
 		when write_0A =>
+			
 			wire_out<='0';
 		when write_0B =>
+			
 			wire_out<='1';
 			
 		when read_A =>
+			
 			wire_out<='0';
 		when read_B =>
+			
 			wire_out<='1';
 		when read_C =>
-			readBit_detecion <= wire_in;
+			
 		when read_D =>
+			
 			wire_out<='1';	
 		
 		when reset_A =>
+			
 			wire_out<='0';
 		when reset_B =>
+			
 			wire_out<='1';
 		when reset_C =>
-			readBit_detecion <= wire_in;
+			
 		when reset_D =>
+			
 			wire_out<='1';	
 		
 	end case;
 end process;
+
+
+process ( clk) is
+begin
+		if rising_edge( Clk ) and ( present_state = read_C or present_state = reset_C)  then
+			readBit_detecion <= wire_in;
+		end if;
+end process;
+
 
 clock : process ( clk) is
 begin

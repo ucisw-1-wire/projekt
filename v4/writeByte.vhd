@@ -63,7 +63,7 @@ begin
 	
 	busy <= '0' WHEN PRESENT_STATE = IDLE ELSE '1';
 	
-	next_state_process : process (present_state, start, clk) is
+	next_state_process : process (present_state, start, clk, isBusy, write_counter) is
 	begin
 		
 		next_state <= present_state;

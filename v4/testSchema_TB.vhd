@@ -82,7 +82,8 @@ BEGIN
 		start_read <='1';
 		wait for 2 us;
 		start_read <='0';
-	
+		wait for 178 us;
+		wire_in <= '1';
 	
       WAIT; -- will wait forever
    END PROCESS;

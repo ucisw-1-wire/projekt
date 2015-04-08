@@ -1,15 +1,15 @@
-Release 14.7 - xst P.20131013 (nt64)
+Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: testSchema.prj
@@ -104,14 +104,13 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/writeByte.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/writeByte.vhd" in Library work.
 Architecture behavioral of Entity writebyte is up to date.
-Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/readByte.vhd" in Library work.
-Entity <readbyte> compiled.
-Entity <readbyte> (Architecture <behavioral>) compiled.
-Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/modul.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/readByte.vhd" in Library work.
+Architecture behavioral of Entity readbyte is up to date.
+Compiling vhdl file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/modul.vhd" in Library work.
 Architecture behavioral of Entity modul is up to date.
-Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/testSchema.vhf" in Library work.
+Compiling vhdl file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema.vhf" in Library work.
 Architecture behavioral of Entity testschema is up to date.
 
 =========================================================================
@@ -133,20 +132,12 @@ Analyzing Entity <testSchema> in library <work> (Architecture <behavioral>).
 Entity <testSchema> analyzed. Unit <testSchema> generated.
 
 Analyzing Entity <writeByte> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/writeByte.vhd" line 66: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <isBusy>, <write_counter>
 Entity <writeByte> analyzed. Unit <writeByte> generated.
 
 Analyzing Entity <readByte> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/readByte.vhd" line 76: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <isBusy>, <read_counter>
-WARNING:Xst:819 - "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/readByte.vhd" line 108: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <read_counter>, <readBit_detecion>
 Entity <readByte> analyzed. Unit <readByte> generated.
 
 Analyzing Entity <modul> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/modul.vhd" line 165: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <wire_in>
 Entity <modul> analyzed. Unit <modul> generated.
 
 
@@ -157,7 +148,7 @@ Entity <modul> analyzed. Unit <modul> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <writeByte>.
-    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/writeByte.vhd".
+    Related source file is "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/writeByte.vhd".
     Found finite state machine <FSM_0> for signal <present_state>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
@@ -183,58 +174,56 @@ Unit <writeByte> synthesized.
 
 
 Synthesizing Unit <readByte>.
-    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/readByte.vhd".
+    Related source file is "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/readByte.vhd".
     Found finite state machine <FSM_1> for signal <present_state>.
     -----------------------------------------------------------------------
-    | States             | 4                                              |
+    | States             | 5                                              |
     | Transitions        | 8                                              |
     | Inputs             | 3                                              |
-    | Outputs            | 4                                              |
+    | Outputs            | 5                                              |
     | Clock              | clk                       (rising_edge)        |
     | Power Up State     | idle                                           |
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-WARNING:Xst:737 - Found 1-bit latch for signal <read_buffor_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <read_buffor_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <read_buffor_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <read_buffor_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <read_buffor_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <read_buffor_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <read_buffor_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <read_buffor_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 8-bit latch for signal <data>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 4-bit latch for signal <read_counter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 4-bit adder for signal <read_counter$addsub0000> created at line 120.
+    Found 1-bit register for signal <read_bit>.
+    Found 8-bit register for signal <data>.
+    Found 8-bit register for signal <read_buffor>.
+    Found 5-bit comparator greatequal for signal <read_buffor_0$cmp_ge0000> created at line 129.
+    Found 5-bit register for signal <read_counter>.
+    Found 4-bit adder for signal <read_counter$add0000> created at line 135.
     Summary:
 	inferred   1 Finite State Machine(s).
+	inferred  22 D-type flip-flop(s).
 	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
 Unit <readByte> synthesized.
 
 
 Synthesizing Unit <modul>.
-    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/modul.vhd".
+    Related source file is "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/modul.vhd".
     Found finite state machine <FSM_2> for signal <present_state>.
     -----------------------------------------------------------------------
     | States             | 13                                             |
     | Transitions        | 27                                             |
     | Inputs             | 11                                             |
-    | Outputs            | 16                                             |
+    | Outputs            | 5                                              |
     | Clock              | clk                       (rising_edge)        |
     | Power Up State     | idle                                           |
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
+    Found 1-bit register for signal <readBit_detecion>.
     Found 16-bit up counter for signal <clock_counter>.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
 Unit <modul> synthesized.
 
 
 Synthesizing Unit <testSchema>.
-    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/testSchema.vhf".
+    Related source file is "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema.vhf".
 WARNING:Xst:653 - Signal <XLXI_3_writeReset_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 Unit <testSchema> synthesized.
 
@@ -248,13 +237,13 @@ Macro Statistics
  4-bit adder                                           : 1
 # Counters                                             : 1
  16-bit up counter                                     : 1
-# Registers                                            : 3
- 1-bit register                                        : 2
+# Registers                                            : 15
+ 1-bit register                                        : 12
  32-bit register                                       : 1
-# Latches                                              : 10
- 1-bit latch                                           : 8
- 4-bit latch                                           : 1
- 8-bit latch                                           : 1
+ 5-bit register                                        : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 1
+ 5-bit comparator greatequal                           : 1
 # Multiplexers                                         : 1
  1-bit 8-to-1 multiplexer                              : 1
 
@@ -265,33 +254,34 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_2> for best encoding.
-Optimizing FSM <XLXI_3/present_state/FSM> on signal <present_state[1:13]> with one-hot encoding.
----------------------------
+Optimizing FSM <XLXI_3/present_state/FSM> on signal <present_state[1:4]> with user encoding.
+----------------------
  State    | Encoding
----------------------------
- idle     | 0000000000001
- write_1a | 0000000000010
- write_1b | 0000000100000
- write_0a | 0000000000100
- write_0b | 0000001000000
- read_a   | 0000000001000
- read_b   | 0000010000000
- read_c   | 0000100000000
- read_d   | 0001000000000
- reset_a  | 0000000010000
- reset_b  | 0010000000000
- reset_c  | 0100000000000
- reset_d  | 1000000000000
----------------------------
+----------------------
+ idle     | 0000
+ write_1a | 0001
+ write_1b | 0010
+ write_0a | 0011
+ write_0b | 0100
+ read_a   | 0101
+ read_b   | 0110
+ read_c   | 0111
+ read_d   | 1000
+ reset_a  | 1001
+ reset_b  | 1010
+ reset_c  | 1011
+ reset_d  | 1100
+----------------------
 Analyzing FSM <FSM_1> for best encoding.
-Optimizing FSM <XLXI_2/present_state/FSM> on signal <present_state[1:2]> with sequential encoding.
+Optimizing FSM <XLXI_2/present_state/FSM> on signal <present_state[1:5]> with one-hot encoding.
 -------------------------
  State       | Encoding
 -------------------------
- idle        | 00
- readbit     | 01
- waitforbusy | 11
- done        | 10
+ idle        | 00001
+ readbit     | 01000
+ waitforbusy | 00010
+ waitforread | 10000
+ done        | 00100
 -------------------------
 Analyzing FSM <FSM_0> for best encoding.
 Optimizing FSM <XLXI_1/present_state/FSM> on signal <present_state[1:2]> with user encoding.
@@ -303,10 +293,6 @@ Optimizing FSM <XLXI_1/present_state/FSM> on signal <present_state[1:2]> with us
  writebit    | 10
  increment   | 11
 -------------------------
-WARNING:Xst:1293 - FF/Latch <FFd1> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <FFd2> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <FFd3> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <FFd9> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -318,12 +304,10 @@ Macro Statistics
  4-bit adder                                           : 1
 # Counters                                             : 1
  16-bit up counter                                     : 1
-# Registers                                            : 34
- Flip-Flops                                            : 34
-# Latches                                              : 10
- 1-bit latch                                           : 8
- 4-bit latch                                           : 1
- 8-bit latch                                           : 1
+# Registers                                            : 57
+ Flip-Flops                                            : 57
+# Comparators                                          : 1
+ 5-bit comparator greatequal                           : 1
 # Multiplexers                                         : 1
  1-bit 8-to-1 multiplexer                              : 1
 
@@ -332,22 +316,19 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <present_state_FSM_FFd1> has a constant value of 0 in block <modul>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <present_state_FSM_FFd2> has a constant value of 0 in block <modul>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <present_state_FSM_FFd3> has a constant value of 0 in block <modul>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <present_state_FSM_FFd9> has a constant value of 0 in block <modul>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <testSchema> ...
 
 Optimizing unit <writeByte> ...
 
-Optimizing unit <modul> ...
-
 Optimizing unit <readByte> ...
+
+Optimizing unit <modul> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block testSchema, actual ratio is 7.
+Found area constraint ratio of 100 (+ 5) on block testSchema, actual ratio is 11.
+FlipFlop XLXI_3/present_state_FSM_FFd1 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -355,8 +336,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 63
- Flip-Flops                                            : 63
+# Registers                                            : 85
+ Flip-Flops                                            : 85
 
 =========================================================================
 
@@ -385,28 +366,29 @@ Design Statistics
 # IOs                              : 15
 
 Cell Usage :
-# BELS                             : 242
+# BELS                             : 319
 #      GND                         : 1
-#      INV                         : 2
+#      INV                         : 4
 #      LUT1                        : 46
-#      LUT2                        : 8
-#      LUT2_D                      : 2
-#      LUT3                        : 8
-#      LUT4                        : 72
+#      LUT2                        : 9
+#      LUT2_D                      : 6
+#      LUT2_L                      : 1
+#      LUT3                        : 20
+#      LUT3_D                      : 1
+#      LUT3_L                      : 3
+#      LUT4                        : 114
 #      LUT4_D                      : 4
-#      LUT4_L                      : 3
+#      LUT4_L                      : 8
 #      MUXCY                       : 46
-#      MUXF5                       : 1
+#      MUXF5                       : 7
 #      VCC                         : 1
 #      XORCY                       : 48
-# FlipFlops/Latches                : 83
-#      FD                          : 43
-#      FDR                         : 18
-#      FDS                         : 1
+# FlipFlops/Latches                : 85
+#      FD                          : 44
+#      FDE                         : 9
+#      FDR                         : 21
+#      FDS                         : 10
 #      FDSE                        : 1
-#      LD                          : 12
-#      LDE                         : 7
-#      LDE_1                       : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 14
@@ -419,12 +401,11 @@ Device utilization summary:
 
 Selected Device : 3s100evq100-5 
 
- Number of Slices:                       77  out of    960     8%  
- Number of Slice Flip Flops:             75  out of   1920     3%  
- Number of 4 input LUTs:                145  out of   1920     7%  
+ Number of Slices:                      114  out of    960    11%  
+ Number of Slice Flip Flops:             85  out of   1920     4%  
+ Number of 4 input LUTs:                216  out of   1920    11%  
  Number of IOs:                          15
  Number of bonded IOBs:                  15  out of     66    22%  
-    IOB Flip Flops:                       8
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -445,25 +426,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------------------------------+------------------------------+-------+
-Clock Signal                                                       | Clock buffer(FF name)        | Load  |
--------------------------------------------------------------------+------------------------------+-------+
-clk                                                                | BUFGP                        | 63    |
-XLXI_2/present_state_cmp_eq0002(XLXI_2/present_state_FSM_Out11:O)  | NONE(*)(XLXI_2/data_7)       | 8     |
-XLXI_2/present_state_FSM_FFd1                                      | NONE(XLXI_2/read_counter_3)  | 4     |
-XLXI_2/read_buffor_0_not0001(XLXI_2/read_buffor_0_not00011:O)      | NONE(*)(XLXI_2/read_buffor_0)| 1     |
-XLXI_2/read_buffor_1_cmp_eq0000(XLXI_2/read_buffor_1_cmp_eq00001:O)| NONE(*)(XLXI_2/read_buffor_1)| 1     |
-XLXI_2/read_buffor_2_cmp_eq0000(XLXI_2/read_buffor_2_cmp_eq00001:O)| NONE(*)(XLXI_2/read_buffor_2)| 1     |
-XLXI_2/read_buffor_3_cmp_eq0000(XLXI_2/read_buffor_3_cmp_eq00001:O)| NONE(*)(XLXI_2/read_buffor_3)| 1     |
-XLXI_2/read_buffor_4_cmp_eq0000(XLXI_2/read_buffor_4_cmp_eq00001:O)| NONE(*)(XLXI_2/read_buffor_4)| 1     |
-XLXI_2/read_buffor_5_cmp_eq0000(XLXI_2/read_buffor_5_cmp_eq00001:O)| NONE(*)(XLXI_2/read_buffor_5)| 1     |
-XLXI_2/read_buffor_6_cmp_eq0000(XLXI_2/read_buffor_6_cmp_eq00001:O)| NONE(*)(XLXI_2/read_buffor_6)| 1     |
-XLXI_2/read_buffor_7_cmp_eq0000(XLXI_2/read_buffor_7_cmp_eq00001:O)| NONE(*)(XLXI_2/read_buffor_7)| 1     |
--------------------------------------------------------------------+------------------------------+-------+
-(*) These 9 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 85    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -473,8 +440,8 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 6.170ns (Maximum Frequency: 162.069MHz)
-   Minimum input arrival time before clock: 2.674ns
+   Minimum period: 8.726ns (Maximum Frequency: 114.593MHz)
+   Minimum input arrival time before clock: 2.369ns
    Maximum output required time after clock: 5.878ns
    Maximum combinational path delay: No path found
 
@@ -484,236 +451,54 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.170ns (frequency: 162.069MHz)
-  Total number of paths / destination ports: 1423 / 81
+  Clock period: 8.726ns (frequency: 114.593MHz)
+  Total number of paths / destination ports: 6499 / 121
 -------------------------------------------------------------------------
-Delay:               6.170ns (Levels of Logic = 4)
-  Source:            XLXI_3/clock_counter_13 (FF)
+Delay:               8.726ns (Levels of Logic = 6)
+  Source:            XLXI_3/clock_counter_7 (FF)
   Destination:       XLXI_3/clock_counter_15 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: XLXI_3/clock_counter_13 to XLXI_3/clock_counter_15
+  Data Path: XLXI_3/clock_counter_7 to XLXI_3/clock_counter_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.514   0.532  XLXI_3/clock_counter_13 (XLXI_3/clock_counter_13)
-     LUT4_D:I0->LO         1   0.612   0.103  XLXI_3/present_state_cmp_eq00001_SW0 (N36)
-     LUT4:I3->O            2   0.612   0.383  XLXI_3/present_state_cmp_eq00001 (XLXI_3/N0)
-     LUT4:I3->O            4   0.612   0.502  XLXI_3/present_state_cmp_eq00011 (XLXI_3/present_state_cmp_eq0001)
-     LUT4:I3->O           17   0.612   0.893  XLXI_3/present_state_FSM_FFd13-In (XLXI_3/present_state_cmp_eq0007)
+     FDR:C->Q             10   0.514   0.780  XLXI_3/clock_counter_7 (XLXI_3/clock_counter_7)
+     LUT4:I2->O            1   0.612   0.509  XLXI_3/present_state_FSM_FFd4-In24 (XLXI_3/present_state_FSM_FFd4-In24)
+     LUT4:I0->O            2   0.612   0.383  XLXI_3/present_state_FSM_FFd4-In69 (XLXI_3/present_state_FSM_FFd4-In69)
+     LUT4:I3->O            1   0.612   0.357  XLXI_3/present_state_FSM_FFd4-In83 (XLXI_3/present_state_FSM_FFd4-In83)
+     MUXF5:S->O            1   0.641   0.360  XLXI_3/present_state_FSM_FFd4-In51_SW2 (N44)
+     LUT4:I3->O            2   0.612   0.449  XLXI_3/present_state_FSM_FFd4-In125 (XLXI_3/present_state_FSM_FFd4-In125)
+     LUT4:I1->O           16   0.612   0.879  XLXI_3/present_state_FSM_Out21 (XLXI_3/present_state_cmp_eq0009)
      FDR:R                     0.795          XLXI_3/clock_counter_0
     ----------------------------------------
-    Total                      6.170ns (3.757ns logic, 2.413ns route)
-                                       (60.9% logic, 39.1% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'XLXI_2/present_state_FSM_FFd1'
-  Clock period: 3.428ns (frequency: 291.754MHz)
-  Total number of paths / destination ports: 10 / 4
--------------------------------------------------------------------------
-Delay:               3.428ns (Levels of Logic = 2)
-  Source:            XLXI_2/read_counter_0 (LATCH)
-  Destination:       XLXI_2/read_counter_3 (LATCH)
-  Source Clock:      XLXI_2/present_state_FSM_FFd1 falling
-  Destination Clock: XLXI_2/present_state_FSM_FFd1 falling
-
-  Data Path: XLXI_2/read_counter_0 to XLXI_2/read_counter_3
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q              13   0.588   0.988  XLXI_2/read_counter_0 (XLXI_2/read_counter_0)
-     LUT3:I0->O            1   0.612   0.360  XLXI_2/read_counter_mux0000<3>_SW1 (N32)
-     LUT4:I3->O            1   0.612   0.000  XLXI_2/read_counter_mux0000<3> (XLXI_2/read_counter_mux0000<3>)
-     LD:D                      0.268          XLXI_2/read_counter_3
-    ----------------------------------------
-    Total                      3.428ns (2.080ns logic, 1.348ns route)
-                                       (60.7% logic, 39.3% route)
+    Total                      8.726ns (5.010ns logic, 3.716ns route)
+                                       (57.4% logic, 42.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 3 / 2
+  Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
-Offset:              2.674ns (Levels of Logic = 3)
+Offset:              2.369ns (Levels of Logic = 2)
   Source:            start_read (PAD)
-  Destination:       XLXI_2/present_state_FSM_FFd2 (FF)
+  Destination:       XLXI_2/present_state_FSM_FFd4 (FF)
   Destination Clock: clk rising
 
-  Data Path: start_read to XLXI_2/present_state_FSM_FFd2
+  Data Path: start_read to XLXI_2/present_state_FSM_FFd4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.106   0.410  start_read_IBUF (start_read_IBUF)
-     LUT3:I2->O            1   0.612   0.000  XLXI_2/present_state_FSM_FFd2-In2 (XLXI_2/present_state_FSM_FFd2-In2)
-     MUXF5:I0->O           1   0.278   0.000  XLXI_2/present_state_FSM_FFd2-In_f5 (XLXI_2/present_state_FSM_FFd2-In)
-     FD:D                      0.268          XLXI_2/present_state_FSM_FFd2
+     IBUF:I->O             2   1.106   0.383  start_read_IBUF (start_read_IBUF)
+     LUT4:I3->O            1   0.612   0.000  XLXI_2/present_state_FSM_FFd4-In1 (XLXI_2/present_state_FSM_FFd4-In1)
+     FDS:D                     0.268          XLXI_2/present_state_FSM_FFd4
     ----------------------------------------
-    Total                      2.674ns (2.264ns logic, 0.410ns route)
-                                       (84.7% logic, 15.3% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_2/read_buffor_0_not0001'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              2.412ns (Levels of Logic = 2)
-  Source:            wire_in (PAD)
-  Destination:       XLXI_2/read_buffor_0 (LATCH)
-  Destination Clock: XLXI_2/read_buffor_0_not0001 rising
-
-  Data Path: wire_in to XLXI_2/read_buffor_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.106   0.426  wire_in_IBUF (wire_in_IBUF)
-     LUT2:I1->O            8   0.612   0.000  XLXI_3/readBit_detecion1 (XLXN_8)
-     LDE_1:D                   0.268          XLXI_2/read_buffor_0
-    ----------------------------------------
-    Total                      2.412ns (1.986ns logic, 0.426ns route)
-                                       (82.3% logic, 17.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_2/read_buffor_1_cmp_eq0000'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              2.412ns (Levels of Logic = 2)
-  Source:            wire_in (PAD)
-  Destination:       XLXI_2/read_buffor_1 (LATCH)
-  Destination Clock: XLXI_2/read_buffor_1_cmp_eq0000 falling
-
-  Data Path: wire_in to XLXI_2/read_buffor_1
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.106   0.426  wire_in_IBUF (wire_in_IBUF)
-     LUT2:I1->O            8   0.612   0.000  XLXI_3/readBit_detecion1 (XLXN_8)
-     LDE:D                     0.268          XLXI_2/read_buffor_1
-    ----------------------------------------
-    Total                      2.412ns (1.986ns logic, 0.426ns route)
-                                       (82.3% logic, 17.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_2/read_buffor_2_cmp_eq0000'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              2.412ns (Levels of Logic = 2)
-  Source:            wire_in (PAD)
-  Destination:       XLXI_2/read_buffor_2 (LATCH)
-  Destination Clock: XLXI_2/read_buffor_2_cmp_eq0000 falling
-
-  Data Path: wire_in to XLXI_2/read_buffor_2
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.106   0.426  wire_in_IBUF (wire_in_IBUF)
-     LUT2:I1->O            8   0.612   0.000  XLXI_3/readBit_detecion1 (XLXN_8)
-     LDE:D                     0.268          XLXI_2/read_buffor_2
-    ----------------------------------------
-    Total                      2.412ns (1.986ns logic, 0.426ns route)
-                                       (82.3% logic, 17.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_2/read_buffor_3_cmp_eq0000'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              2.412ns (Levels of Logic = 2)
-  Source:            wire_in (PAD)
-  Destination:       XLXI_2/read_buffor_3 (LATCH)
-  Destination Clock: XLXI_2/read_buffor_3_cmp_eq0000 falling
-
-  Data Path: wire_in to XLXI_2/read_buffor_3
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.106   0.426  wire_in_IBUF (wire_in_IBUF)
-     LUT2:I1->O            8   0.612   0.000  XLXI_3/readBit_detecion1 (XLXN_8)
-     LDE:D                     0.268          XLXI_2/read_buffor_3
-    ----------------------------------------
-    Total                      2.412ns (1.986ns logic, 0.426ns route)
-                                       (82.3% logic, 17.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_2/read_buffor_4_cmp_eq0000'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              2.412ns (Levels of Logic = 2)
-  Source:            wire_in (PAD)
-  Destination:       XLXI_2/read_buffor_4 (LATCH)
-  Destination Clock: XLXI_2/read_buffor_4_cmp_eq0000 falling
-
-  Data Path: wire_in to XLXI_2/read_buffor_4
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.106   0.426  wire_in_IBUF (wire_in_IBUF)
-     LUT2:I1->O            8   0.612   0.000  XLXI_3/readBit_detecion1 (XLXN_8)
-     LDE:D                     0.268          XLXI_2/read_buffor_4
-    ----------------------------------------
-    Total                      2.412ns (1.986ns logic, 0.426ns route)
-                                       (82.3% logic, 17.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_2/read_buffor_5_cmp_eq0000'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              2.412ns (Levels of Logic = 2)
-  Source:            wire_in (PAD)
-  Destination:       XLXI_2/read_buffor_5 (LATCH)
-  Destination Clock: XLXI_2/read_buffor_5_cmp_eq0000 falling
-
-  Data Path: wire_in to XLXI_2/read_buffor_5
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.106   0.426  wire_in_IBUF (wire_in_IBUF)
-     LUT2:I1->O            8   0.612   0.000  XLXI_3/readBit_detecion1 (XLXN_8)
-     LDE:D                     0.268          XLXI_2/read_buffor_5
-    ----------------------------------------
-    Total                      2.412ns (1.986ns logic, 0.426ns route)
-                                       (82.3% logic, 17.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_2/read_buffor_6_cmp_eq0000'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              2.412ns (Levels of Logic = 2)
-  Source:            wire_in (PAD)
-  Destination:       XLXI_2/read_buffor_6 (LATCH)
-  Destination Clock: XLXI_2/read_buffor_6_cmp_eq0000 falling
-
-  Data Path: wire_in to XLXI_2/read_buffor_6
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.106   0.426  wire_in_IBUF (wire_in_IBUF)
-     LUT2:I1->O            8   0.612   0.000  XLXI_3/readBit_detecion1 (XLXN_8)
-     LDE:D                     0.268          XLXI_2/read_buffor_6
-    ----------------------------------------
-    Total                      2.412ns (1.986ns logic, 0.426ns route)
-                                       (82.3% logic, 17.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_2/read_buffor_7_cmp_eq0000'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              2.412ns (Levels of Logic = 2)
-  Source:            wire_in (PAD)
-  Destination:       XLXI_2/read_buffor_7 (LATCH)
-  Destination Clock: XLXI_2/read_buffor_7_cmp_eq0000 falling
-
-  Data Path: wire_in to XLXI_2/read_buffor_7
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.106   0.426  wire_in_IBUF (wire_in_IBUF)
-     LUT2:I1->O            8   0.612   0.000  XLXI_3/readBit_detecion1 (XLXN_8)
-     LDE:D                     0.268          XLXI_2/read_buffor_7
-    ----------------------------------------
-    Total                      2.412ns (1.986ns logic, 0.426ns route)
-                                       (82.3% logic, 17.7% route)
+    Total                      2.369ns (1.986ns logic, 0.383ns route)
+                                       (83.8% logic, 16.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 7 / 3
+  Total number of paths / destination ports: 15 / 11
 -------------------------------------------------------------------------
 Offset:              5.878ns (Levels of Logic = 2)
   Source:            XLXI_1/present_state_FSM_FFd2 (FF)
@@ -732,25 +517,6 @@ Offset:              5.878ns (Levels of Logic = 2)
                                        (73.1% logic, 26.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/present_state_cmp_eq0002'
-  Total number of paths / destination ports: 8 / 8
--------------------------------------------------------------------------
-Offset:              4.114ns (Levels of Logic = 1)
-  Source:            XLXI_2/data_7 (LATCH)
-  Destination:       XLXN_17<7> (PAD)
-  Source Clock:      XLXI_2/present_state_cmp_eq0002 falling
-
-  Data Path: XLXI_2/data_7 to XLXN_17<7>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.588   0.357  XLXI_2/data_7 (XLXI_2/data_7)
-     OBUF:I->O                 3.169          XLXN_17_7_OBUF (XLXN_17<7>)
-    ----------------------------------------
-    Total                      4.114ns (3.757ns logic, 0.357ns route)
-                                       (91.3% logic, 8.7% route)
-
-=========================================================================
 
 
 Total REAL time to Xst completion: 6.00 secs
@@ -758,9 +524,9 @@ Total CPU time to Xst completion: 5.72 secs
  
 --> 
 
-Total memory usage is 279232 kilobytes
+Total memory usage is 216776 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   23 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

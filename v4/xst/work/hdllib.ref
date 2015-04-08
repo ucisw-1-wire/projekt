@@ -1,8 +1,8 @@
-EN testschema NULL "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/testSchema.vhf" sub00/vhpl06 1428450049
-EN readbyte NULL "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/readByte.vhd" sub00/vhpl04 1428450045
-EN modul NULL "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/modul.vhd" sub00/vhpl00 1428450047
-AR writebyte behavioral "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/writeByte.vhd" sub00/vhpl03 1428450044
-AR testschema behavioral "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/testSchema.vhf" sub00/vhpl07 1428450050
-EN writebyte NULL "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/writeByte.vhd" sub00/vhpl02 1428450043
-AR readbyte behavioral "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/readByte.vhd" sub00/vhpl05 1428450046
-AR modul behavioral "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/modul.vhd" sub00/vhpl01 1428450048
+AR writebyte behavioral C:/Users/lab/Downloads/projekt-master/projekt-master/v4/writeByte.vhd sub00/vhpl03 1428479985
+EN testschema NULL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema.vhf sub00/vhpl06 1428479990
+AR testschema behavioral C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema.vhf sub00/vhpl07 1428479991
+AR modul behavioral C:/Users/lab/Downloads/projekt-master/projekt-master/v4/modul.vhd sub00/vhpl01 1428479989
+EN readbyte NULL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/readByte.vhd sub00/vhpl04 1428479986
+EN modul NULL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/modul.vhd sub00/vhpl00 1428479988
+AR readbyte behavioral C:/Users/lab/Downloads/projekt-master/projekt-master/v4/readByte.vhd sub00/vhpl05 1428479987
+EN writebyte NULL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/writeByte.vhd sub00/vhpl02 1428479984
