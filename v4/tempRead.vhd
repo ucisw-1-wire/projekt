@@ -49,12 +49,15 @@ architecture Behavioral of tempRead is
 	type stan is (
 	idle,
 	
-	waitForBusy_reset_1,
+	waitForBusy_reset_1,		
 	waitForBusy_reset_2,
+	waitForBusy_reset_3,		-- trzeci reset potrzebny jest do przerwania sekwencji Read Scetchpad -> DS18S20.pdf Figure 17 str 17
 	reset_1,
 	reset_2,
+	reset_3,
 	waitForReset_1,
 	waitForReset_2,
+	waitForReset_3,
 	
 	waitForBusy_skip_rom_1,
 	waitForBusy_skip_rom_2,
@@ -73,15 +76,19 @@ architecture Behavioral of tempRead is
 	waitForReadScetchpad,
 	captureByte_endOrNot,
 	
+	
+	
 	done
 	);
-
-
+	
+	
 	signal present_state : stan := idle ;
 	signal next_state : stan := idle ;
 	
 	signal tempDataBuffor : STD_LOGIC_VECTOR (23 downto 0) := X"000000";
-	signal read_counter : integer  range 0 to 3 := 0; -- inkrementowane w read_scetchpad, zerowane w idle
+	signal read_counter : integer  range 0 to 3 := 0; -- inkrementowane w read_scetchpad, zerowane w idle,		
+													  -- zgodnie z scratchpad_respond wystarcza 2 bajty, trzeba to zmienic, nie chce mi sie teraz bo trzeba potem znowu schematic symbol robic, zmienic sequenceTestSchema itp..
+													  
 	
 begin
 	
@@ -107,8 +114,7 @@ begin
 					next_state <= waitForReset_1;
 				when waitForReset_1 =>
 					if isBusy = '0' then
-						if readBit_detection = '1' then  -- nie jestem pewny, ale wykrycie u¿¹dzenia daje na wyjciu modu³u '0', 
-																	-- ale dla czytelnosci tego kodu na poziomie schematu wstawi siê inverter
+						if readBit_detection = '0' then 		--- DS18S20.pdf Figure 12, str 13  
 							next_state <= waitForBusy_skip_rom_1;
 						else
 							next_state <= idle; -- ? ! ! ! SPYTAC SUGIERA ! ! !
@@ -184,9 +190,19 @@ begin
 					end if;
 				when captureByte_endOrNot =>
 					if read_counter = 3 then
-						next_state <= done;
+						next_state <= waitForBusy_reset_3;
 					else
 						next_state <= waitForBusy_read_scetchpad;
+					end if;
+				when waitForBusy_reset_3 =>
+					if isBusy = '0' then
+						next_state <= reset_3;
+					end if;
+				when reset_3 =>
+					next_state <= waitForBusy_reset_3;
+				when waitForReset_3 =>
+					if isBusy = '0' then
+						next_state <= done;
 					end if;
 					
 				--- done
@@ -211,6 +227,10 @@ begin
 			case present_state is
 				when reset_1 =>
 					startReset <= '1';
+				when reset_2 =>
+					startReset <= '1';
+				when reset_3 =>
+					startReset <= '1';	
 				when skip_rom_1 =>
 					outputData <= X"CC";
 					startWrite <= '1';
@@ -222,15 +242,13 @@ begin
 					startWrite <= '1';
 				when read_scetchpad =>
 					outputData <= X"BE";
-					startWrite <= '1';
+					startRead <= '1';
 					read_counter <= read_counter + 1;
 				when captureByte_endOrNot =>
 					tempDataBuffor ( (read_counter * 8 - 1) downto ( (read_counter -1) * 8 )) <= inputData;
 				when others =>
 					read_counter <= 0;
-					startRead <= '0';
 			end case;		
-			
 			
 		end if;
 
