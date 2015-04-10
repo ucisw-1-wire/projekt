@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : testSchema_drc.vhf
--- /___/   /\     Timestamp : 04/08/2015 00:33:03
+-- /___/   /\     Timestamp : 04/10/2015 18:05:22
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: d:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family spartan3e -flat -suppress -vhdl testSchema_drc.vhf -w "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/testSchema.sch"
+--Command: d:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family spartan3e -flat -suppress -vhdl testSchema_drc.vhf -w D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/testSchema.sch
 --Design Name: testSchema
 --Device: spartan3e
 --Purpose:

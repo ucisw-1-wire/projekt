@@ -67,7 +67,7 @@ architecture Behavioral of readByte is
 	signal next_state : stan := idle ;
 	
 	signal read_counter : integer range -1 to 10 := -1 ;
-	signal read_buffor : STD_LOGIC_VECTOR (7 downto 0 ) := "00000000" ; -- ustawilem tak, zeby w TB widziec jak wpisuja sie kolejne zera, bo nie chcialo mi sie jakos bardziej sterowac wire_in...
+	signal read_buffor : STD_LOGIC_VECTOR (7 downto 0 ) := "00000000" ; 
 	
 	
 begin

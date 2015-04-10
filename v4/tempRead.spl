@@ -1,0 +1,14 @@
+[Inputs]
+clk
+start
+isBusy
+readBit_detection
+=inputData[7:0]=
+[Outputs]
+busy
+startRead
+startWrite
+startReset
+=tempData[23:0]=
+=outputData[7:0]=
+[BiDir]

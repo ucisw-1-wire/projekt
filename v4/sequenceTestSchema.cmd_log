@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/sequenceTestSchema.xst" -ofn "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/sequenceTestSchema.syr" 

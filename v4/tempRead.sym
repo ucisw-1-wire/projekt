@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="tempRead">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2015-4-10T16:11:2</timestamp>
+    <pin polarity="Input" x="0" y="-352" name="clk" />
+    <pin polarity="Input" x="0" y="-272" name="start" />
+    <pin polarity="Input" x="0" y="-192" name="isBusy" />
+    <pin polarity="Input" x="0" y="-112" name="readBit_detection" />
+    <pin polarity="Input" x="0" y="-32" name="inputData(7:0)" />
+    <pin polarity="Output" x="480" y="-352" name="busy" />
+    <pin polarity="Output" x="480" y="-288" name="startRead" />
+    <pin polarity="Output" x="480" y="-224" name="startWrite" />
+    <pin polarity="Output" x="480" y="-160" name="startReset" />
+    <pin polarity="Output" x="480" y="-96" name="tempData(23:0)" />
+    <pin polarity="Output" x="480" y="-32" name="outputData(7:0)" />
+    <graph>
+        <rect width="352" x="64" y="-384" height="384" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="240" y="-392" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin clk" />
+        <line x2="0" y1="-352" y2="-352" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-272" type="pin start" />
+        <line x2="0" y1="-272" y2="-272" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-192" type="pin isBusy" />
+        <line x2="0" y1="-192" y2="-192" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-112" type="pin readBit_detection" />
+        <line x2="0" y1="-112" y2="-112" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin inputData(7:0)" />
+        <rect width="64" x="0" y="-44" height="24" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-352" type="pin busy" />
+        <line x2="480" y1="-352" y2="-352" x1="416" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-288" type="pin startRead" />
+        <line x2="480" y1="-288" y2="-288" x1="416" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-224" type="pin startWrite" />
+        <line x2="480" y1="-224" y2="-224" x1="416" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-160" type="pin startReset" />
+        <line x2="480" y1="-160" y2="-160" x1="416" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-96" type="pin tempData(23:0)" />
+        <rect width="64" x="416" y="-108" height="24" />
+        <line x2="480" y1="-96" y2="-96" x1="416" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-32" type="pin outputData(7:0)" />
+        <rect width="64" x="416" y="-44" height="24" />
+        <line x2="480" y1="-32" y2="-32" x1="416" />
+    </graph>
+</symbol>

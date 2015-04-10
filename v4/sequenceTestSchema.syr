@@ -3,16 +3,16 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.30 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.32 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
---> Reading design: testSchema.prj
+--> Reading design: sequenceTestSchema.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -35,17 +35,17 @@ TABLE OF CONTENTS
 *                      Synthesis Options Summary                        *
 =========================================================================
 ---- Source Parameters
-Input File Name                    : "testSchema.prj"
+Input File Name                    : "sequenceTestSchema.prj"
 Input Format                       : mixed
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
-Output File Name                   : "testSchema"
+Output File Name                   : "sequenceTestSchema"
 Output Format                      : NGC
 Target Device                      : xc3s100e-5-vq100
 
 ---- Source Options
-Top Module Name                    : testSchema
+Top Module Name                    : sequenceTestSchema
 Automatic FSM Extraction           : YES
 FSM Encoding Algorithm             : Auto
 Safe Implementation                : No
@@ -104,50 +104,55 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/testSchema is now defined in a different file.  It was defined in "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema.vhf", and is now defined in "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/testSchema.vhf".
-WARNING:HDLParsers:3607 - Unit work/testSchema/BEHAVIORAL is now defined in a different file.  It was defined in "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema.vhf", and is now defined in "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/testSchema.vhf".
-WARNING:HDLParsers:3607 - Unit work/modul is now defined in a different file.  It was defined in "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/modul.vhd", and is now defined in "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/modul.vhd".
-WARNING:HDLParsers:3607 - Unit work/modul/Behavioral is now defined in a different file.  It was defined in "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/modul.vhd", and is now defined in "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/modul.vhd".
-WARNING:HDLParsers:3607 - Unit work/readByte is now defined in a different file.  It was defined in "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/readByte.vhd", and is now defined in "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/readByte.vhd".
-WARNING:HDLParsers:3607 - Unit work/readByte/Behavioral is now defined in a different file.  It was defined in "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/readByte.vhd", and is now defined in "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/readByte.vhd".
-WARNING:HDLParsers:3607 - Unit work/writeByte is now defined in a different file.  It was defined in "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/writeByte.vhd", and is now defined in "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/writeByte.vhd".
-WARNING:HDLParsers:3607 - Unit work/writeByte/Behavioral is now defined in a different file.  It was defined in "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/writeByte.vhd", and is now defined in "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/writeByte.vhd".
-Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/writeByte.vhd" in Library work.
-Architecture behavioral of Entity writebyte is up to date.
-Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/readByte.vhd" in Library work.
-Entity <readbyte> compiled.
-Entity <readbyte> (Architecture <behavioral>) compiled.
 Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/modul.vhd" in Library work.
 Architecture behavioral of Entity modul is up to date.
-Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/testSchema.vhf" in Library work.
-Architecture behavioral of Entity testschema is up to date.
+Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/readByte.vhd" in Library work.
+Architecture behavioral of Entity readbyte is up to date.
+Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/writeByte.vhd" in Library work.
+Architecture behavioral of Entity writebyte is up to date.
+Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/tempRead.vhd" in Library work.
+Architecture behavioral of Entity tempread is up to date.
+Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/sequenceTestSchema.vhf" in Library work.
+Entity <sequenceTestSchema> compiled.
+Entity <sequenceTestSchema> (Architecture <BEHAVIORAL>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <testSchema> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <sequenceTestSchema> in library <work> (architecture <BEHAVIORAL>).
 
-Analyzing hierarchy for entity <writeByte> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <modul> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <readByte> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <modul> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <writeByte> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <tempRead> in library <work> (architecture <behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <testSchema> in library <work> (Architecture <behavioral>).
-Entity <testSchema> analyzed. Unit <testSchema> generated.
+Analyzing Entity <sequenceTestSchema> in library <work> (Architecture <BEHAVIORAL>).
+    Set user-defined property "DRIVE =  12" for instance <XLXI_5> in unit <sequenceTestSchema>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <XLXI_5> in unit <sequenceTestSchema>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_5> in unit <sequenceTestSchema>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_5> in unit <sequenceTestSchema>.
+    Set user-defined property "SLEW =  SLOW" for instance <XLXI_5> in unit <sequenceTestSchema>.
+Entity <sequenceTestSchema> analyzed. Unit <sequenceTestSchema> generated.
 
-Analyzing Entity <writeByte> in library <work> (Architecture <behavioral>).
-Entity <writeByte> analyzed. Unit <writeByte> generated.
+Analyzing Entity <modul> in library <work> (Architecture <behavioral>).
+Entity <modul> analyzed. Unit <modul> generated.
 
 Analyzing Entity <readByte> in library <work> (Architecture <behavioral>).
 Entity <readByte> analyzed. Unit <readByte> generated.
 
-Analyzing Entity <modul> in library <work> (Architecture <behavioral>).
-Entity <modul> analyzed. Unit <modul> generated.
+Analyzing Entity <writeByte> in library <work> (Architecture <behavioral>).
+Entity <writeByte> analyzed. Unit <writeByte> generated.
+
+Analyzing Entity <tempRead> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <startRead> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <tempRead> analyzed. Unit <tempRead> generated.
 
 
 =========================================================================
@@ -156,30 +161,26 @@ Entity <modul> analyzed. Unit <modul> generated.
 
 Performing bidirectional port resolution...
 
-Synthesizing Unit <writeByte>.
-    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/writeByte.vhd".
+Synthesizing Unit <modul>.
+    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/modul.vhd".
     Found finite state machine <FSM_0> for signal <present_state>.
     -----------------------------------------------------------------------
-    | States             | 4                                              |
-    | Transitions        | 8                                              |
-    | Inputs             | 3                                              |
-    | Outputs            | 4                                              |
+    | States             | 13                                             |
+    | Transitions        | 27                                             |
+    | Inputs             | 11                                             |
+    | Outputs            | 5                                              |
     | Clock              | clk                       (rising_edge)        |
     | Power Up State     | idle                                           |
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 1-bit register for signal <writeZero>.
-    Found 1-bit register for signal <writeOne>.
-    Found 1-bit 8-to-1 multiplexer for signal <data$mux0000> created at line 112.
-    Found 32-bit register for signal <write_counter>.
-    Found 32-bit adder for signal <write_counter$addsub0000> created at line 122.
+    Found 1-bit register for signal <readBit_detecion>.
+    Found 16-bit up counter for signal <clock_counter>.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred  34 D-type flip-flop(s).
-	inferred   1 Adder/Subtractor(s).
-	inferred   1 Multiplexer(s).
-Unit <writeByte> synthesized.
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <modul> synthesized.
 
 
 Synthesizing Unit <readByte>.
@@ -209,48 +210,74 @@ Synthesizing Unit <readByte>.
 Unit <readByte> synthesized.
 
 
-Synthesizing Unit <modul>.
-    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/modul.vhd".
+Synthesizing Unit <writeByte>.
+    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/writeByte.vhd".
     Found finite state machine <FSM_2> for signal <present_state>.
     -----------------------------------------------------------------------
-    | States             | 13                                             |
-    | Transitions        | 27                                             |
-    | Inputs             | 11                                             |
-    | Outputs            | 5                                              |
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
     | Clock              | clk                       (rising_edge)        |
     | Power Up State     | idle                                           |
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 1-bit register for signal <readBit_detecion>.
-    Found 16-bit up counter for signal <clock_counter>.
+    Found 1-bit register for signal <writeZero>.
+    Found 1-bit register for signal <writeOne>.
+    Found 1-bit 8-to-1 multiplexer for signal <data$mux0000> created at line 112.
+    Found 32-bit register for signal <write_counter>.
+    Found 32-bit adder for signal <write_counter$addsub0000> created at line 122.
     Summary:
 	inferred   1 Finite State Machine(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <writeByte> synthesized.
+
+
+Synthesizing Unit <tempRead>.
+    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/tempRead.vhd".
+    Using one-hot encoding for signal <present_state>.
+    Found 8-bit register for signal <outputData>.
+    Found 1-bit register for signal <startReset>.
+    Found 24-bit register for signal <tempData>.
+    Found 1-bit register for signal <startWrite>.
+    Found 3-bit subtractor for signal <$sub0000> created at line 228.
+    Found 22-bit register for signal <next_state>.
+    Found 22-bit register for signal <present_state>.
+    Found 2-bit up counter for signal <read_counter>.
+    Found 24-bit register for signal <tempDataBuffor>.
+    Summary:
 	inferred   1 Counter(s).
-	inferred   1 D-type flip-flop(s).
-Unit <modul> synthesized.
+	inferred 102 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <tempRead> synthesized.
 
 
-Synthesizing Unit <testSchema>.
-    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/testSchema.vhf".
-WARNING:Xst:653 - Signal <XLXI_3_writeReset_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-Unit <testSchema> synthesized.
+Synthesizing Unit <sequenceTestSchema>.
+    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/sequenceTestSchema.vhf".
+Unit <sequenceTestSchema> synthesized.
 
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 2
+# Adders/Subtractors                                   : 3
+ 3-bit subtractor                                      : 1
  32-bit adder                                          : 1
  4-bit adder                                           : 1
-# Counters                                             : 1
+# Counters                                             : 2
  16-bit up counter                                     : 1
-# Registers                                            : 15
- 1-bit register                                        : 12
+ 2-bit up counter                                      : 1
+# Registers                                            : 45
+ 1-bit register                                        : 38
+ 22-bit register                                       : 2
+ 24-bit register                                       : 1
  32-bit register                                       : 1
  5-bit register                                        : 1
- 8-bit register                                        : 1
+ 8-bit register                                        : 2
 # Comparators                                          : 1
  5-bit comparator greatequal                           : 1
 # Multiplexers                                         : 1
@@ -263,7 +290,28 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_2> for best encoding.
-Optimizing FSM <XLXI_3/present_state/FSM> on signal <present_state[1:4]> with user encoding.
+Optimizing FSM <XLXI_3/present_state/FSM> on signal <present_state[1:2]> with user encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ idle        | 00
+ waitforbusy | 01
+ writebit    | 10
+ increment   | 11
+-------------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <XLXI_2/present_state/FSM> on signal <present_state[1:5]> with one-hot encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ idle        | 00001
+ readbit     | 01000
+ waitforbusy | 00010
+ waitforread | 10000
+ done        | 00100
+-------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <XLXI_1/present_state/FSM> on signal <present_state[1:4]> with user encoding.
 ----------------------
  State    | Encoding
 ----------------------
@@ -281,40 +329,23 @@ Optimizing FSM <XLXI_3/present_state/FSM> on signal <present_state[1:4]> with us
  reset_c  | 1011
  reset_d  | 1100
 ----------------------
-Analyzing FSM <FSM_1> for best encoding.
-Optimizing FSM <XLXI_2/present_state/FSM> on signal <present_state[1:5]> with one-hot encoding.
--------------------------
- State       | Encoding
--------------------------
- idle        | 00001
- readbit     | 01000
- waitforbusy | 00010
- waitforread | 10000
- done        | 00100
--------------------------
-Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <XLXI_1/present_state/FSM> on signal <present_state[1:2]> with user encoding.
--------------------------
- State       | Encoding
--------------------------
- idle        | 00
- waitforbusy | 01
- writebit    | 10
- increment   | 11
--------------------------
+WARNING:Xst:1293 - FF/Latch <FFd5> has a constant value of 1 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <outputData_0> (without init value) has a constant value of 0 in block <XLXI_4>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
 # FSMs                                                 : 3
-# Adders/Subtractors                                   : 2
+# Adders/Subtractors                                   : 3
+ 3-bit subtractor                                      : 1
  32-bit adder                                          : 1
  4-bit adder                                           : 1
-# Counters                                             : 1
+# Counters                                             : 2
  16-bit up counter                                     : 1
-# Registers                                            : 57
- Flip-Flops                                            : 57
+ 2-bit up counter                                      : 1
+# Registers                                            : 159
+ Flip-Flops                                            : 159
 # Comparators                                          : 1
  5-bit comparator greatequal                           : 1
 # Multiplexers                                         : 1
@@ -325,19 +356,24 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <outputData_0> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
 
-Optimizing unit <testSchema> ...
-
-Optimizing unit <writeByte> ...
-
-Optimizing unit <readByte> ...
+Optimizing unit <sequenceTestSchema> ...
 
 Optimizing unit <modul> ...
 
+Optimizing unit <readByte> ...
+
+Optimizing unit <writeByte> ...
+
+Optimizing unit <tempRead> ...
+WARNING:Xst:1710 - FF/Latch <outputData_2> (without init value) has a constant value of 1 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_2/present_state_FSM_FFd5> has a constant value of 1 in block <sequenceTestSchema>. This FF/Latch will be trimmed during the optimization process.
+
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block testSchema, actual ratio is 11.
-FlipFlop XLXI_3/present_state_FSM_FFd1 has been replicated 1 time(s)
+INFO:Xst:2261 - The FF/Latch <XLXI_4/outputData_5> in Unit <sequenceTestSchema> is equivalent to the following 2 FFs/Latches, which will be removed : <XLXI_4/outputData_4> <XLXI_4/outputData_1> 
+Found area constraint ratio of 100 (+ 5) on block sequenceTestSchema, actual ratio is 17.
 
 Final Macro Processing ...
 
@@ -345,8 +381,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 85
- Flip-Flops                                            : 85
+# Registers                                            : 183
+ Flip-Flops                                            : 183
 
 =========================================================================
 
@@ -365,44 +401,46 @@ Partition Implementation Status
 *                            Final Report                               *
 =========================================================================
 Final Results
-RTL Top Level Output File Name     : testSchema.ngr
-Top Level Output File Name         : testSchema
+RTL Top Level Output File Name     : sequenceTestSchema.ngr
+Top Level Output File Name         : sequenceTestSchema
 Output Format                      : NGC
 Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 15
+# IOs                              : 28
 
 Cell Usage :
-# BELS                             : 319
+# BELS                             : 377
 #      GND                         : 1
-#      INV                         : 4
-#      LUT1                        : 46
-#      LUT2                        : 9
-#      LUT2_D                      : 6
+#      INV                         : 6
+#      LUT1                        : 47
+#      LUT2                        : 25
 #      LUT2_L                      : 1
-#      LUT3                        : 20
+#      LUT3                        : 38
 #      LUT3_D                      : 1
-#      LUT3_L                      : 3
-#      LUT4                        : 114
-#      LUT4_D                      : 4
-#      LUT4_L                      : 8
+#      LUT3_L                      : 2
+#      LUT4                        : 139
+#      LUT4_D                      : 7
+#      LUT4_L                      : 6
 #      MUXCY                       : 46
 #      MUXF5                       : 7
+#      MUXF6                       : 1
+#      OR3                         : 1
 #      VCC                         : 1
 #      XORCY                       : 48
-# FlipFlops/Latches                : 85
-#      FD                          : 44
-#      FDE                         : 9
-#      FDR                         : 21
-#      FDS                         : 10
+# FlipFlops/Latches                : 183
+#      FD                          : 70
+#      FDE                         : 59
+#      FDR                         : 29
+#      FDS                         : 24
 #      FDSE                        : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 14
-#      IBUF                        : 3
-#      OBUF                        : 11
+# IO Buffers                       : 27
+#      IBUF                        : 1
+#      IOBUF                       : 1
+#      OBUF                        : 25
 =========================================================================
 
 Device utilization summary:
@@ -410,11 +448,11 @@ Device utilization summary:
 
 Selected Device : 3s100evq100-5 
 
- Number of Slices:                      114  out of    960    11%  
- Number of Slice Flip Flops:             85  out of   1920     4%  
- Number of 4 input LUTs:                216  out of   1920    11%  
- Number of IOs:                          15
- Number of bonded IOBs:                  15  out of     66    22%  
+ Number of Slices:                      161  out of    960    16%  
+ Number of Slice Flip Flops:            183  out of   1920     9%  
+ Number of 4 input LUTs:                272  out of   1920    14%  
+ Number of IOs:                          28
+ Number of bonded IOBs:                  28  out of     66    42%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -438,7 +476,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 85    |
+clk                                | BUFGP                  | 183   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -449,9 +487,9 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 8.726ns (Maximum Frequency: 114.593MHz)
-   Minimum input arrival time before clock: 2.369ns
-   Maximum output required time after clock: 5.878ns
+   Minimum period: 8.335ns (Maximum Frequency: 119.980MHz)
+   Minimum input arrival time before clock: 3.402ns
+   Maximum output required time after clock: 5.668ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -460,82 +498,82 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 8.726ns (frequency: 114.593MHz)
-  Total number of paths / destination ports: 6499 / 121
+  Clock period: 8.335ns (frequency: 119.980MHz)
+  Total number of paths / destination ports: 4533 / 291
 -------------------------------------------------------------------------
-Delay:               8.726ns (Levels of Logic = 6)
-  Source:            XLXI_3/clock_counter_7 (FF)
-  Destination:       XLXI_3/clock_counter_15 (FF)
+Delay:               8.335ns (Levels of Logic = 6)
+  Source:            XLXI_1/present_state_FSM_FFd2 (FF)
+  Destination:       XLXI_1/clock_counter_15 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: XLXI_3/clock_counter_7 to XLXI_3/clock_counter_15
+  Data Path: XLXI_1/present_state_FSM_FFd2 to XLXI_1/clock_counter_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             10   0.514   0.780  XLXI_3/clock_counter_7 (XLXI_3/clock_counter_7)
-     LUT4:I2->O            1   0.612   0.509  XLXI_3/present_state_FSM_FFd4-In24 (XLXI_3/present_state_FSM_FFd4-In24)
-     LUT4:I0->O            2   0.612   0.383  XLXI_3/present_state_FSM_FFd4-In69 (XLXI_3/present_state_FSM_FFd4-In69)
-     LUT4:I3->O            1   0.612   0.357  XLXI_3/present_state_FSM_FFd4-In83 (XLXI_3/present_state_FSM_FFd4-In83)
-     MUXF5:S->O            1   0.641   0.360  XLXI_3/present_state_FSM_FFd4-In51_SW2 (N44)
-     LUT4:I3->O            2   0.612   0.449  XLXI_3/present_state_FSM_FFd4-In125 (XLXI_3/present_state_FSM_FFd4-In125)
-     LUT4:I1->O           16   0.612   0.879  XLXI_3/present_state_FSM_Out21 (XLXI_3/present_state_cmp_eq0009)
-     FDR:R                     0.795          XLXI_3/clock_counter_0
+     FDS:C->Q             16   0.514   0.909  XLXI_1/present_state_FSM_FFd2 (XLXI_1/present_state_FSM_FFd2)
+     LUT3:I2->O            1   0.612   0.360  XLXI_1/present_state_FSM_FFd4-In39 (XLXI_1/present_state_FSM_FFd4-In39)
+     LUT4:I3->O            1   0.612   0.360  XLXI_1/present_state_FSM_FFd4-In91_SW0 (N49)
+     LUT4_L:I3->LO         1   0.612   0.103  XLXI_1/present_state_FSM_FFd4-In91 (XLXI_1/present_state_FSM_FFd4-In91)
+     LUT4:I3->O            1   0.612   0.360  XLXI_1/present_state_FSM_FFd4-In127 (XLXI_1/present_state_FSM_FFd4-In127)
+     LUT4:I3->O            2   0.612   0.383  XLXI_1/present_state_FSM_FFd4-In194 (XLXI_1/present_state_FSM_FFd4-In)
+     LUT4:I3->O           16   0.612   0.879  XLXI_1/present_state_FSM_Out2136 (XLXI_1/present_state_cmp_eq0009)
+     FDR:R                     0.795          XLXI_1/clock_counter_0
     ----------------------------------------
-    Total                      8.726ns (5.010ns logic, 3.716ns route)
-                                       (57.4% logic, 42.6% route)
+    Total                      8.335ns (4.981ns logic, 3.354ns route)
+                                       (59.8% logic, 40.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 4 / 4
+  Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Offset:              2.369ns (Levels of Logic = 2)
-  Source:            start_read (PAD)
-  Destination:       XLXI_2/present_state_FSM_FFd4 (FF)
+Offset:              3.402ns (Levels of Logic = 2)
+  Source:            start (PAD)
+  Destination:       XLXI_4/next_state_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: start_read to XLXI_2/present_state_FSM_FFd4
+  Data Path: start to XLXI_4/next_state_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.106   0.383  start_read_IBUF (start_read_IBUF)
-     LUT4:I3->O            1   0.612   0.000  XLXI_2/present_state_FSM_FFd4-In1 (XLXI_2/present_state_FSM_FFd4-In1)
-     FDS:D                     0.268          XLXI_2/present_state_FSM_FFd4
+     IBUF:I->O             2   1.106   0.532  start_IBUF (start_IBUF)
+     LUT2:I0->O            1   0.612   0.357  XLXI_4/next_state_mux0004<21>2 (XLXI_4/next_state_mux0004<21>2)
+     FDS:S                     0.795          XLXI_4/next_state_0
     ----------------------------------------
-    Total                      2.369ns (1.986ns logic, 0.383ns route)
-                                       (83.8% logic, 16.2% route)
+    Total                      3.402ns (2.513ns logic, 0.889ns route)
+                                       (73.9% logic, 26.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 15 / 11
+  Total number of paths / destination ports: 29 / 26
 -------------------------------------------------------------------------
-Offset:              5.878ns (Levels of Logic = 2)
-  Source:            XLXI_1/present_state_FSM_FFd2 (FF)
-  Destination:       busy_write (PAD)
+Offset:              5.668ns (Levels of Logic = 2)
+  Source:            XLXI_1/present_state_FSM_FFd1 (FF)
+  Destination:       wire_inout (PAD)
   Source Clock:      clk rising
 
-  Data Path: XLXI_1/present_state_FSM_FFd2 to busy_write
+  Data Path: XLXI_1/present_state_FSM_FFd1 to wire_inout
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              37   0.514   1.226  XLXI_1/present_state_FSM_FFd2 (XLXI_1/present_state_FSM_FFd2)
-     LUT2:I0->O            1   0.612   0.357  XLXI_1/present_state_FSM_Out31 (busy_write_OBUF)
-     OBUF:I->O                 3.169          busy_write_OBUF (busy_write)
+     FDS:C->Q             15   0.514   1.016  XLXI_1/present_state_FSM_FFd1 (XLXI_1/present_state_FSM_FFd1)
+     LUT4:I0->O            1   0.612   0.357  XLXI_1/present_state_FSM_Out31 (XLXN_16)
+     IOBUF:T->IO               3.169          XLXI_5 (wire_inout)
     ----------------------------------------
-    Total                      5.878ns (4.295ns logic, 1.583ns route)
-                                       (73.1% logic, 26.9% route)
+    Total                      5.668ns (4.295ns logic, 1.373ns route)
+                                       (75.8% logic, 24.2% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.58 secs
+Total CPU time to Xst completion: 7.54 secs
  
 --> 
 
-Total memory usage is 279616 kilobytes
+Total memory usage is 291968 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    9 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 
