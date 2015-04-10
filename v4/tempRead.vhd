@@ -227,6 +227,7 @@ begin
 				when captureByte_endOrNot =>
 					tempDataBuffor ( (read_counter * 8 - 1) downto ( (read_counter -1) * 8 )) <= inputData;
 				when others =>
+					read_counter <= 0;
 					startRead <= '0';
 			end case;		
 			
