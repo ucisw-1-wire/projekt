@@ -12,37 +12,37 @@ FL "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/modul.vhd" 201
 FL "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/readByte.vhd" 2015/04/08.01:40:09 P.20131013
 FL "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/testSchema.vhf" 2015/03/30.01:03:49 P.20131013
 FL "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW 2/svn/trunk/v4/writeByte.vhd" 2015/04/08.01:14:40 P.20131013
-FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/modul.vhd 2015/04/08.09:44:31 P.20131013
-EN work/modul 1428683122 \
+FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/modul.vhd 2015/04/16.22:13:22 P.20131013
+EN work/modul 1429215666 \
       FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/modul.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/modul/Behavioral 1428683123 \
+AR work/modul/Behavioral 1429215667 \
       FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/modul.vhd \
-      EN work/modul 1428683122
-FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/readByte.vhd 2015/04/10.18:00:40 P.20131013
-EN work/readByte 1428683124 \
+      EN work/modul 1429215666
+FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/readByte.vhd 2015/04/16.22:13:23 P.20131013
+EN work/readByte 1429215668 \
       FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/readByte.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/readByte/Behavioral 1428683125 \
+AR work/readByte/Behavioral 1429215669 \
       FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/readByte.vhd \
-      EN work/readByte 1428683124
-FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/sequenceTestSchema.vhf 2015/04/10.18:25:18 P.20131013
-EN work/sequenceTestSchema 1428683130 \
+      EN work/readByte 1429215668
+FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/sequenceTestSchema.vhf 2015/04/16.22:13:23 P.20131013
+EN work/sequenceTestSchema 1429215674 \
       FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/sequenceTestSchema.vhf \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/sequenceTestSchema/BEHAVIORAL 1428683131 \
+AR work/sequenceTestSchema/BEHAVIORAL 1429215675 \
       FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/sequenceTestSchema.vhf \
-      EN work/sequenceTestSchema 1428683130 CP modul CP readByte CP writeByte \
+      EN work/sequenceTestSchema 1429215674 CP modul CP readByte CP writeByte \
       CP tempRead CP IOBUF CP GND CP OR3
-FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/tempRead.vhd 2015/04/10.18:09:44 P.20131013
-EN work/tempRead 1428683128 \
+FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/tempRead.vhd 2015/04/16.22:13:22 P.20131013
+EN work/tempRead 1429215672 \
       FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/tempRead.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/tempRead/Behavioral 1428683129 \
+AR work/tempRead/Behavioral 1429215673 \
       FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/tempRead.vhd \
-      EN work/tempRead 1428683128
+      EN work/tempRead 1429215672
 FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/testSchema.vhf 2015/04/08.08:32:38 P.20131013
 EN work/testSchema 1428681982 \
       FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/testSchema.vhf \
@@ -51,11 +51,11 @@ EN work/testSchema 1428681982 \
 AR work/testSchema/BEHAVIORAL 1428681983 \
       FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/testSchema.vhf \
       EN work/testSchema 1428681982 CP writeByte CP readByte CP modul
-FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/writeByte.vhd 2015/04/08.08:58:07 P.20131013
-EN work/writeByte 1428683126 \
+FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/writeByte.vhd 2015/04/16.22:13:23 P.20131013
+EN work/writeByte 1429215670 \
       FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/writeByte.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/writeByte/Behavioral 1428683127 \
+AR work/writeByte/Behavioral 1429215671 \
       FL D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/writeByte.vhd \
-      EN work/writeByte 1428683126
+      EN work/writeByte 1429215670

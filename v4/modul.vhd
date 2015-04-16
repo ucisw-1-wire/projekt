@@ -178,6 +178,7 @@ begin
 		when idle =>
 			wire_out<='1';
 			
+			
 		when write_1A =>
 			
 			wire_out<='0';
@@ -223,7 +224,7 @@ end process;
 process ( clk) is
 begin
 		if rising_edge( Clk ) and ( present_state = read_C or present_state = reset_C)  then
-			readBit_detecion <= wire_in;
+			readBit_detecion <=  not wire_in;
 		end if;
 end process;
 

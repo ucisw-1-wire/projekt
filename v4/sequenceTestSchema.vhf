@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : sequenceTestSchema.vhf
--- /___/   /\     Timestamp : 04/10/2015 18:25:18
+-- /___/   /\     Timestamp : 04/16/2015 23:42:11
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -50,12 +50,12 @@ architecture BEHAVIORAL of sequenceTestSchema is
    signal XLXN_12    : std_logic_vector (7 downto 0);
    signal XLXN_15    : std_logic;
    signal XLXN_16    : std_logic;
-   signal XLXN_17    : std_logic;
    signal XLXN_18    : std_logic;
    signal XLXN_22    : std_logic;
    signal XLXN_23    : std_logic;
    signal XLXN_25    : std_logic;
    signal XLXN_26    : std_logic;
+   signal XLXN_27    : std_logic;
    component modul
       port ( clk              : in    std_logic; 
              writeOne         : in    std_logic; 
@@ -88,20 +88,6 @@ architecture BEHAVIORAL of sequenceTestSchema is
              busy      : out   std_logic);
    end component;
    
-   component tempRead
-      port ( clk               : in    std_logic; 
-             start             : in    std_logic; 
-             isBusy            : in    std_logic; 
-             readBit_detection : in    std_logic; 
-             inputData         : in    std_logic_vector (7 downto 0); 
-             busy              : out   std_logic; 
-             startRead         : out   std_logic; 
-             startWrite        : out   std_logic; 
-             startReset        : out   std_logic; 
-             tempData          : out   std_logic_vector (23 downto 0); 
-             outputData        : out   std_logic_vector (7 downto 0));
-   end component;
-   
    component IOBUF
       port ( I  : in    std_logic; 
              IO : inout std_logic; 
@@ -128,10 +114,25 @@ architecture BEHAVIORAL of sequenceTestSchema is
    end component;
    attribute BOX_TYPE of OR3 : component is "BLACK_BOX";
    
+   component tempRead
+      port ( clk               : in    std_logic; 
+             start             : in    std_logic; 
+             isBusy            : in    std_logic; 
+             readBit_detection : in    std_logic; 
+             inputData         : in    std_logic_vector (7 downto 0); 
+             busy              : out   std_logic; 
+             startRead         : out   std_logic; 
+             startWrite        : out   std_logic; 
+             startReset        : out   std_logic; 
+             tempData          : out   std_logic_vector (23 downto 0); 
+             outputData        : out   std_logic_vector (7 downto 0); 
+             wire_in           : in    std_logic);
+   end component;
+   
 begin
    XLXI_1 : modul
       port map (clk=>clk,
-                wire_in=>XLXN_17,
+                wire_in=>XLXN_27,
                 writeOne=>XLXN_1,
                 writeRead=>XLXN_4,
                 writeReset=>XLXN_8,
@@ -158,23 +159,10 @@ begin
                 writeOne=>XLXN_1,
                 writeZero=>XLXN_3);
    
-   XLXI_4 : tempRead
-      port map (clk=>clk,
-                inputData(7 downto 0)=>XLXN_12(7 downto 0),
-                isBusy=>XLXN_26,
-                readBit_detection=>XLXN_15,
-                start=>start,
-                busy=>busy,
-                outputData(7 downto 0)=>XLXN_9(7 downto 0),
-                startRead=>XLXN_11,
-                startReset=>XLXN_8,
-                startWrite=>XLXN_10,
-                tempData(23 downto 0)=>tempData(23 downto 0));
-   
    XLXI_5 : IOBUF
       port map (I=>XLXN_18,
                 T=>XLXN_16,
-                O=>XLXN_17,
+                O=>XLXN_27,
                 IO=>wire_inout);
    
    XLXI_6 : GND
@@ -185,6 +173,20 @@ begin
                 I1=>XLXN_25,
                 I2=>XLXN_23,
                 O=>XLXN_26);
+   
+   XLXI_8 : tempRead
+      port map (clk=>clk,
+                inputData(7 downto 0)=>XLXN_12(7 downto 0),
+                isBusy=>XLXN_26,
+                readBit_detection=>XLXN_15,
+                start=>start,
+                wire_in=>XLXN_27,
+                busy=>busy,
+                outputData(7 downto 0)=>XLXN_9(7 downto 0),
+                startRead=>XLXN_11,
+                startReset=>XLXN_8,
+                startWrite=>XLXN_10,
+                tempData(23 downto 0)=>tempData(23 downto 0));
    
 end BEHAVIORAL;
 

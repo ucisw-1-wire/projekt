@@ -6,4 +6,4 @@ MODULE sequenceTestSchema
 	SUBMODULE writeByte
 		INSTANCE XLXI_3
 	SUBMODULE tempRead
-		INSTANCE XLXI_4
+		INSTANCE XLXI_8

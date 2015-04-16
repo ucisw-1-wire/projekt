@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: sequenceTestSchema.prj
 
@@ -107,19 +107,21 @@ Slice Utilization Ratio Delta      : 5
 Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/modul.vhd" in Library work.
 Architecture behavioral of Entity modul is up to date.
 Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/readByte.vhd" in Library work.
-Architecture behavioral of Entity readbyte is up to date.
+Entity <readbyte> compiled.
+Entity <readbyte> (Architecture <behavioral>) compiled.
 Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/writeByte.vhd" in Library work.
-Architecture behavioral of Entity writebyte is up to date.
+Entity <writebyte> compiled.
+Entity <writebyte> (Architecture <behavioral>) compiled.
 Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/tempRead.vhd" in Library work.
 Architecture behavioral of Entity tempread is up to date.
 Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/sequenceTestSchema.vhf" in Library work.
-Entity <sequenceTestSchema> compiled.
-Entity <sequenceTestSchema> (Architecture <BEHAVIORAL>) compiled.
+Entity <sequencetestschema> compiled.
+Entity <sequencetestschema> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <sequenceTestSchema> in library <work> (architecture <BEHAVIORAL>).
+Analyzing hierarchy for entity <sequenceTestSchema> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <modul> in library <work> (architecture <behavioral>).
 
@@ -133,7 +135,7 @@ Analyzing hierarchy for entity <tempRead> in library <work> (architecture <behav
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <sequenceTestSchema> in library <work> (Architecture <BEHAVIORAL>).
+Analyzing Entity <sequenceTestSchema> in library <work> (Architecture <behavioral>).
     Set user-defined property "DRIVE =  12" for instance <XLXI_5> in unit <sequenceTestSchema>.
     Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <XLXI_5> in unit <sequenceTestSchema>.
     Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_5> in unit <sequenceTestSchema>.
@@ -151,7 +153,6 @@ Analyzing Entity <writeByte> in library <work> (Architecture <behavioral>).
 Entity <writeByte> analyzed. Unit <writeByte> generated.
 
 Analyzing Entity <tempRead> in library <work> (Architecture <behavioral>).
-INFO:Xst:2679 - Register <startRead> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
 Entity <tempRead> analyzed. Unit <tempRead> generated.
 
 
@@ -242,16 +243,17 @@ Synthesizing Unit <tempRead>.
     Found 8-bit register for signal <outputData>.
     Found 1-bit register for signal <startReset>.
     Found 24-bit register for signal <tempData>.
+    Found 1-bit register for signal <startRead>.
     Found 1-bit register for signal <startWrite>.
-    Found 3-bit subtractor for signal <$sub0000> created at line 228.
-    Found 22-bit register for signal <next_state>.
-    Found 22-bit register for signal <present_state>.
-    Found 2-bit up counter for signal <read_counter>.
+    Found 3-bit subtractor for signal <$sub0000> created at line 248.
+    Found 25-bit register for signal <next_state>.
+    Found 25-bit register for signal <present_state>.
+    Found 2-bit register for signal <read_counter>.
+    Found 2-bit adder for signal <read_counter$addsub0000> created at line 246.
     Found 24-bit register for signal <tempDataBuffor>.
     Summary:
-	inferred   1 Counter(s).
-	inferred 102 D-type flip-flop(s).
-	inferred   1 Adder/Subtractor(s).
+	inferred 111 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
 Unit <tempRead> synthesized.
 
 
@@ -264,17 +266,18 @@ Unit <sequenceTestSchema> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 3
+# Adders/Subtractors                                   : 4
+ 2-bit adder                                           : 1
  3-bit subtractor                                      : 1
  32-bit adder                                          : 1
  4-bit adder                                           : 1
-# Counters                                             : 2
+# Counters                                             : 1
  16-bit up counter                                     : 1
- 2-bit up counter                                      : 1
-# Registers                                            : 45
- 1-bit register                                        : 38
- 22-bit register                                       : 2
+# Registers                                            : 47
+ 1-bit register                                        : 39
+ 2-bit register                                        : 1
  24-bit register                                       : 1
+ 25-bit register                                       : 2
  32-bit register                                       : 1
  5-bit register                                        : 1
  8-bit register                                        : 2
@@ -329,7 +332,6 @@ Optimizing FSM <XLXI_1/present_state/FSM> on signal <present_state[1:4]> with us
  reset_c  | 1011
  reset_d  | 1100
 ----------------------
-WARNING:Xst:1293 - FF/Latch <FFd5> has a constant value of 1 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <outputData_0> (without init value) has a constant value of 0 in block <XLXI_4>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
@@ -337,15 +339,15 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # FSMs                                                 : 3
-# Adders/Subtractors                                   : 3
+# Adders/Subtractors                                   : 4
+ 2-bit adder                                           : 1
  3-bit subtractor                                      : 1
  32-bit adder                                          : 1
  4-bit adder                                           : 1
-# Counters                                             : 2
+# Counters                                             : 1
  16-bit up counter                                     : 1
- 2-bit up counter                                      : 1
-# Registers                                            : 159
- Flip-Flops                                            : 159
+# Registers                                            : 168
+ Flip-Flops                                            : 168
 # Comparators                                          : 1
  5-bit comparator greatequal                           : 1
 # Multiplexers                                         : 1
@@ -368,12 +370,11 @@ Optimizing unit <writeByte> ...
 
 Optimizing unit <tempRead> ...
 WARNING:Xst:1710 - FF/Latch <outputData_2> (without init value) has a constant value of 1 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <XLXI_2/present_state_FSM_FFd5> has a constant value of 1 in block <sequenceTestSchema>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
 INFO:Xst:2261 - The FF/Latch <XLXI_4/outputData_5> in Unit <sequenceTestSchema> is equivalent to the following 2 FFs/Latches, which will be removed : <XLXI_4/outputData_4> <XLXI_4/outputData_1> 
-Found area constraint ratio of 100 (+ 5) on block sequenceTestSchema, actual ratio is 17.
+Found area constraint ratio of 100 (+ 5) on block sequenceTestSchema, actual ratio is 18.
 
 Final Macro Processing ...
 
@@ -381,8 +382,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 183
- Flip-Flops                                            : 183
+# Registers                                            : 191
+ Flip-Flops                                            : 191
 
 =========================================================================
 
@@ -411,30 +412,30 @@ Design Statistics
 # IOs                              : 28
 
 Cell Usage :
-# BELS                             : 377
+# BELS                             : 384
 #      GND                         : 1
 #      INV                         : 6
 #      LUT1                        : 47
-#      LUT2                        : 25
+#      LUT2                        : 26
 #      LUT2_L                      : 1
-#      LUT3                        : 38
+#      LUT3                        : 39
 #      LUT3_D                      : 1
 #      LUT3_L                      : 2
-#      LUT4                        : 139
+#      LUT4                        : 143
 #      LUT4_D                      : 7
-#      LUT4_L                      : 6
+#      LUT4_L                      : 8
 #      MUXCY                       : 46
-#      MUXF5                       : 7
+#      MUXF5                       : 6
 #      MUXF6                       : 1
 #      OR3                         : 1
 #      VCC                         : 1
 #      XORCY                       : 48
-# FlipFlops/Latches                : 183
-#      FD                          : 70
-#      FDE                         : 59
-#      FDR                         : 29
-#      FDS                         : 24
-#      FDSE                        : 1
+# FlipFlops/Latches                : 191
+#      FD                          : 74
+#      FDE                         : 57
+#      FDR                         : 31
+#      FDS                         : 27
+#      FDSE                        : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 27
@@ -448,9 +449,9 @@ Device utilization summary:
 
 Selected Device : 3s100evq100-5 
 
- Number of Slices:                      161  out of    960    16%  
- Number of Slice Flip Flops:            183  out of   1920     9%  
- Number of 4 input LUTs:                272  out of   1920    14%  
+ Number of Slices:                      166  out of    960    17%  
+ Number of Slice Flip Flops:            191  out of   1920     9%  
+ Number of 4 input LUTs:                280  out of   1920    14%  
  Number of IOs:                          28
  Number of bonded IOBs:                  28  out of     66    42%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -476,7 +477,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 183   |
+clk                                | BUFGP                  | 191   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -499,7 +500,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.335ns (frequency: 119.980MHz)
-  Total number of paths / destination ports: 4533 / 291
+  Total number of paths / destination ports: 4613 / 303
 -------------------------------------------------------------------------
 Delay:               8.335ns (Levels of Logic = 6)
   Source:            XLXI_1/present_state_FSM_FFd2 (FF)
@@ -513,7 +514,7 @@ Delay:               8.335ns (Levels of Logic = 6)
     ----------------------------------------  ------------
      FDS:C->Q             16   0.514   0.909  XLXI_1/present_state_FSM_FFd2 (XLXI_1/present_state_FSM_FFd2)
      LUT3:I2->O            1   0.612   0.360  XLXI_1/present_state_FSM_FFd4-In39 (XLXI_1/present_state_FSM_FFd4-In39)
-     LUT4:I3->O            1   0.612   0.360  XLXI_1/present_state_FSM_FFd4-In91_SW0 (N49)
+     LUT4:I3->O            1   0.612   0.360  XLXI_1/present_state_FSM_FFd4-In91_SW0 (N55)
      LUT4_L:I3->LO         1   0.612   0.103  XLXI_1/present_state_FSM_FFd4-In91 (XLXI_1/present_state_FSM_FFd4-In91)
      LUT4:I3->O            1   0.612   0.360  XLXI_1/present_state_FSM_FFd4-In127 (XLXI_1/present_state_FSM_FFd4-In127)
      LUT4:I3->O            2   0.612   0.383  XLXI_1/present_state_FSM_FFd4-In194 (XLXI_1/present_state_FSM_FFd4-In)
@@ -537,7 +538,7 @@ Offset:              3.402ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             2   1.106   0.532  start_IBUF (start_IBUF)
-     LUT2:I0->O            1   0.612   0.357  XLXI_4/next_state_mux0004<21>2 (XLXI_4/next_state_mux0004<21>2)
+     LUT2:I0->O            1   0.612   0.357  XLXI_4/next_state_mux0004<24>2 (XLXI_4/next_state_mux0004<24>2)
      FDS:S                     0.795          XLXI_4/next_state_0
     ----------------------------------------
     Total                      3.402ns (2.513ns logic, 0.889ns route)
@@ -567,13 +568,13 @@ Offset:              5.668ns (Levels of Logic = 2)
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.54 secs
+Total CPU time to Xst completion: 7.19 secs
  
 --> 
 
-Total memory usage is 291968 kilobytes
+Total memory usage is 292544 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

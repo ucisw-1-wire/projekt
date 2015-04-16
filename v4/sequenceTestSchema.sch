@@ -7,7 +7,6 @@
     </attr>
     <netlist>
         <signal name="XLXN_1" />
-        <signal name="XLXN_2" />
         <signal name="XLXN_3" />
         <signal name="XLXN_4" />
         <signal name="XLXN_8" />
@@ -15,28 +14,20 @@
         <signal name="XLXN_10" />
         <signal name="XLXN_11" />
         <signal name="XLXN_12(7:0)" />
-        <signal name="XLXN_13" />
-        <signal name="XLXN_14" />
         <signal name="XLXN_15" />
         <signal name="XLXN_16" />
         <signal name="XLXN_17" />
         <signal name="XLXN_18" />
-        <signal name="XLXN_19" />
-        <signal name="XLXN_20" />
-        <signal name="XLXN_21" />
         <signal name="XLXN_22" />
         <signal name="XLXN_23" />
-        <signal name="XLXN_24" />
         <signal name="XLXN_25" />
         <signal name="XLXN_26" />
-        <signal name="XLXN_27" />
-        <signal name="XLXN_28" />
-        <signal name="XLXN_29" />
         <signal name="clk" />
         <signal name="tempData(23:0)" />
         <signal name="busy" />
         <signal name="start" />
         <signal name="wire_inout" />
+        <signal name="XLXN_27" />
         <port polarity="Input" name="clk" />
         <port polarity="Output" name="tempData(23:0)" />
         <port polarity="Output" name="busy" />
@@ -79,24 +70,6 @@
             <line x2="384" y1="-128" y2="-128" x1="320" />
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
-        <blockdef name="tempRead">
-            <timestamp>2015-4-10T16:11:2</timestamp>
-            <rect width="352" x="64" y="-384" height="384" />
-            <line x2="0" y1="-352" y2="-352" x1="64" />
-            <line x2="0" y1="-272" y2="-272" x1="64" />
-            <line x2="0" y1="-192" y2="-192" x1="64" />
-            <line x2="0" y1="-112" y2="-112" x1="64" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <line x2="480" y1="-352" y2="-352" x1="416" />
-            <line x2="480" y1="-288" y2="-288" x1="416" />
-            <line x2="480" y1="-224" y2="-224" x1="416" />
-            <line x2="480" y1="-160" y2="-160" x1="416" />
-            <rect width="64" x="416" y="-108" height="24" />
-            <line x2="480" y1="-96" y2="-96" x1="416" />
-            <rect width="64" x="416" y="-44" height="24" />
-            <line x2="480" y1="-32" y2="-32" x1="416" />
-        </blockdef>
         <blockdef name="iobuf">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="128" y1="-128" y2="-128" x1="224" />
@@ -136,13 +109,32 @@
             <arc ex="112" ey="-176" sx="192" sy="-128" r="88" cx="116" cy="-88" />
             <line x2="48" y1="-176" y2="-176" x1="112" />
         </blockdef>
+        <blockdef name="tempRead">
+            <timestamp>2015-4-16T21:34:9</timestamp>
+            <line x2="0" y1="32" y2="32" x1="64" />
+            <line x2="0" y1="-352" y2="-352" x1="64" />
+            <line x2="0" y1="-272" y2="-272" x1="64" />
+            <line x2="0" y1="-192" y2="-192" x1="64" />
+            <line x2="0" y1="-112" y2="-112" x1="64" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="480" y1="-352" y2="-352" x1="416" />
+            <line x2="480" y1="-288" y2="-288" x1="416" />
+            <line x2="480" y1="-224" y2="-224" x1="416" />
+            <line x2="480" y1="-160" y2="-160" x1="416" />
+            <rect width="64" x="416" y="-108" height="24" />
+            <line x2="480" y1="-96" y2="-96" x1="416" />
+            <rect width="64" x="416" y="-44" height="24" />
+            <line x2="480" y1="-32" y2="-32" x1="416" />
+            <rect width="352" x="64" y="-384" height="448" />
+        </blockdef>
         <block symbolname="modul" name="XLXI_1">
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="XLXN_1" name="writeOne" />
             <blockpin signalname="XLXN_3" name="writeZero" />
             <blockpin signalname="XLXN_4" name="writeRead" />
             <blockpin signalname="XLXN_8" name="writeReset" />
-            <blockpin signalname="XLXN_17" name="wire_in" />
+            <blockpin signalname="XLXN_27" name="wire_in" />
             <blockpin signalname="XLXN_22" name="busy" />
             <blockpin signalname="XLXN_15" name="readBit_detecion" />
             <blockpin signalname="XLXN_16" name="wire_out" />
@@ -165,7 +157,22 @@
             <blockpin signalname="XLXN_3" name="writeZero" />
             <blockpin signalname="XLXN_23" name="busy" />
         </block>
-        <block symbolname="tempRead" name="XLXI_4">
+        <block symbolname="iobuf" name="XLXI_5">
+            <blockpin signalname="XLXN_18" name="I" />
+            <blockpin signalname="wire_inout" name="IO" />
+            <blockpin signalname="XLXN_27" name="O" />
+            <blockpin signalname="XLXN_16" name="T" />
+        </block>
+        <block symbolname="gnd" name="XLXI_6">
+            <blockpin signalname="XLXN_18" name="G" />
+        </block>
+        <block symbolname="or3" name="XLXI_7">
+            <blockpin signalname="XLXN_22" name="I0" />
+            <blockpin signalname="XLXN_25" name="I1" />
+            <blockpin signalname="XLXN_23" name="I2" />
+            <blockpin signalname="XLXN_26" name="O" />
+        </block>
+        <block symbolname="tempRead" name="XLXI_8">
             <blockpin signalname="clk" name="clk" />
             <blockpin signalname="start" name="start" />
             <blockpin signalname="XLXN_26" name="isBusy" />
@@ -177,21 +184,7 @@
             <blockpin signalname="XLXN_8" name="startReset" />
             <blockpin signalname="tempData(23:0)" name="tempData(23:0)" />
             <blockpin signalname="XLXN_9(7:0)" name="outputData(7:0)" />
-        </block>
-        <block symbolname="iobuf" name="XLXI_5">
-            <blockpin signalname="XLXN_18" name="I" />
-            <blockpin signalname="wire_inout" name="IO" />
-            <blockpin signalname="XLXN_17" name="O" />
-            <blockpin signalname="XLXN_16" name="T" />
-        </block>
-        <block symbolname="gnd" name="XLXI_6">
-            <blockpin signalname="XLXN_18" name="G" />
-        </block>
-        <block symbolname="or3" name="XLXI_7">
-            <blockpin signalname="XLXN_22" name="I0" />
-            <blockpin signalname="XLXN_25" name="I1" />
-            <blockpin signalname="XLXN_23" name="I2" />
-            <blockpin signalname="XLXN_26" name="O" />
+            <blockpin signalname="XLXN_27" name="wire_in" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -216,8 +209,6 @@
             <wire x2="1888" y1="1040" y2="1264" x1="1888" />
             <wire x2="2256" y1="1264" y2="1264" x1="1888" />
         </branch>
-        <instance x="352" y="1664" name="XLXI_4" orien="R0">
-        </instance>
         <branch name="XLXN_8">
             <wire x2="1536" y1="1504" y2="1504" x1="832" />
             <wire x2="1536" y1="1328" y2="1504" x1="1536" />
@@ -261,11 +252,6 @@
             <wire x2="2768" y1="1488" y2="1488" x1="2432" />
             <wire x2="2768" y1="1392" y2="1392" x1="2688" />
             <wire x2="2768" y1="1392" y2="1488" x1="2768" />
-        </branch>
-        <branch name="XLXN_17">
-            <wire x2="2256" y1="1392" y2="1392" x1="2240" />
-            <wire x2="2240" y1="1392" y2="1664" x1="2240" />
-            <wire x2="2432" y1="1664" y2="1664" x1="2240" />
         </branch>
         <branch name="XLXN_18">
             <wire x2="2432" y1="1600" y2="1600" x1="2368" />
@@ -347,5 +333,17 @@
         <iomarker fontsize="28" x="960" y="2192" name="tempData(23:0)" orien="R0" />
         <iomarker fontsize="28" x="304" y="2288" name="clk" orien="R180" />
         <iomarker fontsize="28" x="304" y="2224" name="start" orien="R180" />
+        <instance x="352" y="1664" name="XLXI_8" orien="R0">
+        </instance>
+        <branch name="XLXN_27">
+            <wire x2="352" y1="1696" y2="1696" x1="336" />
+            <wire x2="336" y1="1696" y2="1824" x1="336" />
+            <wire x2="1712" y1="1824" y2="1824" x1="336" />
+            <wire x2="2240" y1="1824" y2="1824" x1="1712" />
+            <wire x2="2256" y1="1392" y2="1392" x1="2240" />
+            <wire x2="2240" y1="1392" y2="1664" x1="2240" />
+            <wire x2="2432" y1="1664" y2="1664" x1="2240" />
+            <wire x2="2240" y1="1664" y2="1824" x1="2240" />
+        </branch>
     </sheet>
 </drawing>

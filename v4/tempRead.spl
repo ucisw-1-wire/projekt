@@ -3,6 +3,7 @@ clk
 start
 isBusy
 readBit_detection
+wire_in
 =inputData[7:0]=
 [Outputs]
 busy

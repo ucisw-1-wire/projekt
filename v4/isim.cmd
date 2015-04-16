@@ -1,2 +1,2 @@
 onerror {resume}
-run 3000 us;
+run 6000 us;

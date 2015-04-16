@@ -36,6 +36,7 @@ entity tempRead is
            inputData : in  STD_LOGIC_VECTOR (7 downto 0);
 			  isBusy : in STD_LOGIC;
 			  readBit_detection : in STD_LOGIC;
+			  wire_in : in STD_LOGIC; -- potrzebne do waitForConvert_t_end, nie mam pomyslu jakby zrobic to inaczej, ew spytac SUGIERA	
 			  outputData: out STD_LOGIC_VECTOR (7 downto 0);
 			  busy : out STD_LOGIC;
 			  startRead : out STD_LOGIC;
@@ -86,7 +87,7 @@ architecture Behavioral of tempRead is
 	signal next_state : stan := idle ;
 	
 	signal tempDataBuffor : STD_LOGIC_VECTOR (23 downto 0) := X"000000";
-	signal read_counter : integer  range 0 to 3 := 0; -- inkrementowane w read_scetchpad, zerowane w idle,		
+	signal read_counter : integer  range 0 to 10 := 0; -- inkrementowane w read_scetchpad, zerowane w idle,		
 													  -- zgodnie z scratchpad_respond wystarcza 2 bajty, trzeba to zmienic, nie chce mi sie teraz bo trzeba potem znowu schematic symbol robic, zmienic sequenceTestSchema itp..
 													  
 	
@@ -114,7 +115,7 @@ begin
 					next_state <= waitForReset_1;
 				when waitForReset_1 =>
 					if isBusy = '0' then
-						if readBit_detection = '0' then 		--- DS18S20.pdf Figure 12, str 13  
+						if readBit_detection = '1' then 		--- DS18S20.pdf Figure 12, str 13  (w modul jest negacja)
 							next_state <= waitForBusy_skip_rom_1;
 						else
 							next_state <= idle; -- ? ! ! ! SPYTAC SUGIERA ! ! !
@@ -145,7 +146,7 @@ begin
 						next_state <= waitForConvert_T_end;
 					end if;
 				when waitForConvert_T_end =>
-					if readBit_detection = '0' then -- koniec konwersji - patrz dokumentacjia 12 str, ! ! ! SPYTAC SUGIERA ! ! !
+					if wire_in = '0' then -- koniec konwersji - patrz dokumentacjia 12 str, ! ! ! SPYTAC SUGIERA ! ! !
 						next_state <= waitForBusy_reset_2;
 					end if;
 					
@@ -245,9 +246,14 @@ begin
 					startRead <= '1';
 					read_counter <= read_counter + 1;
 				when captureByte_endOrNot =>
-					tempDataBuffor ( (read_counter * 8 - 1) downto ( (read_counter -1) * 8 )) <= inputData;
-				when others =>
+					startRead <= '0';
+					--tempDataBuffor ( (read_counter * 8 - 1) downto ( (read_counter -1) * 8 )) <= inputData;
+				when idle =>
 					read_counter <= 0;
+				when others =>
+					startRead <= '0';
+					startWrite <= '0';
+					startReset <= '0';
 			end case;		
 			
 		end if;
