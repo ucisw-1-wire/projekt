@@ -2,28 +2,9 @@ Command line:
    sequenceTestSchema_sequenceTestSchema_sch_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  52613
+     -socket  49541
 
-Fri Apr 17 00:04:50 2015
+Fri Apr 17 09:58:46 2015
 
 
  Elaboration Time: 0.0624 sec
-
- Current Memory Usage: 673.12 Meg
-
- Total Signals          : 109
- Total Nets             : 142
- Total Signal Drivers   : 35
- Total Blocks           : 14
- Total Primitive Blocks : 12
- Total Processes        : 25
- Total Traceable Variables  : 23
- Total Scalar Nets and Variables : 671
-Total Line Count : 230
-
- Total Simulation Time: 1.43521 sec
-
- Current Memory Usage: 673.12 Meg
-
-Fri Apr 17 00:11:08 2015
-

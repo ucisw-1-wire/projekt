@@ -1,16 +1,16 @@
-Release 14.7 - xst P.20131013 (nt64)
+Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: sequenceTestSchema.prj
 
@@ -42,7 +42,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "sequenceTestSchema"
 Output Format                      : NGC
-Target Device                      : xc3s100e-5-vq100
+Target Device                      : xc3s500e-5-fg320
 
 ---- Source Options
 Top Module Name                    : sequenceTestSchema
@@ -104,17 +104,15 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/modul.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Downloads/v4 (2)/modul.vhd" in Library work.
 Architecture behavioral of Entity modul is up to date.
-Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/readByte.vhd" in Library work.
-Entity <readbyte> compiled.
-Entity <readbyte> (Architecture <behavioral>) compiled.
-Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/writeByte.vhd" in Library work.
-Entity <writebyte> compiled.
-Entity <writebyte> (Architecture <behavioral>) compiled.
-Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/tempRead.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Downloads/v4 (2)/readByte.vhd" in Library work.
+Architecture behavioral of Entity readbyte is up to date.
+Compiling vhdl file "C:/Users/lab/Downloads/v4 (2)/writeByte.vhd" in Library work.
+Architecture behavioral of Entity writebyte is up to date.
+Compiling vhdl file "C:/Users/lab/Downloads/v4 (2)/tempRead.vhd" in Library work.
 Architecture behavioral of Entity tempread is up to date.
-Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/sequenceTestSchema.vhf" in Library work.
+Compiling vhdl file "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf" in Library work.
 Entity <sequencetestschema> compiled.
 Entity <sequencetestschema> (Architecture <behavioral>) compiled.
 
@@ -141,6 +139,9 @@ Analyzing Entity <sequenceTestSchema> in library <work> (Architecture <behaviora
     Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_5> in unit <sequenceTestSchema>.
     Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_5> in unit <sequenceTestSchema>.
     Set user-defined property "SLEW =  SLOW" for instance <XLXI_5> in unit <sequenceTestSchema>.
+WARNING:Xst:753 - "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf" line 223: Unconnected output port 'RotR' of component 'RotaryEnc'.
+WARNING:Xst:2211 - "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf" line 223: Instantiating black box module <RotaryEnc>.
+WARNING:Xst:2211 - "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf" line 230: Instantiating black box module <LCD1x64>.
 Entity <sequenceTestSchema> analyzed. Unit <sequenceTestSchema> generated.
 
 Analyzing Entity <modul> in library <work> (Architecture <behavioral>).
@@ -153,6 +154,8 @@ Analyzing Entity <writeByte> in library <work> (Architecture <behavioral>).
 Entity <writeByte> analyzed. Unit <writeByte> generated.
 
 Analyzing Entity <tempRead> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/lab/Downloads/v4 (2)/tempRead.vhd" line 104: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <readBit_detection>, <read_counter>
 Entity <tempRead> analyzed. Unit <tempRead> generated.
 
 
@@ -163,7 +166,7 @@ Entity <tempRead> analyzed. Unit <tempRead> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <modul>.
-    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/modul.vhd".
+    Related source file is "C:/Users/lab/Downloads/v4 (2)/modul.vhd".
     Found finite state machine <FSM_0> for signal <present_state>.
     -----------------------------------------------------------------------
     | States             | 13                                             |
@@ -185,7 +188,7 @@ Unit <modul> synthesized.
 
 
 Synthesizing Unit <readByte>.
-    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/readByte.vhd".
+    Related source file is "C:/Users/lab/Downloads/v4 (2)/readByte.vhd".
     Found finite state machine <FSM_1> for signal <present_state>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
@@ -212,7 +215,7 @@ Unit <readByte> synthesized.
 
 
 Synthesizing Unit <writeByte>.
-    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/writeByte.vhd".
+    Related source file is "C:/Users/lab/Downloads/v4 (2)/writeByte.vhd".
     Found finite state machine <FSM_2> for signal <present_state>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
@@ -238,27 +241,40 @@ Unit <writeByte> synthesized.
 
 
 Synthesizing Unit <tempRead>.
-    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/tempRead.vhd".
-    Using one-hot encoding for signal <present_state>.
+    Related source file is "C:/Users/lab/Downloads/v4 (2)/tempRead.vhd".
+WARNING:Xst:647 - Input <wire_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_3> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 29                                             |
+    | Transitions        | 57                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 12                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
     Found 8-bit register for signal <outputData>.
     Found 1-bit register for signal <startReset>.
     Found 24-bit register for signal <tempData>.
     Found 1-bit register for signal <startRead>.
     Found 1-bit register for signal <startWrite>.
-    Found 3-bit subtractor for signal <$sub0000> created at line 248.
-    Found 25-bit register for signal <next_state>.
-    Found 25-bit register for signal <present_state>.
-    Found 2-bit register for signal <read_counter>.
-    Found 2-bit adder for signal <read_counter$addsub0000> created at line 246.
+    Found 5-bit subtractor for signal <$sub0000> created at line 287.
+    Found 4-bit register for signal <read_counter>.
+    Found 4-bit adder for signal <read_counter$addsub0000> created at line 284.
     Found 24-bit register for signal <tempDataBuffor>.
     Summary:
-	inferred 111 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+	inferred  63 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
 Unit <tempRead> synthesized.
 
 
 Synthesizing Unit <sequenceTestSchema>.
-    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/sequenceTestSchema.vhf".
+    Related source file is "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf".
+WARNING:Xst:653 - Signal <XLXI_9_ROT_B_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <XLXI_10_Reset_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <XLXI_10_Blank_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
 Unit <sequenceTestSchema> synthesized.
 
 
@@ -267,18 +283,16 @@ HDL Synthesis Report
 
 Macro Statistics
 # Adders/Subtractors                                   : 4
- 2-bit adder                                           : 1
- 3-bit subtractor                                      : 1
  32-bit adder                                          : 1
- 4-bit adder                                           : 1
+ 4-bit adder                                           : 2
+ 5-bit subtractor                                      : 1
 # Counters                                             : 1
  16-bit up counter                                     : 1
-# Registers                                            : 47
+# Registers                                            : 45
  1-bit register                                        : 39
- 2-bit register                                        : 1
  24-bit register                                       : 1
- 25-bit register                                       : 2
  32-bit register                                       : 1
+ 4-bit register                                        : 1
  5-bit register                                        : 1
  8-bit register                                        : 2
 # Comparators                                          : 1
@@ -292,6 +306,41 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+Analyzing FSM <FSM_3> for best encoding.
+Optimizing FSM <XLXI_8/present_state/FSM> on signal <present_state[1:29]> with one-hot encoding.
+-------------------------------------------------------------
+ State                      | Encoding
+-------------------------------------------------------------
+ idle                       | 00000000000000000000000000001
+ waitforbusy_reset_1        | 00000000000000000000000000010
+ waitforbusy_reset_2        | 00000000000000100000000000000
+ waitforbusy_reset_3        | 00010000000000000000000000000
+ reset_1                    | 00000000000000000000000000100
+ reset_2                    | 00000000000001000000000000000
+ reset_3                    | 00100000000000000000000000000
+ waitforreset_1             | 00000000000000000000000001000
+ waitforreset_2             | 00000000000010000000000000000
+ waitforreset_3             | 01000000000000000000000000000
+ waitforbusy_skip_rom_1     | 00000000000000000000000010000
+ waitforbusy_skip_rom_2     | 00000000000100000000000000000
+ skip_rom_1                 | 00000000000000000000000100000
+ skip_rom_2                 | 00000000001000000000000000000
+ waitforskiprom_1           | 00000000000000000000001000000
+ waitforskiprom_2           | 00000000010000000000000000000
+ waitforbusy_convert_t      | 00000000000000000000010000000
+ convert_t                  | 00000000000000000000100000000
+ waitforconvert_t           | 00000000000000000001000000000
+ waitforbusy_endofconvert   | 00000000000000000010000000000
+ readbyte                   | 00000000000000000100000000000
+ waitforreadbyte            | 00000000000000001000000000000
+ convert_t_endornot         | 00000000000000010000000000000
+ waitforbusy_read_scetchpad | 00000000100000000000000000000
+ read_scetchpad             | 00000001000000000000000000000
+ increment                  | 00000010000000000000000000000
+ waitforreadscetchpad       | 00000100000000000000000000000
+ capturebyte_endornot       | 00001000000000000000000000000
+ done                       | 10000000000000000000000000000
+-------------------------------------------------------------
 Analyzing FSM <FSM_2> for best encoding.
 Optimizing FSM <XLXI_3/present_state/FSM> on signal <present_state[1:2]> with user encoding.
 -------------------------
@@ -332,22 +381,25 @@ Optimizing FSM <XLXI_1/present_state/FSM> on signal <present_state[1:4]> with us
  reset_c  | 1011
  reset_d  | 1100
 ----------------------
-WARNING:Xst:1710 - FF/Latch <outputData_0> (without init value) has a constant value of 0 in block <XLXI_4>. This FF/Latch will be trimmed during the optimization process.
+Reading core <RotaryEnc.ngc>.
+Reading core <LCD1x64.ngc>.
+Loading core <RotaryEnc> for timing and area information for instance <XLXI_9>.
+Loading core <LCD1x64> for timing and area information for instance <XLXI_10>.
+WARNING:Xst:1710 - FF/Latch <outputData_0> (without init value) has a constant value of 0 in block <XLXI_8>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# FSMs                                                 : 3
+# FSMs                                                 : 4
 # Adders/Subtractors                                   : 4
- 2-bit adder                                           : 1
- 3-bit subtractor                                      : 1
  32-bit adder                                          : 1
- 4-bit adder                                           : 1
+ 4-bit adder                                           : 2
+ 5-bit subtractor                                      : 1
 # Counters                                             : 1
  16-bit up counter                                     : 1
-# Registers                                            : 168
- Flip-Flops                                            : 168
+# Registers                                            : 120
+ Flip-Flops                                            : 120
 # Comparators                                          : 1
  5-bit comparator greatequal                           : 1
 # Multiplexers                                         : 1
@@ -373,8 +425,14 @@ WARNING:Xst:1710 - FF/Latch <outputData_2> (without init value) has a constant v
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2261 - The FF/Latch <XLXI_4/outputData_5> in Unit <sequenceTestSchema> is equivalent to the following 2 FFs/Latches, which will be removed : <XLXI_4/outputData_4> <XLXI_4/outputData_1> 
-Found area constraint ratio of 100 (+ 5) on block sequenceTestSchema, actual ratio is 18.
+INFO:Xst:2261 - The FF/Latch <XLXI_8/outputData_5> in Unit <sequenceTestSchema> is equivalent to the following 2 FFs/Latches, which will be removed : <XLXI_8/outputData_4> <XLXI_8/outputData_1> 
+Found area constraint ratio of 100 (+ 5) on block sequenceTestSchema, actual ratio is 5.
+INFO:Xst:2260 - The FF/Latch <cntDigit_0> in Unit <XLXI_10> is equivalent to the following 4 FFs/Latches : <cntDigit_0_1> <cntDigit_0_2> <cntDigit_0_3> <cntDigit_0_4> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_1> in Unit <XLXI_10> is equivalent to the following 2 FFs/Latches : <cntDigit_1_1> <cntDigit_1_2> 
+INFO:Xst:2260 - The FF/Latch <State_16> in Unit <XLXI_10> is equivalent to the following FF/Latch : <State_16_1> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_0> in Unit <XLXI_10> is equivalent to the following 4 FFs/Latches : <cntDigit_0_1> <cntDigit_0_2> <cntDigit_0_3> <cntDigit_0_4> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_1> in Unit <XLXI_10> is equivalent to the following 2 FFs/Latches : <cntDigit_1_1> <cntDigit_1_2> 
+INFO:Xst:2260 - The FF/Latch <State_16> in Unit <XLXI_10> is equivalent to the following FF/Latch : <State_16_1> 
 
 Final Macro Processing ...
 
@@ -382,8 +440,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 191
- Flip-Flops                                            : 191
+# Registers                                            : 172
+ Flip-Flops                                            : 172
 
 =========================================================================
 
@@ -409,51 +467,60 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 28
+# IOs                              : 12
 
 Cell Usage :
-# BELS                             : 384
-#      GND                         : 1
-#      INV                         : 6
-#      LUT1                        : 47
-#      LUT2                        : 26
-#      LUT2_L                      : 1
-#      LUT3                        : 39
-#      LUT3_D                      : 1
-#      LUT3_L                      : 2
-#      LUT4                        : 143
+# BELS                             : 667
+#      GND                         : 3
+#      INV                         : 10
+#      LUT1                        : 73
+#      LUT2                        : 54
+#      LUT2_D                      : 3
+#      LUT2_L                      : 4
+#      LUT3                        : 127
+#      LUT3_D                      : 2
+#      LUT3_L                      : 6
+#      LUT4                        : 163
 #      LUT4_D                      : 7
-#      LUT4_L                      : 8
-#      MUXCY                       : 46
-#      MUXF5                       : 6
-#      MUXF6                       : 1
+#      LUT4_L                      : 19
+#      MUXCY                       : 72
+#      MUXF5                       : 29
+#      MUXF6                       : 11
+#      MUXF7                       : 5
 #      OR3                         : 1
-#      VCC                         : 1
-#      XORCY                       : 48
-# FlipFlops/Latches                : 191
-#      FD                          : 74
-#      FDE                         : 57
-#      FDR                         : 31
-#      FDS                         : 27
+#      VCC                         : 3
+#      XORCY                       : 75
+# FlipFlops/Latches                : 270
+#      FD                          : 63
+#      FDE                         : 68
+#      FDR                         : 77
+#      FDRE                        : 6
+#      FDRS                        : 18
+#      FDRSE                       : 3
+#      FDS                         : 33
 #      FDSE                        : 2
+# Shift Registers                  : 2
+#      SRL16                       : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 27
+# IO Buffers                       : 11
 #      IBUF                        : 1
-#      IOBUF                       : 1
-#      OBUF                        : 25
+#      IOBUF                       : 5
+#      OBUF                        : 5
 =========================================================================
 
 Device utilization summary:
 ---------------------------
 
-Selected Device : 3s100evq100-5 
+Selected Device : 3s500efg320-5 
 
- Number of Slices:                      166  out of    960    17%  
- Number of Slice Flip Flops:            191  out of   1920     9%  
- Number of 4 input LUTs:                280  out of   1920    14%  
- Number of IOs:                          28
- Number of bonded IOBs:                  28  out of     66    42%  
+ Number of Slices:                      258  out of   4656     5%  
+ Number of Slice Flip Flops:            270  out of   9312     2%  
+ Number of 4 input LUTs:                470  out of   9312     5%  
+    Number used as logic:               468
+    Number used as Shift registers:       2
+ Number of IOs:                          12
+ Number of bonded IOBs:                  12  out of    232     5%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -477,7 +544,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 191   |
+Clk_50MHz                          | BUFGP                  | 272   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -488,9 +555,9 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 8.335ns (Maximum Frequency: 119.980MHz)
-   Minimum input arrival time before clock: 3.402ns
-   Maximum output required time after clock: 5.668ns
+   Minimum period: 8.241ns (Maximum Frequency: 121.341MHz)
+   Minimum input arrival time before clock: 2.495ns
+   Maximum output required time after clock: 5.712ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -498,83 +565,83 @@ Timing Detail:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 8.335ns (frequency: 119.980MHz)
-  Total number of paths / destination ports: 4613 / 303
+Timing constraint: Default period analysis for Clock 'Clk_50MHz'
+  Clock period: 8.241ns (frequency: 121.341MHz)
+  Total number of paths / destination ports: 6597 / 458
 -------------------------------------------------------------------------
-Delay:               8.335ns (Levels of Logic = 6)
-  Source:            XLXI_1/present_state_FSM_FFd2 (FF)
+Delay:               8.241ns (Levels of Logic = 6)
+  Source:            XLXI_1/clock_counter_8 (FF)
   Destination:       XLXI_1/clock_counter_15 (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
+  Source Clock:      Clk_50MHz rising
+  Destination Clock: Clk_50MHz rising
 
-  Data Path: XLXI_1/present_state_FSM_FFd2 to XLXI_1/clock_counter_15
+  Data Path: XLXI_1/clock_counter_8 to XLXI_1/clock_counter_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q             16   0.514   0.909  XLXI_1/present_state_FSM_FFd2 (XLXI_1/present_state_FSM_FFd2)
-     LUT3:I2->O            1   0.612   0.360  XLXI_1/present_state_FSM_FFd4-In39 (XLXI_1/present_state_FSM_FFd4-In39)
-     LUT4:I3->O            1   0.612   0.360  XLXI_1/present_state_FSM_FFd4-In91_SW0 (N55)
-     LUT4_L:I3->LO         1   0.612   0.103  XLXI_1/present_state_FSM_FFd4-In91 (XLXI_1/present_state_FSM_FFd4-In91)
-     LUT4:I3->O            1   0.612   0.360  XLXI_1/present_state_FSM_FFd4-In127 (XLXI_1/present_state_FSM_FFd4-In127)
-     LUT4:I3->O            2   0.612   0.383  XLXI_1/present_state_FSM_FFd4-In194 (XLXI_1/present_state_FSM_FFd4-In)
-     LUT4:I3->O           16   0.612   0.879  XLXI_1/present_state_FSM_Out2136 (XLXI_1/present_state_cmp_eq0009)
+     FDR:C->Q              8   0.514   0.646  XLXI_1/clock_counter_8 (XLXI_1/clock_counter_8)
+     LUT4:I3->O            1   0.612   0.387  XLXI_1/present_state_cmp_eq0004124 (XLXI_1/present_state_cmp_eq0004124)
+     LUT4:I2->O            4   0.612   0.502  XLXI_1/present_state_cmp_eq0004125 (XLXI_1/N5)
+     LUT4_L:I3->LO         1   0.612   0.103  XLXI_1/present_state_FSM_FFd4-In144 (XLXI_1/present_state_FSM_FFd4-In144)
+     LUT4:I3->O            1   0.612   0.360  XLXI_1/present_state_FSM_FFd4-In173_SW0 (N61)
+     LUT4:I3->O            2   0.612   0.383  XLXI_1/present_state_FSM_FFd4-In173 (XLXI_1/present_state_FSM_FFd4-In)
+     LUT4:I3->O           16   0.612   0.879  XLXI_1/present_state_FSM_Out2141 (XLXI_1/present_state_cmp_eq0009)
      FDR:R                     0.795          XLXI_1/clock_counter_0
     ----------------------------------------
-    Total                      8.335ns (4.981ns logic, 3.354ns route)
-                                       (59.8% logic, 40.2% route)
+    Total                      8.241ns (4.981ns logic, 3.260ns route)
+                                       (60.4% logic, 39.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 3 / 3
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
+  Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Offset:              3.402ns (Levels of Logic = 2)
-  Source:            start (PAD)
-  Destination:       XLXI_4/next_state_0 (FF)
-  Destination Clock: clk rising
+Offset:              2.495ns (Levels of Logic = 2)
+  Source:            OW_DQ (PAD)
+  Destination:       XLXI_1/readBit_detecion (FF)
+  Destination Clock: Clk_50MHz rising
 
-  Data Path: start to XLXI_4/next_state_0
+  Data Path: OW_DQ to XLXI_1/readBit_detecion
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.106   0.532  start_IBUF (start_IBUF)
-     LUT2:I0->O            1   0.612   0.357  XLXI_4/next_state_mux0004<24>2 (XLXI_4/next_state_mux0004<24>2)
-     FDS:S                     0.795          XLXI_4/next_state_0
+     IOBUF:IO->O           1   1.106   0.509  XLXI_5 (XLXN_27)
+     LUT4:I0->O            1   0.612   0.000  XLXI_1/readBit_detecion_mux00011 (XLXI_1/readBit_detecion_mux0001)
+     FDE:D                     0.268          XLXI_1/readBit_detecion
     ----------------------------------------
-    Total                      3.402ns (2.513ns logic, 0.889ns route)
-                                       (73.9% logic, 26.1% route)
+    Total                      2.495ns (1.986ns logic, 0.509ns route)
+                                       (79.6% logic, 20.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 29 / 26
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
+  Total number of paths / destination ports: 31 / 9
 -------------------------------------------------------------------------
-Offset:              5.668ns (Levels of Logic = 2)
+Offset:              5.712ns (Levels of Logic = 2)
   Source:            XLXI_1/present_state_FSM_FFd1 (FF)
-  Destination:       wire_inout (PAD)
-  Source Clock:      clk rising
+  Destination:       OW_DQ (PAD)
+  Source Clock:      Clk_50MHz rising
 
-  Data Path: XLXI_1/present_state_FSM_FFd1 to wire_inout
+  Data Path: XLXI_1/present_state_FSM_FFd1 to OW_DQ
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q             15   0.514   1.016  XLXI_1/present_state_FSM_FFd1 (XLXI_1/present_state_FSM_FFd1)
+     FDS:C->Q             18   0.514   1.060  XLXI_1/present_state_FSM_FFd1 (XLXI_1/present_state_FSM_FFd1)
      LUT4:I0->O            1   0.612   0.357  XLXI_1/present_state_FSM_Out31 (XLXN_16)
-     IOBUF:T->IO               3.169          XLXI_5 (wire_inout)
+     IOBUF:T->IO               3.169          XLXI_5 (OW_DQ)
     ----------------------------------------
-    Total                      5.668ns (4.295ns logic, 1.373ns route)
-                                       (75.8% logic, 24.2% route)
+    Total                      5.712ns (4.295ns logic, 1.417ns route)
+                                       (75.2% logic, 24.8% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.19 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.05 secs
  
 --> 
 
-Total memory usage is 292544 kilobytes
+Total memory usage is 223880 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
 

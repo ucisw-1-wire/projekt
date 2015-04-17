@@ -55,6 +55,7 @@ BEGIN
 			wait for clk_period/2;
 		end process;
 	
+	--wire_inout <= '0' after 3250 us;
 	
    tb : PROCESS
    BEGIN
@@ -62,20 +63,26 @@ BEGIN
 		start <= '1';
 		wait for 10 us;
 		start <= '0';
-		wait for 500 us;
+		wait for 500 us; -- reset 1 response
 		wire_inout <= '0';
 		wait for 100 us;
-		wire_inout <='1';
+		wire_inout <='H';
 		
-		wait for 1800 us;
+		wait for 1450 us; -- reset 2 response
 		wire_inout <='0';
 		wait for 10 us;
-		wire_inout <='1';
+		wire_inout <='H';
 		
-		wait for 525 us;
+		wait for 525 us;	-- convert T end signal
 		wire_inout <='0';
 		wait for 50 us;
-		wire_inout <='1';
+		wire_inout <='H';
+		
+		wait for 500 us;
+		wire_inout <= '0';
+		wait for 50 us;
+		wire_inout <='H';
+		
 		
       WAIT; -- will wait forever
    END PROCESS;

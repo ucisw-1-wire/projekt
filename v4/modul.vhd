@@ -224,7 +224,11 @@ end process;
 process ( clk) is
 begin
 		if rising_edge( Clk ) and ( present_state = read_C or present_state = reset_C)  then
-			readBit_detecion <=  not wire_in;
+			if present_state = reset_C then
+				readBit_detecion <=  not wire_in;
+			else
+				readBit_detecion <=  wire_in;
+			end if;
 		end if;
 end process;
 

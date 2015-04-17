@@ -70,12 +70,18 @@ architecture Behavioral of tempRead is
 	waitForBusy_convert_t,
 	convert_t,
 	waitForConvert_T, -- czeka na zakonczenie wysylania rozkazu Convert T
-	waitForConvert_T_end, -- czeka na zakonczenie konwersji	
+	waitForBusy_endOfConvert,
+	readByte,
+	waitForReadByte,
+	convert_t_endOrNot,
+	--waitForConvert_T_end, -- czeka na zakonczenie konwersji	
 	
 	waitForBusy_read_scetchpad,
 	read_scetchpad,
+	increment,
 	waitForReadScetchpad,
 	captureByte_endOrNot,
+	
 	
 	
 	
@@ -98,7 +104,7 @@ begin
 	next_state_process: process (clk, present_state, start, inputData, isBusy)
 	begin
 		
-		if rising_edge(clk) then
+--		if rising_edge(clk) then
 			next_state <= present_state;
 			case present_state is
 				when idle =>
@@ -112,7 +118,9 @@ begin
 						next_state <= reset_1;
 					end if;
 				when reset_1 =>
-					next_state <= waitForReset_1;
+					if isBusy = '1' then
+						next_state <= waitForReset_1;
+					end if;
 				when waitForReset_1 =>
 					if isBusy = '0' then
 						if readBit_detection = '1' then 		--- DS18S20.pdf Figure 12, str 13  (w modul jest negacja)
@@ -128,7 +136,9 @@ begin
 						next_state <= skip_rom_1;
 					end if;
 				when skip_rom_1 =>
-					next_state <= waitForSkipRom_1;
+					if isBusy = '1' then
+						next_state <= waitForSkipRom_1;
+					end if;
 				when waitForSkipRom_1 =>
 					if isBusy = '0' then
 						next_state <= waitForBusy_convert_t;
@@ -143,11 +153,25 @@ begin
 					next_state <= waitForConvert_T;
 				when waitForConvert_T =>
 					if isBusy = '0' then
-						next_state <= waitForConvert_T_end;
+						next_state <= waitForBusy_endOfConvert;
 					end if;
-				when waitForConvert_T_end =>
-					if wire_in = '0' then -- koniec konwersji - patrz dokumentacjia 12 str, ! ! ! SPYTAC SUGIERA ! ! !
+				when waitForBusy_endOfConvert =>
+					if isBusy = '0' then -- koniec konwersji - patrz dokumentacjia 12 str, ! ! ! SPYTAC SUGIERA ! ! !
+						next_state <= readByte;
+					end if;
+				when readByte =>
+					if isBusy = '1' then
+						next_state <= waitForReadByte;
+					end if;
+				when waitForReadByte =>
+					if isBusy = '0' then
+						next_state <= convert_t_endOrNot;
+					end if;
+				when convert_t_endOrNot =>
+					if inputData = X"FF" then
 						next_state <= waitForBusy_reset_2;
+					else
+						next_state <= waitForBusy_endOfConvert;
 					end if;
 					
 				--- reset#2
@@ -156,7 +180,9 @@ begin
 						next_state <= reset_2;
 					end if;
 				when reset_2 =>
-					next_state <= waitForReset_2;
+					if isBusy = '1' then
+						next_state <= waitForReset_2;
+					end if;
 				when waitForReset_2 =>
 					if isBusy = '0' then
 						if readBit_detection = '1' then  
@@ -172,7 +198,9 @@ begin
 						next_state <= skip_rom_2;
 					end if;
 				when skip_rom_2 =>
-					next_state <= waitForSkipRom_2;
+					if isBusy = '1' then
+						next_state <= waitForSkipRom_2;
+					end if;
 				when waitForSkipRom_2 =>
 					if isBusy = '0' then
 						next_state <= waitForBusy_read_scetchpad;
@@ -184,6 +212,10 @@ begin
 						next_state <= read_scetchpad;
 					end if;
 				when read_scetchpad =>
+					if isBusy ='1' then
+						next_state <= increment;
+					end if;
+				when increment =>
 					next_state <= waitForReadScetchpad;
 				when waitForReadScetchpad =>
 					if isBusy = '0' then
@@ -200,7 +232,9 @@ begin
 						next_state <= reset_3;
 					end if;
 				when reset_3 =>
-					next_state <= waitForBusy_reset_3;
+					if isBusy = '1' then
+						next_state <= waitForReset_3;
+					end if;
 				when waitForReset_3 =>
 					if isBusy = '0' then
 						next_state <= done;
@@ -216,7 +250,7 @@ begin
 					next_state <= idle;
 					
 			end case;
-		end if;
+--		end if;
 	end process;
 		
 	action_process: process (clk, present_state)
@@ -241,13 +275,16 @@ begin
 				when convert_t =>
 					outputData <= X"44";
 					startWrite <= '1';
+				when readByte =>
+					startRead <= '1';
 				when read_scetchpad =>
 					outputData <= X"BE";
-					startRead <= '1';
-					read_counter <= read_counter + 1;
+					startWrite <= '1';
+				when increment =>
+					read_counter <= read_counter +1;
 				when captureByte_endOrNot =>
 					startRead <= '0';
-					--tempDataBuffor ( (read_counter * 8 - 1) downto ( (read_counter -1) * 8 )) <= inputData;
+					tempDataBuffor ( (read_counter * 8 - 1) downto ( (read_counter -1) * 8 )) <= inputData;
 				when idle =>
 					read_counter <= 0;
 				when others =>

@@ -5,7 +5,32 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">outputData_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">XLXI_4</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf</arg>&quot; line <arg fmt="%d" index="2">223</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">RotR</arg>&apos; of component &apos;<arg fmt="%s" index="4">RotaryEnc</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf</arg>&quot; line <arg fmt="%d" index="2">223</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">RotaryEnc</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf</arg>&quot; line <arg fmt="%d" index="2">230</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">LCD1x64</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/v4 (2)/tempRead.vhd</arg>&quot; line <arg fmt="%d" index="2">104</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;readBit_detection&gt;, &lt;read_counter&gt;</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">wire_in</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_9_ROT_B_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_10_Reset_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_10_Blank_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000000000000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">outputData_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">XLXI_8</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">outputData_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">tempRead</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -14,7 +39,25 @@
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">outputData_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">tempRead</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">XLXI_4/outputData_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">sequenceTestSchema</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;XLXI_4/outputData_4&gt; &lt;XLXI_4/outputData_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">XLXI_8/outputData_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">sequenceTestSchema</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;XLXI_8/outputData_4&gt; &lt;XLXI_8/outputData_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cntDigit_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">XLXI_10</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;cntDigit_0_1&gt; &lt;cntDigit_0_2&gt; &lt;cntDigit_0_3&gt; &lt;cntDigit_0_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cntDigit_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">XLXI_10</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;cntDigit_1_1&gt; &lt;cntDigit_1_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">State_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">XLXI_10</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;State_16_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cntDigit_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">XLXI_10</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;cntDigit_0_1&gt; &lt;cntDigit_0_2&gt; &lt;cntDigit_0_3&gt; &lt;cntDigit_0_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cntDigit_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">XLXI_10</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;cntDigit_1_1&gt; &lt;cntDigit_1_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">State_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">XLXI_10</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;State_16_1&gt; </arg>
 </msg>
 
 </messages>
