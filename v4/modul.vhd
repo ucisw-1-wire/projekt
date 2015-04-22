@@ -198,24 +198,24 @@ begin
 			wire_out<='0';
 		when read_B =>
 			
-			wire_out<='1';
+			wire_out<='H';
 		when read_C =>
 			
 		when read_D =>
 			
-			wire_out<='1';	
+			wire_out<='H';	
 		
 		when reset_A =>
 			
 			wire_out<='0';
 		when reset_B =>
 			
-			wire_out<='1';
+			wire_out<='H';
 		when reset_C =>
 			
 		when reset_D =>
 			
-			wire_out<='1';	
+			wire_out<='H';	
 		
 	end case;
 end process;
