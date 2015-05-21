@@ -73,13 +73,16 @@ architecture Behavioral of tempRead is
 	convert_t,
 	waitForConvert_T, -- czeka na zakonczenie wysylania rozkazu Convert T
 	waitForBusy_endOfConvert,
-	readByte,
-	waitForReadByte,
+	readByteConvertT,
+	waitForReadByteConvertT,
 	convert_t_endOrNot,
 	--waitForConvert_T_end, -- czeka na zakonczenie konwersji	
 	
 	waitForBusy_read_scetchpad,
 	read_scetchpad,
+	waitForBusyReadByteScetchpad,
+	readByteScetchpad,
+	waitForReadByteScetchpad,
 	increment,
 	waitForReadScetchpad,
 	captureByte_endOrNot,
@@ -161,13 +164,13 @@ begin
 					end if;
 				when waitForBusy_endOfConvert =>
 					if isBusy = '0' then -- koniec konwersji - patrz dokumentacjia 12 str, ! ! ! SPYTAC SUGIERA ! ! !
-						next_state <= readByte;
+						next_state <= readByteConvertT;
 					end if;
-				when readByte =>
+				when readByteConvertT =>
 					if isBusy = '1' then
-						next_state <= waitForReadByte;
+						next_state <= waitForReadByteConvertT;
 					end if;
-				when waitForReadByte =>
+				when waitForReadByteConvertT =>
 					if isBusy = '0' then
 						next_state <= convert_t_endOrNot;
 					end if;
@@ -210,13 +213,26 @@ begin
 						next_state <= waitForBusy_read_scetchpad;
 					end if;
 					
-				--- read_scetchpad
+				--- read_scetchpad  send  command
 				when waitForBusy_read_scetchpad =>
 					if isBusy = '0' then
 						next_state <= read_scetchpad;
 					end if;
 				when read_scetchpad =>
 					if isBusy ='1' then
+						next_state <= waitForBusyReadByteScetchpad;
+					end if;
+					-- receive bytes
+				when waitForBusyReadByteScetchpad =>
+					if isBusy = '0' then
+						next_state <= readByteScetchpad;
+					end if;
+				when readByteScetchpad =>
+					if isBusy = '1' then
+						next_state <= waitForReadByteScetchpad;
+					end if;
+				when waitForReadByteScetchpad =>
+					if isBusy = '0' then
 						next_state <= increment;
 					end if;
 				when increment =>
@@ -229,8 +245,9 @@ begin
 					if read_counter = 3 then
 						next_state <= waitForBusy_reset_3;
 					else
-						next_state <= waitForBusy_read_scetchpad;
+						next_state <= waitForBusyReadByteScetchpad;
 					end if;
+					-- ending of transfer
 				when waitForBusy_reset_3 =>
 					if isBusy = '0' then
 						next_state <= reset_3;
@@ -284,7 +301,9 @@ begin
 					test_out <= x"3" ;
 					outputData <= X"44";
 					startWrite <= '1';
-				when readByte =>
+				when readByteConvertT =>
+					startRead <= '1';
+				when readByteScetchpad =>
 					startRead <= '1';
 				when read_scetchpad =>
 					test_out <= x"6" ;

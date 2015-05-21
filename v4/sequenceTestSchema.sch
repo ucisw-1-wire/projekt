@@ -18,7 +18,6 @@
         <signal name="XLXN_16" />
         <signal name="XLXN_18" />
         <signal name="D" />
-        <signal name="XLXN_23" />
         <signal name="B" />
         <signal name="XLXN_26" />
         <signal name="Clk_50MHz" />
@@ -33,18 +32,8 @@
         <signal name="XLXN_37(23:0)" />
         <signal name="XLXN_37(63:0)" />
         <signal name="XLXN_37(63:24)" />
-        <signal name="XLXN_38" />
         <signal name="C" />
-        <signal name="XLXN_40" />
-        <signal name="XLXN_42" />
-        <signal name="XLXN_43" />
-        <signal name="XLXN_44" />
-        <signal name="XLXN_45" />
-        <signal name="XLXN_47" />
-        <signal name="XLXN_48" />
-        <signal name="XLXN_49" />
         <signal name="A" />
-        <signal name="XLXN_54" />
         <signal name="test_led(3:0)" />
         <port polarity="Output" name="D" />
         <port polarity="Output" name="B" />
