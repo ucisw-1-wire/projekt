@@ -176,7 +176,7 @@ begin
 
 	case present_state is
 		when idle =>
-			wire_out<='1';
+			wire_out<='H';
 			
 			
 		when write_1A =>

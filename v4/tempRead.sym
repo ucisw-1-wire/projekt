@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="tempRead">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2015-4-16T21:34:9</timestamp>
+    <timestamp>2015-5-15T8:1:5</timestamp>
     <pin polarity="Input" x="0" y="-352" name="clk" />
     <pin polarity="Input" x="0" y="-272" name="start" />
     <pin polarity="Input" x="0" y="-192" name="isBusy" />
     <pin polarity="Input" x="0" y="-112" name="readBit_detection" />
+    <pin polarity="Input" x="0" y="32" name="wire_in" />
     <pin polarity="Input" x="0" y="-32" name="inputData(7:0)" />
     <pin polarity="Output" x="480" y="-352" name="busy" />
     <pin polarity="Output" x="480" y="-288" name="startRead" />
@@ -13,13 +14,14 @@
     <pin polarity="Output" x="480" y="-160" name="startReset" />
     <pin polarity="Output" x="480" y="-96" name="tempData(23:0)" />
     <pin polarity="Output" x="480" y="-32" name="outputData(7:0)" />
-    <pin polarity="Input" x="0" y="32" name="wire_in" />
+    <pin polarity="Output" x="480" y="96" name="test_out(3:0)" />
     <graph>
         <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="240" y="-392" type="symbol" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin clk" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-272" type="pin start" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-192" type="pin isBusy" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-112" type="pin readBit_detection" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="32" type="pin wire_in" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin inputData(7:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-352" type="pin busy" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-288" type="pin startRead" />
@@ -27,7 +29,9 @@
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-160" type="pin startReset" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-96" type="pin tempData(23:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="-32" type="pin outputData(7:0)" />
-        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="32" type="pin wire_in" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="408" y="96" type="pin test_out(3:0)" />
+        <rect width="64" x="416" y="84" height="24" />
+        <line x2="480" y1="96" y2="96" x1="416" />
         <line x2="0" y1="32" y2="32" x1="64" />
         <line x2="0" y1="-352" y2="-352" x1="64" />
         <line x2="0" y1="-272" y2="-272" x1="64" />
@@ -43,6 +47,6 @@
         <line x2="480" y1="-96" y2="-96" x1="416" />
         <rect width="64" x="416" y="-44" height="24" />
         <line x2="480" y1="-32" y2="-32" x1="416" />
-        <rect width="352" x="64" y="-384" height="448" />
+        <rect width="352" x="64" y="-384" height="512" />
     </graph>
 </symbol>

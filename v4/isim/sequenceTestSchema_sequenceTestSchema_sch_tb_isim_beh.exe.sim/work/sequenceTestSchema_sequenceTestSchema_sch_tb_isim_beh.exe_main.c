@@ -40,6 +40,7 @@ int main(int argc, char **argv)
     unisim_a_1717296735_4086321779_init();
     unisim_a_4147737283_2967259552_init();
     work_a_0964042146_3212880686_init();
+    unisim_a_3055263662_1392679692_init();
     work_a_4093082005_3212880686_init();
     work_a_2363297853_3212880686_init();
 

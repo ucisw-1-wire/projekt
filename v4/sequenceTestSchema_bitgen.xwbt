@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\lab\Downloads\v4 (2)\sequenceTestSchema.ncd
-OUTFILE=C:\Users\lab\Downloads\v4 (2)\sequenceTestSchema.bit
+INFILE=C:\Users\lab\Downloads\projekt-master\projekt-master\v4\sequenceTestSchema.ncd
+OUTFILE=C:\Users\lab\Downloads\projekt-master\projekt-master\v4\sequenceTestSchema.bit
 FAMILY=Spartan3E
 PART=xc3s500e-5fg320
-WORKINGDIR=C:\Users\lab\Downloads\v4 (2)
+WORKINGDIR=C:\Users\lab\Downloads\projekt-master\projekt-master\v4
 LICENSE=ISE
 USER_INFO=174693031_177724690_210552578_727

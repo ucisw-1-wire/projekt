@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/lab/Downloads/v4 (2)/readByte.vhd";
+static const char *ng0 = "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/readByte.vhd";
 extern char *IEEE_P_2592010699;
 
 unsigned char ieee_p_2592010699_sub_1744673427_503743352(char *, char *, unsigned int , unsigned int );
@@ -332,7 +332,7 @@ LAB10:    xsi_set_current_line(143, ng0);
     *((unsigned char *)t6) = (unsigned char)2;
     xsi_driver_first_trans_fast_port(t1);
     xsi_set_current_line(144, ng0);
-    t1 = (t0 + 5304);
+    t1 = (t0 + 5772);
     t4 = (t0 + 3164);
     t5 = (t4 + 32U);
     t6 = *((char **)t5);

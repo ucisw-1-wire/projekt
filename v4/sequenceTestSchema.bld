@@ -6,9 +6,11 @@ ise -dd _ngo -nt timestamp -uc LCD/LCD.ucf -uc GenIO (1)/GenIO.ucf -uc
 1-Wire/1-Wire.ucf -p xc3s500e-fg320-5 sequenceTestSchema.ngc
 sequenceTestSchema.ngd
 
-Reading NGO file "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.ngc" ...
-Loading design module "C:\Users\lab\Downloads\v4 (2)/RotaryEnc.ngc"...
-Loading design module "C:\Users\lab\Downloads\v4 (2)/LCD1x64.ngc"...
+Reading NGO file
+"C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.ngc"
+...
+Loading design module
+"C:\Users\lab\Downloads\projekt-master\projekt-master\v4/LCD1x64.ngc"...
 Gathering constraint information from source properties...
 Done.
 
@@ -36,7 +38,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 115496 kilobytes
+Total memory usage is 115372 kilobytes
 
 Writing NGD file "sequenceTestSchema.ngd" ...
 Total REAL time to NGDBUILD completion:  3 sec

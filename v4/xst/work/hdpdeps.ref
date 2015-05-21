@@ -1,39 +1,49 @@
-V3 45
-FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/modul.vhd 2015/04/08.09:44:31 P.20131013
-FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/readByte.vhd 2015/04/08.09:56:48 P.20131013
-FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema.vhf 2015/04/08.08:32:38 P.20131013
-FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/writeByte.vhd 2015/04/08.08:58:07 P.20131013
-FL "C:/Users/lab/Downloads/v4 (2)/modul.vhd" 2015/04/17.09:30:16 P.20131013
-EN work/modul 1429259774 FL "C:/Users/lab/Downloads/v4 (2)/modul.vhd" \
+V3 46
+FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/modul.vhd 2015/05/15.08:47:45 P.20131013
+EN work/modul 1431679310 \
+      FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/modul.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/modul/Behavioral 1429259775 \
-      FL "C:/Users/lab/Downloads/v4 (2)/modul.vhd" EN work/modul 1429259774
-FL "C:/Users/lab/Downloads/v4 (2)/readByte.vhd" 2015/04/16.20:14:18 P.20131013
-EN work/readByte 1429259776 FL "C:/Users/lab/Downloads/v4 (2)/readByte.vhd" \
+AR work/modul/Behavioral 1431679311 \
+      FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/modul.vhd \
+      EN work/modul 1431679310
+FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/readByte.vhd 2015/04/22.13:24:02 P.20131013
+EN work/readByte 1431679312 \
+      FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/readByte.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/readByte/Behavioral 1429259777 \
-      FL "C:/Users/lab/Downloads/v4 (2)/readByte.vhd" EN work/readByte 1429259776
-FL "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf" 2015/04/17.10:36:11 P.20131013
-EN work/sequenceTestSchema 1429259782 \
-      FL "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf" \
+AR work/readByte/Behavioral 1431679313 \
+      FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/readByte.vhd \
+      EN work/readByte 1431679312
+FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.vhf 2015/05/15.10:03:20 P.20131013
+EN work/sequenceTestSchema 1431679318 \
+      FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.vhf \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/sequenceTestSchema/BEHAVIORAL 1429259783 \
-      FL "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf" \
-      EN work/sequenceTestSchema 1429259782 CP modul CP readByte CP writeByte \
-      CP IOBUF CP GND CP OR3 CP tempRead CP RotaryEnc CP LCD1x64
-FL "C:/Users/lab/Downloads/v4 (2)/tempRead.vhd" 2015/04/17.09:58:39 P.20131013
-EN work/tempRead 1429259780 FL "C:/Users/lab/Downloads/v4 (2)/tempRead.vhd" \
+AR work/sequenceTestSchema/BEHAVIORAL 1431679319 \
+      FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.vhf \
+      EN work/sequenceTestSchema 1431679318 CP modul CP readByte CP writeByte \
+      CP IOBUF CP GND CP OR3 CP LCD1x64 CP tempRead
+FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/tempRead.vhd 2015/05/15.10:41:41 P.20131013
+EN work/tempRead 1431679316 \
+      FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/tempRead.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/tempRead/Behavioral 1429259781 \
-      FL "C:/Users/lab/Downloads/v4 (2)/tempRead.vhd" EN work/tempRead 1429259780
-FL "C:/Users/lab/Downloads/v4 (2)/writeByte.vhd" 2015/04/16.20:13:46 P.20131013
-EN work/writeByte 1429259778 FL "C:/Users/lab/Downloads/v4 (2)/writeByte.vhd" \
+AR work/tempRead/Behavioral 1431679317 \
+      FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/tempRead.vhd \
+      EN work/tempRead 1431679316
+FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema.vhf 2015/04/08.08:32:38 P.20131013
+FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/writeByte.vhd 2015/04/22.13:24:02 P.20131013
+EN work/writeByte 1431679314 \
+      FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/writeByte.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/writeByte/Behavioral 1429259779 \
-      FL "C:/Users/lab/Downloads/v4 (2)/writeByte.vhd" EN work/writeByte 1429259778
+AR work/writeByte/Behavioral 1431679315 \
+      FL C:/Users/lab/Downloads/projekt-master/projekt-master/v4/writeByte.vhd \
+      EN work/writeByte 1431679314
+FL "C:/Users/lab/Downloads/v4 (2)/modul.vhd" 2015/04/17.09:30:16 P.20131013
+FL "C:/Users/lab/Downloads/v4 (2)/readByte.vhd" 2015/04/16.20:14:18 P.20131013
+FL "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf" 2015/04/17.10:36:11 P.20131013
+FL "C:/Users/lab/Downloads/v4 (2)/tempRead.vhd" 2015/04/17.09:58:39 P.20131013
+FL "C:/Users/lab/Downloads/v4 (2)/writeByte.vhd" 2015/04/16.20:13:46 P.20131013
 FL "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/PROJEKT/v4/modul.vhd" 2015/03/20.17:36:37 P.20131013
 FL "D:/!OneDriveCloud/OneDrive/Studia/Sem VI/UCISW 2/PROJEKT/v4/writeByte.vhd" 2015/03/20.18:36:18 P.20131013
 AR work/sendByte/Behavioral 0 \

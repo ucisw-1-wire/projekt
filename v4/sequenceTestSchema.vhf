@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : sequenceTestSchema.vhf
--- /___/   /\     Timestamp : 04/17/2015 10:36:11
+-- /___/   /\     Timestamp : 05/15/2015 10:03:20
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf" -w "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.sch"
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.vhf -w C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.sch
 --Design Name: sequenceTestSchema
 --Device: spartan3e
 --Purpose:
@@ -27,13 +27,17 @@ use UNISIM.Vcomponents.ALL;
 
 entity sequenceTestSchema is
    port ( Clk_50MHz : in    std_logic; 
-          ROT_A     : in    std_logic; 
-          busy      : out   std_logic; 
+          start     : in    std_logic; 
+          A         : out   std_logic; 
+          B         : out   std_logic; 
+          C         : out   std_logic; 
+          D         : out   std_logic; 
           LCD_D     : out   std_logic_vector (3 downto 0); 
           LCD_E     : out   std_logic; 
           LCD_RS    : out   std_logic; 
           LCD_RW    : out   std_logic; 
           SF_CE     : out   std_logic; 
+          test_led  : out   std_logic_vector (3 downto 0); 
           OW_DQ     : inout std_logic);
 end sequenceTestSchema;
 
@@ -44,7 +48,6 @@ architecture BEHAVIORAL of sequenceTestSchema is
    attribute IBUF_DELAY_VALUE : string ;
    attribute IFD_DELAY_VALUE  : string ;
    attribute BOX_TYPE         : string ;
-   signal start                    : std_logic;
    signal XLXN_1                   : std_logic;
    signal XLXN_3                   : std_logic;
    signal XLXN_4                   : std_logic;
@@ -56,14 +59,13 @@ architecture BEHAVIORAL of sequenceTestSchema is
    signal XLXN_15                  : std_logic;
    signal XLXN_16                  : std_logic;
    signal XLXN_18                  : std_logic;
-   signal XLXN_22                  : std_logic;
-   signal XLXN_23                  : std_logic;
-   signal XLXN_25                  : std_logic;
    signal XLXN_26                  : std_logic;
    signal XLXN_27                  : std_logic;
    signal XLXN_37                  : std_logic_vector (63 downto 0);
+   signal B_DUMMY                  : std_logic;
+   signal C_DUMMY                  : std_logic;
+   signal D_DUMMY                  : std_logic;
    signal LCD_D_DUMMY              : std_logic_vector (3 downto 0);
-   signal XLXI_9_ROT_B_openSignal  : std_logic;
    signal XLXI_10_Blank_openSignal : std_logic_vector (15 downto 0);
    signal XLXI_10_Reset_openSignal : std_logic;
    component modul
@@ -124,29 +126,6 @@ architecture BEHAVIORAL of sequenceTestSchema is
    end component;
    attribute BOX_TYPE of OR3 : component is "BLACK_BOX";
    
-   component tempRead
-      port ( clk               : in    std_logic; 
-             start             : in    std_logic; 
-             isBusy            : in    std_logic; 
-             readBit_detection : in    std_logic; 
-             inputData         : in    std_logic_vector (7 downto 0); 
-             busy              : out   std_logic; 
-             startRead         : out   std_logic; 
-             startWrite        : out   std_logic; 
-             startReset        : out   std_logic; 
-             tempData          : out   std_logic_vector (23 downto 0); 
-             outputData        : out   std_logic_vector (7 downto 0); 
-             wire_in           : in    std_logic);
-   end component;
-   
-   component RotaryEnc
-      port ( ROT_A : in    std_logic; 
-             ROT_B : in    std_logic; 
-             RotL  : out   std_logic; 
-             RotR  : out   std_logic; 
-             Clk   : in    std_logic);
-   end component;
-   
    component LCD1x64
       port ( Clk_50MHz : in    std_logic; 
              Reset     : in    std_logic; 
@@ -159,8 +138,27 @@ architecture BEHAVIORAL of sequenceTestSchema is
              SF_CE     : out   std_logic);
    end component;
    
+   component tempRead
+      port ( clk               : in    std_logic; 
+             start             : in    std_logic; 
+             isBusy            : in    std_logic; 
+             readBit_detection : in    std_logic; 
+             wire_in           : in    std_logic; 
+             inputData         : in    std_logic_vector (7 downto 0); 
+             busy              : out   std_logic; 
+             startRead         : out   std_logic; 
+             startWrite        : out   std_logic; 
+             startReset        : out   std_logic; 
+             tempData          : out   std_logic_vector (23 downto 0); 
+             outputData        : out   std_logic_vector (7 downto 0); 
+             test_out          : out   std_logic_vector (3 downto 0));
+   end component;
+   
 begin
    XLXN_37(63 downto 24) <= x"00FFFFFFFF";
+   B <= B_DUMMY;
+   C <= C_DUMMY;
+   D <= D_DUMMY;
    LCD_D(3 downto 0) <= LCD_D_DUMMY(3 downto 0);
    XLXI_1 : modul
       port map (clk=>Clk_50MHz,
@@ -169,25 +167,25 @@ begin
                 writeRead=>XLXN_4,
                 writeReset=>XLXN_8,
                 writeZero=>XLXN_3,
-                busy=>XLXN_22,
+                busy=>D_DUMMY,
                 readBit_detecion=>XLXN_15,
                 wire_out=>XLXN_16);
    
    XLXI_2 : readByte
       port map (clk=>Clk_50MHz,
-                isBusy=>XLXN_22,
+                isBusy=>D_DUMMY,
                 readBit_detecion=>XLXN_15,
                 start=>XLXN_11,
-                busy=>XLXN_25,
+                busy=>B_DUMMY,
                 data(7 downto 0)=>XLXN_12(7 downto 0),
                 read_bit=>XLXN_4);
    
    XLXI_3 : writeByte
       port map (clk=>Clk_50MHz,
                 data(7 downto 0)=>XLXN_9(7 downto 0),
-                isBusy=>XLXN_22,
+                isBusy=>D_DUMMY,
                 start=>XLXN_10,
-                busy=>XLXN_23,
+                busy=>C_DUMMY,
                 writeOne=>XLXN_1,
                 writeZero=>XLXN_3);
    
@@ -201,31 +199,10 @@ begin
       port map (G=>XLXN_18);
    
    XLXI_7 : OR3
-      port map (I0=>XLXN_22,
-                I1=>XLXN_25,
-                I2=>XLXN_23,
+      port map (I0=>D_DUMMY,
+                I1=>B_DUMMY,
+                I2=>C_DUMMY,
                 O=>XLXN_26);
-   
-   XLXI_8 : tempRead
-      port map (clk=>Clk_50MHz,
-                inputData(7 downto 0)=>XLXN_12(7 downto 0),
-                isBusy=>XLXN_26,
-                readBit_detection=>XLXN_15,
-                start=>start,
-                wire_in=>XLXN_27,
-                busy=>busy,
-                outputData(7 downto 0)=>XLXN_9(7 downto 0),
-                startRead=>XLXN_11,
-                startReset=>XLXN_8,
-                startWrite=>XLXN_10,
-                tempData(23 downto 0)=>XLXN_37(23 downto 0));
-   
-   XLXI_9 : RotaryEnc
-      port map (Clk=>Clk_50MHz,
-                ROT_A=>ROT_A,
-                ROT_B=>XLXI_9_ROT_B_openSignal,
-                RotL=>start,
-                RotR=>open);
    
    XLXI_10 : LCD1x64
       port map (Blank(15 downto 0)=>XLXI_10_Blank_openSignal(15 downto 0),
@@ -237,6 +214,21 @@ begin
                 LCD_RW=>LCD_RW,
                 SF_CE=>SF_CE,
                 LCD_D(3 downto 0)=>LCD_D_DUMMY(3 downto 0));
+   
+   XLXI_24 : tempRead
+      port map (clk=>Clk_50MHz,
+                inputData(7 downto 0)=>XLXN_12(7 downto 0),
+                isBusy=>XLXN_26,
+                readBit_detection=>XLXN_15,
+                start=>start,
+                wire_in=>XLXN_27,
+                busy=>A,
+                outputData(7 downto 0)=>XLXN_9(7 downto 0),
+                startRead=>XLXN_11,
+                startReset=>XLXN_8,
+                startWrite=>XLXN_10,
+                tempData(23 downto 0)=>XLXN_37(23 downto 0),
+                test_out(3 downto 0)=>test_led(3 downto 0));
    
 end BEHAVIORAL;
 

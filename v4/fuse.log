@@ -1,36 +1,31 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema_sequenceTestSchema_sch_tb_isim_beh.exe" -prj "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema_sequenceTestSchema_sch_tb_beh.prj" "work.sequenceTestSchema_sequenceTestSchema_sch_tb" 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema_testSchema_sch_tb_isim_beh.exe -prj C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema_testSchema_sch_tb_beh.prj work.testSchema_testSchema_sch_tb 
 ISim P.20131013 (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/lab/Downloads/v4 (2)/writeByte.vhd" into library work
-Parsing VHDL file "C:/Users/lab/Downloads/v4 (2)/tempRead.vhd" into library work
-Parsing VHDL file "C:/Users/lab/Downloads/v4 (2)/readByte.vhd" into library work
-Parsing VHDL file "C:/Users/lab/Downloads/v4 (2)/modul.vhd" into library work
-Parsing VHDL file "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf" into library work
-Parsing VHDL file "C:/Users/lab/Downloads/v4 (2)/sequenceTB.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/writeByte.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/readByte.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/modul.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema.vhf" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema_TB.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 109764 KB
-Fuse CPU Usage: 389 ms
+Fuse Memory Usage: 109256 KB
+Fuse CPU Usage: 374 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
 Compiling package vcomponents
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
-Compiling architecture behavioral of entity modul [modul_default]
-Compiling architecture behavioral of entity readByte [readbyte_default]
 Compiling architecture behavioral of entity writeByte [writebyte_default]
-Compiling architecture iobuf_v of entity IOBUF [\IOBUF("DONT_CARE",12,"0",true,"...]
-Compiling architecture gnd_v of entity GND [gnd_default]
-Compiling architecture or3_v of entity OR3 [or3_default]
-Compiling architecture behavioral of entity tempRead [tempread_default]
-Compiling architecture behavioral of entity sequenceTestSchema [sequencetestschema_default]
-Compiling architecture behavioral of entity sequencetestschema_sequencetests...
+Compiling architecture behavioral of entity readByte [readbyte_default]
+Compiling architecture behavioral of entity modul [modul_default]
+Compiling architecture behavioral of entity testSchema [testschema_default]
+Compiling architecture behavioral of entity testschema_testschema_sch_tb
 Time Resolution for simulation is 1ps.
-Waiting for 8 sub-compilation(s) to finish...
-Compiled 23 VHDL Units
-Built simulation executable C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema_sequenceTestSchema_sch_tb_isim_beh.exe
-Fuse Memory Usage: 130804 KB
-Fuse CPU Usage: 670 ms
+Waiting for 7 sub-compilation(s) to finish...
+Compiled 15 VHDL Units
+Built simulation executable C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema_testSchema_sch_tb_isim_beh.exe
+Fuse Memory Usage: 130296 KB
+Fuse CPU Usage: 639 ms

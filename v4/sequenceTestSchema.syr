@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: sequenceTestSchema.prj
 
@@ -104,17 +104,17 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/lab/Downloads/v4 (2)/modul.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/modul.vhd" in Library work.
 Architecture behavioral of Entity modul is up to date.
-Compiling vhdl file "C:/Users/lab/Downloads/v4 (2)/readByte.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/readByte.vhd" in Library work.
 Architecture behavioral of Entity readbyte is up to date.
-Compiling vhdl file "C:/Users/lab/Downloads/v4 (2)/writeByte.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/writeByte.vhd" in Library work.
 Architecture behavioral of Entity writebyte is up to date.
-Compiling vhdl file "C:/Users/lab/Downloads/v4 (2)/tempRead.vhd" in Library work.
-Architecture behavioral of Entity tempread is up to date.
-Compiling vhdl file "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf" in Library work.
-Entity <sequencetestschema> compiled.
-Entity <sequencetestschema> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/tempRead.vhd" in Library work.
+Entity <tempread> compiled.
+Entity <tempread> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.vhf" in Library work.
+Architecture behavioral of Entity sequencetestschema is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -139,9 +139,7 @@ Analyzing Entity <sequenceTestSchema> in library <work> (Architecture <behaviora
     Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_5> in unit <sequenceTestSchema>.
     Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_5> in unit <sequenceTestSchema>.
     Set user-defined property "SLEW =  SLOW" for instance <XLXI_5> in unit <sequenceTestSchema>.
-WARNING:Xst:753 - "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf" line 223: Unconnected output port 'RotR' of component 'RotaryEnc'.
-WARNING:Xst:2211 - "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf" line 223: Instantiating black box module <RotaryEnc>.
-WARNING:Xst:2211 - "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf" line 230: Instantiating black box module <LCD1x64>.
+WARNING:Xst:2211 - "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.vhf" line 207: Instantiating black box module <LCD1x64>.
 Entity <sequenceTestSchema> analyzed. Unit <sequenceTestSchema> generated.
 
 Analyzing Entity <modul> in library <work> (Architecture <behavioral>).
@@ -154,8 +152,24 @@ Analyzing Entity <writeByte> in library <work> (Architecture <behavioral>).
 Entity <writeByte> analyzed. Unit <writeByte> generated.
 
 Analyzing Entity <tempRead> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/Users/lab/Downloads/v4 (2)/tempRead.vhd" line 104: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <readBit_detection>, <read_counter>
+INFO:Xst:2679 - Register <tempDataBuffor<7>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<5>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<4>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<3>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<1>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<0>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<15>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<13>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<12>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<11>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<9>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<8>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<23>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<21>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<20>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<19>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<17>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <tempDataBuffor<16>> in unit <tempRead> has a constant value of 0 during circuit operation. The register is replaced by logic.
 Entity <tempRead> analyzed. Unit <tempRead> generated.
 
 
@@ -166,7 +180,7 @@ Entity <tempRead> analyzed. Unit <tempRead> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <modul>.
-    Related source file is "C:/Users/lab/Downloads/v4 (2)/modul.vhd".
+    Related source file is "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/modul.vhd".
     Found finite state machine <FSM_0> for signal <present_state>.
     -----------------------------------------------------------------------
     | States             | 13                                             |
@@ -188,7 +202,7 @@ Unit <modul> synthesized.
 
 
 Synthesizing Unit <readByte>.
-    Related source file is "C:/Users/lab/Downloads/v4 (2)/readByte.vhd".
+    Related source file is "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/readByte.vhd".
     Found finite state machine <FSM_1> for signal <present_state>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
@@ -215,7 +229,7 @@ Unit <readByte> synthesized.
 
 
 Synthesizing Unit <writeByte>.
-    Related source file is "C:/Users/lab/Downloads/v4 (2)/writeByte.vhd".
+    Related source file is "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/writeByte.vhd".
     Found finite state machine <FSM_2> for signal <present_state>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
@@ -241,38 +255,43 @@ Unit <writeByte> synthesized.
 
 
 Synthesizing Unit <tempRead>.
-    Related source file is "C:/Users/lab/Downloads/v4 (2)/tempRead.vhd".
+    Related source file is "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/tempRead.vhd".
 WARNING:Xst:647 - Input <wire_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Register <tempDataBuffor<14>> equivalent to <tempDataBuffor<10>> has been removed
+    Register <tempDataBuffor<22>> equivalent to <tempDataBuffor<18>> has been removed
+    Register <tempDataBuffor<6>> equivalent to <tempDataBuffor<2>> has been removed
     Found finite state machine <FSM_3> for signal <present_state>.
     -----------------------------------------------------------------------
     | States             | 29                                             |
     | Transitions        | 57                                             |
     | Inputs             | 5                                              |
-    | Outputs            | 12                                             |
+    | Outputs            | 14                                             |
     | Clock              | clk                       (rising_edge)        |
     | Power Up State     | idle                                           |
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
+    Found 4-bit register for signal <test_out>.
     Found 8-bit register for signal <outputData>.
     Found 1-bit register for signal <startReset>.
     Found 24-bit register for signal <tempData>.
     Found 1-bit register for signal <startRead>.
     Found 1-bit register for signal <startWrite>.
-    Found 5-bit subtractor for signal <$sub0000> created at line 287.
+    Found 5-bit subtractor for signal <$sub0000> created at line 298.
     Found 4-bit register for signal <read_counter>.
-    Found 4-bit adder for signal <read_counter$addsub0000> created at line 284.
-    Found 24-bit register for signal <tempDataBuffor>.
+    Found 4-bit adder for signal <read_counter$addsub0000> created at line 294.
+    Found 1-bit register for signal <tempDataBuffor<18>>.
+    Found 1-bit register for signal <tempDataBuffor<10>>.
+    Found 1-bit register for signal <tempDataBuffor<2>>.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred  63 D-type flip-flop(s).
+	inferred  46 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
 Unit <tempRead> synthesized.
 
 
 Synthesizing Unit <sequenceTestSchema>.
-    Related source file is "C:/Users/lab/Downloads/v4 (2)/sequenceTestSchema.vhf".
-WARNING:Xst:653 - Signal <XLXI_9_ROT_B_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+    Related source file is "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.vhf".
 WARNING:Xst:653 - Signal <XLXI_10_Reset_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 WARNING:Xst:653 - Signal <XLXI_10_Blank_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
 Unit <sequenceTestSchema> synthesized.
@@ -288,11 +307,11 @@ Macro Statistics
  5-bit subtractor                                      : 1
 # Counters                                             : 1
  16-bit up counter                                     : 1
-# Registers                                            : 45
- 1-bit register                                        : 39
+# Registers                                            : 25
+ 1-bit register                                        : 18
  24-bit register                                       : 1
  32-bit register                                       : 1
- 4-bit register                                        : 1
+ 4-bit register                                        : 2
  5-bit register                                        : 1
  8-bit register                                        : 2
 # Comparators                                          : 1
@@ -307,7 +326,7 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_3> for best encoding.
-Optimizing FSM <XLXI_8/present_state/FSM> on signal <present_state[1:29]> with one-hot encoding.
+Optimizing FSM <XLXI_24/present_state/FSM> on signal <present_state[1:29]> with one-hot encoding.
 -------------------------------------------------------------
  State                      | Encoding
 -------------------------------------------------------------
@@ -381,11 +400,15 @@ Optimizing FSM <XLXI_1/present_state/FSM> on signal <present_state[1:4]> with us
  reset_c  | 1011
  reset_d  | 1100
 ----------------------
-Reading core <RotaryEnc.ngc>.
 Reading core <LCD1x64.ngc>.
-Loading core <RotaryEnc> for timing and area information for instance <XLXI_9>.
 Loading core <LCD1x64> for timing and area information for instance <XLXI_10>.
-WARNING:Xst:1710 - FF/Latch <outputData_0> (without init value) has a constant value of 0 in block <XLXI_8>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <tempData_0> in Unit <XLXI_24> is equivalent to the following 17 FFs/Latches, which will be removed : <tempData_1> <tempData_3> <tempData_4> <tempData_5> <tempData_7> <tempData_8> <tempData_9> <tempData_11> <tempData_12> <tempData_13> <tempData_15> <tempData_16> <tempData_17> <tempData_19> <tempData_20> <tempData_21> <tempData_23> 
+INFO:Xst:2261 - The FF/Latch <tempData_2> in Unit <XLXI_24> is equivalent to the following FF/Latch, which will be removed : <tempData_6> 
+INFO:Xst:2261 - The FF/Latch <tempData_10> in Unit <XLXI_24> is equivalent to the following FF/Latch, which will be removed : <tempData_14> 
+INFO:Xst:2261 - The FF/Latch <tempData_18> in Unit <XLXI_24> is equivalent to the following FF/Latch, which will be removed : <tempData_22> 
+WARNING:Xst:1710 - FF/Latch <outputData_0> (without init value) has a constant value of 0 in block <XLXI_24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <tempData_0> (without init value) has a constant value of 0 in block <XLXI_24>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <tempData<23:23>> (without init value) have a constant value of 0 in block <tempRead>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -398,8 +421,8 @@ Macro Statistics
  5-bit subtractor                                      : 1
 # Counters                                             : 1
  16-bit up counter                                     : 1
-# Registers                                            : 120
- Flip-Flops                                            : 120
+# Registers                                            : 102
+ Flip-Flops                                            : 102
 # Comparators                                          : 1
  5-bit comparator greatequal                           : 1
 # Multiplexers                                         : 1
@@ -410,7 +433,27 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <outputData_0> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <tempData_21> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_20> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_19> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_17> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_16> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_15> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_13> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_12> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_11> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_9> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_8> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_7> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_5> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_4> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_3> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_1> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tempData_0> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outputData_0> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <tempData_2> in Unit <tempRead> is equivalent to the following FF/Latch, which will be removed : <tempData_6> 
+INFO:Xst:2261 - The FF/Latch <tempData_10> in Unit <tempRead> is equivalent to the following FF/Latch, which will be removed : <tempData_14> 
+INFO:Xst:2261 - The FF/Latch <tempData_18> in Unit <tempRead> is equivalent to the following FF/Latch, which will be removed : <tempData_22> 
 
 Optimizing unit <sequenceTestSchema> ...
 
@@ -425,7 +468,7 @@ WARNING:Xst:1710 - FF/Latch <outputData_2> (without init value) has a constant v
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2261 - The FF/Latch <XLXI_8/outputData_5> in Unit <sequenceTestSchema> is equivalent to the following 2 FFs/Latches, which will be removed : <XLXI_8/outputData_4> <XLXI_8/outputData_1> 
+INFO:Xst:2261 - The FF/Latch <XLXI_24/outputData_5> in Unit <sequenceTestSchema> is equivalent to the following 2 FFs/Latches, which will be removed : <XLXI_24/outputData_4> <XLXI_24/outputData_1> 
 Found area constraint ratio of 100 (+ 5) on block sequenceTestSchema, actual ratio is 5.
 INFO:Xst:2260 - The FF/Latch <cntDigit_0> in Unit <XLXI_10> is equivalent to the following 4 FFs/Latches : <cntDigit_0_1> <cntDigit_0_2> <cntDigit_0_3> <cntDigit_0_4> 
 INFO:Xst:2260 - The FF/Latch <cntDigit_1> in Unit <XLXI_10> is equivalent to the following 2 FFs/Latches : <cntDigit_1_1> <cntDigit_1_2> 
@@ -440,8 +483,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 172
- Flip-Flops                                            : 172
+# Registers                                            : 134
+ Flip-Flops                                            : 134
 
 =========================================================================
 
@@ -467,46 +510,44 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 12
+# IOs                              : 19
 
 Cell Usage :
-# BELS                             : 667
-#      GND                         : 3
-#      INV                         : 10
+# BELS                             : 646
+#      GND                         : 2
+#      INV                         : 9
 #      LUT1                        : 73
-#      LUT2                        : 54
-#      LUT2_D                      : 3
+#      LUT2                        : 59
+#      LUT2_D                      : 2
 #      LUT2_L                      : 4
-#      LUT3                        : 127
+#      LUT3                        : 104
 #      LUT3_D                      : 2
 #      LUT3_L                      : 6
-#      LUT4                        : 163
-#      LUT4_D                      : 7
-#      LUT4_L                      : 19
+#      LUT4                        : 165
+#      LUT4_D                      : 9
+#      LUT4_L                      : 16
 #      MUXCY                       : 72
 #      MUXF5                       : 29
 #      MUXF6                       : 11
 #      MUXF7                       : 5
 #      OR3                         : 1
-#      VCC                         : 3
+#      VCC                         : 2
 #      XORCY                       : 75
-# FlipFlops/Latches                : 270
-#      FD                          : 63
-#      FDE                         : 68
+# FlipFlops/Latches                : 225
+#      FD                          : 58
+#      FDE                         : 26
 #      FDR                         : 77
-#      FDRE                        : 6
+#      FDRE                        : 4
 #      FDRS                        : 18
 #      FDRSE                       : 3
-#      FDS                         : 33
-#      FDSE                        : 2
-# Shift Registers                  : 2
-#      SRL16                       : 2
+#      FDS                         : 36
+#      FDSE                        : 3
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 11
+# IO Buffers                       : 18
 #      IBUF                        : 1
 #      IOBUF                       : 5
-#      OBUF                        : 5
+#      OBUF                        : 12
 =========================================================================
 
 Device utilization summary:
@@ -514,13 +555,11 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                      258  out of   4656     5%  
- Number of Slice Flip Flops:            270  out of   9312     2%  
- Number of 4 input LUTs:                470  out of   9312     5%  
-    Number used as logic:               468
-    Number used as Shift registers:       2
- Number of IOs:                          12
- Number of bonded IOBs:                  12  out of    232     5%  
+ Number of Slices:                      238  out of   4656     5%  
+ Number of Slice Flip Flops:            225  out of   9312     2%  
+ Number of 4 input LUTs:                449  out of   9312     4%  
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of    232     8%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -544,7 +583,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk_50MHz                          | BUFGP                  | 272   |
+Clk_50MHz                          | BUFGP                  | 225   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -555,9 +594,9 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 8.241ns (Maximum Frequency: 121.341MHz)
-   Minimum input arrival time before clock: 2.495ns
-   Maximum output required time after clock: 5.712ns
+   Minimum period: 8.126ns (Maximum Frequency: 123.064MHz)
+   Minimum input arrival time before clock: 3.319ns
+   Maximum output required time after clock: 6.119ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -566,82 +605,82 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk_50MHz'
-  Clock period: 8.241ns (frequency: 121.341MHz)
-  Total number of paths / destination ports: 6597 / 458
+  Clock period: 8.126ns (frequency: 123.064MHz)
+  Total number of paths / destination ports: 6334 / 373
 -------------------------------------------------------------------------
-Delay:               8.241ns (Levels of Logic = 6)
-  Source:            XLXI_1/clock_counter_8 (FF)
+Delay:               8.126ns (Levels of Logic = 6)
+  Source:            XLXI_1/clock_counter_11 (FF)
   Destination:       XLXI_1/clock_counter_15 (FF)
   Source Clock:      Clk_50MHz rising
   Destination Clock: Clk_50MHz rising
 
-  Data Path: XLXI_1/clock_counter_8 to XLXI_1/clock_counter_15
+  Data Path: XLXI_1/clock_counter_11 to XLXI_1/clock_counter_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              8   0.514   0.646  XLXI_1/clock_counter_8 (XLXI_1/clock_counter_8)
-     LUT4:I3->O            1   0.612   0.387  XLXI_1/present_state_cmp_eq0004124 (XLXI_1/present_state_cmp_eq0004124)
-     LUT4:I2->O            4   0.612   0.502  XLXI_1/present_state_cmp_eq0004125 (XLXI_1/N5)
-     LUT4_L:I3->LO         1   0.612   0.103  XLXI_1/present_state_FSM_FFd4-In144 (XLXI_1/present_state_FSM_FFd4-In144)
-     LUT4:I3->O            1   0.612   0.360  XLXI_1/present_state_FSM_FFd4-In173_SW0 (N61)
+     FDR:C->Q              9   0.514   0.700  XLXI_1/clock_counter_11 (XLXI_1/clock_counter_11)
+     LUT4:I3->O            1   0.612   0.360  XLXI_1/present_state_cmp_eq0004125_SW0 (N64)
+     LUT4_D:I3->LO         1   0.612   0.103  XLXI_1/present_state_cmp_eq0004125 (N106)
+     LUT4:I3->O            1   0.612   0.360  XLXI_1/present_state_FSM_FFd4-In144 (XLXI_1/present_state_FSM_FFd4-In144)
+     LUT4:I3->O            1   0.612   0.360  XLXI_1/present_state_FSM_FFd4-In173_SW0 (N71)
      LUT4:I3->O            2   0.612   0.383  XLXI_1/present_state_FSM_FFd4-In173 (XLXI_1/present_state_FSM_FFd4-In)
      LUT4:I3->O           16   0.612   0.879  XLXI_1/present_state_FSM_Out2141 (XLXI_1/present_state_cmp_eq0009)
      FDR:R                     0.795          XLXI_1/clock_counter_0
     ----------------------------------------
-    Total                      8.241ns (4.981ns logic, 3.260ns route)
-                                       (60.4% logic, 39.6% route)
+    Total                      8.126ns (4.981ns logic, 3.145ns route)
+                                       (61.3% logic, 38.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
-  Total number of paths / destination ports: 2 / 2
+  Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Offset:              2.495ns (Levels of Logic = 2)
-  Source:            OW_DQ (PAD)
-  Destination:       XLXI_1/readBit_detecion (FF)
+Offset:              3.319ns (Levels of Logic = 2)
+  Source:            start (PAD)
+  Destination:       XLXI_24/present_state_FSM_FFd29 (FF)
   Destination Clock: Clk_50MHz rising
 
-  Data Path: OW_DQ to XLXI_1/readBit_detecion
+  Data Path: start to XLXI_24/present_state_FSM_FFd29
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IOBUF:IO->O           1   1.106   0.509  XLXI_5 (XLXN_27)
-     LUT4:I0->O            1   0.612   0.000  XLXI_1/readBit_detecion_mux00011 (XLXI_1/readBit_detecion_mux0001)
-     FDE:D                     0.268          XLXI_1/readBit_detecion
+     IBUF:I->O             2   1.106   0.449  start_IBUF (start_IBUF)
+     LUT3:I1->O            1   0.612   0.357  XLXI_24/present_state_FSM_FFd29-In5 (XLXI_24/present_state_FSM_FFd29-In5)
+     FDS:S                     0.795          XLXI_24/present_state_FSM_FFd29
     ----------------------------------------
-    Total                      2.495ns (1.986ns logic, 0.509ns route)
-                                       (79.6% logic, 20.4% route)
+    Total                      3.319ns (2.513ns logic, 0.806ns route)
+                                       (75.7% logic, 24.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
-  Total number of paths / destination ports: 31 / 9
+  Total number of paths / destination ports: 42 / 16
 -------------------------------------------------------------------------
-Offset:              5.712ns (Levels of Logic = 2)
-  Source:            XLXI_1/present_state_FSM_FFd1 (FF)
-  Destination:       OW_DQ (PAD)
+Offset:              6.119ns (Levels of Logic = 2)
+  Source:            XLXI_1/present_state_FSM_FFd4 (FF)
+  Destination:       D (PAD)
   Source Clock:      Clk_50MHz rising
 
-  Data Path: XLXI_1/present_state_FSM_FFd1 to OW_DQ
+  Data Path: XLXI_1/present_state_FSM_FFd4 to D
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q             18   0.514   1.060  XLXI_1/present_state_FSM_FFd1 (XLXI_1/present_state_FSM_FFd1)
-     LUT4:I0->O            1   0.612   0.357  XLXI_1/present_state_FSM_Out31 (XLXN_16)
-     IOBUF:T->IO               3.169          XLXI_5 (OW_DQ)
+     FD:C->Q              16   0.514   1.031  XLXI_1/present_state_FSM_FFd4 (XLXI_1/present_state_FSM_FFd4)
+     LUT4:I0->O           11   0.612   0.793  XLXI_1/present_state_FSM_Out41 (D_OBUF)
+     OBUF:I->O                 3.169          D_OBUF (D)
     ----------------------------------------
-    Total                      5.712ns (4.295ns logic, 1.417ns route)
-                                       (75.2% logic, 24.8% route)
+    Total                      6.119ns (4.295ns logic, 1.824ns route)
+                                       (70.2% logic, 29.8% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.05 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.94 secs
  
 --> 
 
-Total memory usage is 223880 kilobytes
+Total memory usage is 222668 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   11 (   0 filtered)
-Number of infos    :    7 (   0 filtered)
+Number of warnings :   26 (   0 filtered)
+Number of infos    :   32 (   0 filtered)
 

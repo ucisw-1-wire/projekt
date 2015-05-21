@@ -12,4 +12,5 @@ startWrite
 startReset
 =tempData[23:0]=
 =outputData[7:0]=
+=test_out[3:0]=
 [BiDir]

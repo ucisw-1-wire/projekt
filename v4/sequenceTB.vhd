@@ -22,27 +22,27 @@ END sequenceTestSchema_sequenceTestSchema_sch_tb;
 ARCHITECTURE behavioral OF sequenceTestSchema_sequenceTestSchema_sch_tb IS 
 
    COMPONENT sequenceTestSchema
-   PORT( clk	:	IN	STD_LOGIC; 
-          tempData	:	OUT	STD_LOGIC_VECTOR (23 DOWNTO 0); 
-          busy	:	OUT	STD_LOGIC; 
+   PORT( Clk_50MHz	:	IN	STD_LOGIC; 
+          --tempData	:	OUT	STD_LOGIC_VECTOR (23 DOWNTO 0); 
+          --busy	:	OUT	STD_LOGIC; 
           start	:	IN	STD_LOGIC; 
-          wire_inout	:	INOUT	STD_LOGIC);
+          OW_DQ	:	INOUT	STD_LOGIC);
    END COMPONENT;
 
    SIGNAL clk	:	STD_LOGIC;
-   SIGNAL tempData	:	STD_LOGIC_VECTOR (23 DOWNTO 0);
-   SIGNAL busy	:	STD_LOGIC;
+   --SIGNAL tempData	:	STD_LOGIC_VECTOR (23 DOWNTO 0);
+   --SIGNAL busy	:	STD_LOGIC;
    SIGNAL start	:	STD_LOGIC;
    SIGNAL wire_inout	:	STD_LOGIC;
 	constant clk_period : time := 20 ns;
 BEGIN
 
    UUT: sequenceTestSchema PORT MAP(
-		clk => clk, 
-		tempData => tempData, 
-		busy => busy, 
+		Clk_50MHz => clk, 
+		--tempData => tempData, 
+		--busy => busy, 
 		start => start, 
-		wire_inout => wire_inout
+		OW_DQ => wire_inout
    );
 
 -- *** Test Bench - User Defined Section ***

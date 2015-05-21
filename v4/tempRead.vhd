@@ -41,7 +41,9 @@ entity tempRead is
 			  busy : out STD_LOGIC;
 			  startRead : out STD_LOGIC;
 			  startWrite : out STD_LOGIC;
-			  startReset : out STD_LOGIC
+			  startReset : out STD_LOGIC;
+			  test_out : out STD_LOGIC_VECTOR ( 3 downto 0)
+			  --led_out: out STD_LOGIC ;
 			  );
 end tempRead;
 
@@ -101,15 +103,17 @@ begin
 	
 	busy <= '0' WHEN PRESENT_STATE = IDLE ELSE '1';
 	
-	next_state_process: process (clk, present_state, start, inputData, isBusy)
+	next_state_process: process (clk, present_state, start, inputData, isBusy,readBit_detection, read_counter)
 	begin
 		
 --		if rising_edge(clk) then
 			next_state <= present_state;
 			case present_state is
 				when idle =>
+				--led_out <= '1';
 					if start = '1' then
 						next_state <= waitForBusy_reset_1;
+						--led_out <= '0' ;
 					end if;
 				
 				--- reset#1
@@ -262,30 +266,38 @@ begin
 			case present_state is
 				when reset_1 =>
 					startReset <= '1';
+					test_out <= x"1" ;
 				when reset_2 =>
+					test_out <= x"4" ;
 					startReset <= '1';
 				when reset_3 =>
 					startReset <= '1';	
 				when skip_rom_1 =>
+					test_out <= x"2" ;
 					outputData <= X"CC";
 					startWrite <= '1';
 				when skip_rom_2 =>
+					test_out <= x"5" ;
 					outputData <= X"CC";
 					startWrite <= '1';
 				when convert_t =>
+					test_out <= x"3" ;
 					outputData <= X"44";
 					startWrite <= '1';
 				when readByte =>
 					startRead <= '1';
 				when read_scetchpad =>
+					test_out <= x"6" ;
 					outputData <= X"BE";
 					startWrite <= '1';
 				when increment =>
 					read_counter <= read_counter +1;
 				when captureByte_endOrNot =>
+					test_out <= x"A" ;
 					startRead <= '0';
-					tempDataBuffor ( (read_counter * 8 - 1) downto ( (read_counter -1) * 8 )) <= inputData;
+					tempDataBuffor ( (read_counter * 8 - 1) downto ( (read_counter -1) * 8 )) <= input_data;
 				when idle =>
+					test_out <= x"0" ;
 					read_counter <= 0;
 				when others =>
 					startRead <= '0';
