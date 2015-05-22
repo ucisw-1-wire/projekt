@@ -10,23 +10,23 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Fri May 15 10:42:04 2015
+Mapped Date    : Fri May 22 13:25:43 2015
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    1
 Logic Utilization:
-  Number of Slice Flip Flops:           221 out of   9,312    2%
-  Number of 4 input LUTs:               367 out of   9,312    3%
+  Number of Slice Flip Flops:           270 out of   9,312    2%
+  Number of 4 input LUTs:               395 out of   9,312    4%
 Logic Distribution:
-  Number of occupied Slices:            270 out of   4,656    5%
-    Number of Slices containing only related logic:     270 out of     270 100%
-    Number of Slices containing unrelated logic:          0 out of     270   0%
+  Number of occupied Slices:            297 out of   4,656    6%
+    Number of Slices containing only related logic:     297 out of     297 100%
+    Number of Slices containing unrelated logic:          0 out of     297   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         444 out of   9,312    4%
-    Number used as logic:               367
-    Number used as a route-thru:         77
+  Total Number of 4 input LUTs:         469 out of   9,312    5%
+    Number used as logic:               395
+    Number used as a route-thru:         74
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
@@ -34,11 +34,11 @@ Logic Distribution:
   Number of bonded IOBs:                 19 out of     232    8%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                2.94
+Average Fanout of Non-Clock Nets:                3.01
 
-Peak Memory Usage:  214 MB
-Total REAL time to MAP completion:  2 secs 
-Total CPU time to MAP completion:   1 secs 
+Peak Memory Usage:  221 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 
@@ -106,9 +106,9 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   7 block(s) removed
-  41 block(s) optimized away
-   7 signal(s) removed
+   3 block(s) removed
+  32 block(s) optimized away
+   3 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -123,17 +123,9 @@ To quickly locate the original cause for the removal of a chain of logic, look
 above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
-The signal "XLXI_10/cntDigit_0_2" is sourceless and has been removed.
-The signal "XLXI_10/cntDigit_0_4" is sourceless and has been removed.
-The signal "XLXI_10/cntDigit_01" is sourceless and has been removed.
-The signal "XLXI_10/cntDigit_0_3" is sourceless and has been removed.
 The signal "XLXI_10/genIOBUF[0].instIOBUF/O" is sourceless and has been removed.
 The signal "XLXI_10/genIOBUF[1].instIOBUF/O" is sourceless and has been removed.
 The signal "XLXI_10/genIOBUF[2].instIOBUF/O" is sourceless and has been removed.
-Unused block "XLXI_10/cntDigit_0_1" (FF) removed.
-Unused block "XLXI_10/cntDigit_0_2" (FF) removed.
-Unused block "XLXI_10/cntDigit_0_3" (FF) removed.
-Unused block "XLXI_10/cntDigit_0_4" (FF) removed.
 Unused block "XLXI_10/genIOBUF[0].instIOBUF/IBUF" (BUF) removed.
 Unused block "XLXI_10/genIOBUF[1].instIOBUF/IBUF" (BUF) removed.
 Unused block "XLXI_10/genIOBUF[2].instIOBUF/IBUF" (BUF) removed.
@@ -190,30 +182,12 @@ LUT3 		XLXI_10/Mmux_Digit_69
    optimized to 1
 LUT3 		XLXI_10/Mmux_Digit_7
    optimized to 1
-LUT3 		XLXI_10/Mmux_Digit_71
-   optimized to 0
-LUT3 		XLXI_10/Mmux_Digit_710
-   optimized to 0
-LUT3 		XLXI_10/Mmux_Digit_711
-   optimized to 0
-LUT3 		XLXI_10/Mmux_Digit_72
-   optimized to 0
 LUT3 		XLXI_10/Mmux_Digit_73
    optimized to 1
-LUT3 		XLXI_10/Mmux_Digit_74
-   optimized to 0
-LUT3 		XLXI_10/Mmux_Digit_75
-   optimized to 0
 LUT3 		XLXI_10/Mmux_Digit_76
    optimized to 1
 LUT3 		XLXI_10/Mmux_Digit_79
    optimized to 1
-LUT3 		XLXI_10/Mmux_Digit_8
-   optimized to 0
-LUT3 		XLXI_10/Mmux_Digit_81
-   optimized to 0
-LUT3 		XLXI_10/Mmux_Digit_83
-   optimized to 0
 GND 		XLXI_10/XST_GND
 VCC 		XLXI_10/XST_VCC
 GND 		XLXI_6

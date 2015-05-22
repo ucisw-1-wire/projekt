@@ -1,0 +1,5 @@
+MODULE temperatureSystem
+	SUBMODULE sequenceTestSchema
+		INSTANCE XLXI_2
+	SUBMODULE Memory
+		INSTANCE XLXI_3

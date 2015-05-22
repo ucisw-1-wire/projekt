@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : sequenceTestSchema.vhf
--- /___/   /\     Timestamp : 05/15/2015 10:03:20
+-- /___/   /\     Timestamp : 05/22/2015 13:24:43
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.vhf -w C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.sch
+--Command: sch2hdl -sympath C:/Users/lab/Downloads/projekt-master/projekt-master/v4/LCD1x64 -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.vhf -w C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.sch
 --Design Name: sequenceTestSchema
 --Device: spartan3e
 --Purpose:

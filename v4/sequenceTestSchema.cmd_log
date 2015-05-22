@@ -78,3 +78,13 @@ map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o sequenc
 par -w -intstyle ise -ol high -t 1 sequenceTestSchema_map.ncd sequenceTestSchema.ncd sequenceTestSchema.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sequenceTestSchema.twx sequenceTestSchema.ncd -o sequenceTestSchema.twr sequenceTestSchema.pcf 
 bitgen -intstyle ise -f sequenceTestSchema.ut sequenceTestSchema.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.xst" -ofn "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.syr" 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.xst" -ofn "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -uc 1-Wire/1-Wire.ucf -uc "GenIO (1)/GenIO.ucf" -uc LCD/LCD.ucf -p xc3s500e-fg320-5 sequenceTestSchema.ngc sequenceTestSchema.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o sequenceTestSchema_map.ncd sequenceTestSchema.ngd sequenceTestSchema.pcf 
+par -w -intstyle ise -ol high -t 1 sequenceTestSchema_map.ncd sequenceTestSchema.ncd sequenceTestSchema.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sequenceTestSchema.twx sequenceTestSchema.ncd -o sequenceTestSchema.twr sequenceTestSchema.pcf 
+bitgen -intstyle ise -f sequenceTestSchema.ut sequenceTestSchema.ncd 
+sch2sym -intstyle ise -family spartan3e -refsym sequenceTestSchema C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.sch C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.sym 
+sch2sym -intstyle ise -family spartan3e -refsym sequenceTestSchema C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.sch C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.sym 
+sch2sym -intstyle ise -family spartan3e -refsym sequenceTestSchema C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.sch C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema.sym 

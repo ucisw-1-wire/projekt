@@ -1,0 +1,10 @@
+vhdtdtfi -lib work Memory.vhd -prj v3 -o Memory.spl -module Memory -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Memory.spl C:/Users/lab/Downloads/projekt-master/projekt-master/v4/Memory.sym 
+vhdtdtfi -lib work Memory.vhd -prj v3 -o Memory.spl -module Memory -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Memory.spl C:/Users/lab/Downloads/projekt-master/projekt-master/v4/Memory.sym 
+vhdtdtfi -lib work Memory.vhd -prj v3 -o Memory.spl -module Memory -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Memory.spl C:/Users/lab/Downloads/projekt-master/projekt-master/v4/Memory.sym 
+vhdtdtfi -lib work Memory.vhd -prj v3 -o Memory.spl -module Memory -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Memory.spl C:/Users/lab/Downloads/projekt-master/projekt-master/v4/Memory.sym 
+vhdtdtfi -lib work Memory.vhd -prj v3 -o Memory.spl -module Memory -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Memory.spl C:/Users/lab/Downloads/projekt-master/projekt-master/v4/Memory.sym 

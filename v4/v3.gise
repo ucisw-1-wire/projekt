@@ -23,6 +23,8 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="Memory.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Memory.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -125,6 +127,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="sequenceTestSchema_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="sequenceTestSchema_pad.txt" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="sequenceTestSchema_par.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="sequenceTestSchema_sequenceTestSchema_sch_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="sequenceTestSchema_sequenceTestSchema_sch_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="sequenceTestSchema_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="sequenceTestSchema_summary.xml"/>
@@ -140,6 +143,7 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="tempRead.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="tempRead.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="tempRead_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="temperatureSystem.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="testSchema.cmd_log"/>
     <file xil_pn:fileType="FILE_JHD" xil_pn:name="testSchema.jhd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="testSchema.lso"/>
@@ -184,6 +188,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="modul.vhd"/>
@@ -202,7 +207,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="sequenceTestSchema.vhf"/>
       <outfile xil_pn:name="testSchema.vhf"/>
     </transform>
@@ -257,10 +265,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1431679308" xil_pn:in_ck="-919146472159564237" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2496088697745873113" xil_pn:start_ts="1431679306">
+    <transform xil_pn:end_ts="1432293884" xil_pn:in_ck="-919146472159564237" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2496088697745873113" xil_pn:start_ts="1432293882">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="sequenceTestSchema.vhf"/>
       <outfile xil_pn:name="testSchema.vhf"/>
@@ -287,13 +296,14 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1431679318" xil_pn:in_ck="-942735044970535263" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="12653811074233009" xil_pn:start_ts="1431679308">
+    <transform xil_pn:end_ts="1432293935" xil_pn:in_ck="-942735044970535263" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="12653811074233009" xil_pn:start_ts="1432293924">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
@@ -307,6 +317,7 @@
       <outfile xil_pn:name="sequenceTestSchema.stx"/>
       <outfile xil_pn:name="sequenceTestSchema.syr"/>
       <outfile xil_pn:name="sequenceTestSchema.xst"/>
+      <outfile xil_pn:name="sequenceTestSchema_sequenceTestSchema_sch_tb_beh.prj"/>
       <outfile xil_pn:name="sequenceTestSchema_vhdl.prj"/>
       <outfile xil_pn:name="sequenceTestSchema_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
@@ -317,7 +328,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1431679323" xil_pn:in_ck="-6962672540896671595" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-6441405893982875891" xil_pn:start_ts="1431679318">
+    <transform xil_pn:end_ts="1432293941" xil_pn:in_ck="8331174087724461686" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-6441405893982875891" xil_pn:start_ts="1432293935">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
@@ -327,7 +338,7 @@
       <outfile xil_pn:name="sequenceTestSchema.ngd"/>
       <outfile xil_pn:name="sequenceTestSchema_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1431679328" xil_pn:in_ck="-6493191736832477984" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1309755933173654900" xil_pn:start_ts="1431679323">
+    <transform xil_pn:end_ts="1432293949" xil_pn:in_ck="-6493191736832477984" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1309755933173654900" xil_pn:start_ts="1432293941">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -344,7 +355,7 @@
       <outfile xil_pn:name="sequenceTestSchema_summary.xml"/>
       <outfile xil_pn:name="sequenceTestSchema_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1431679345" xil_pn:in_ck="7098862258473846738" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1431679328">
+    <transform xil_pn:end_ts="1432293968" xil_pn:in_ck="7098862258473846738" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1432293949">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
@@ -359,7 +370,7 @@
       <outfile xil_pn:name="sequenceTestSchema_pad.txt"/>
       <outfile xil_pn:name="sequenceTestSchema_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1431679351" xil_pn:in_ck="4832791168806503313" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="287829442711806529" xil_pn:start_ts="1431679345">
+    <transform xil_pn:end_ts="1432293974" xil_pn:in_ck="4832791168806503313" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="287829442711806529" xil_pn:start_ts="1432293968">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
@@ -372,7 +383,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1431679351" xil_pn:in_ck="-7676489942500689179" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="1890673188639090495" xil_pn:start_ts="1431679351">
+    <transform xil_pn:end_ts="1432294026" xil_pn:in_ck="-7676489942500689179" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="1890673188639090495" xil_pn:start_ts="1432294026">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
@@ -384,7 +395,7 @@
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1431679345" xil_pn:in_ck="6866337335256242392" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1431679341">
+    <transform xil_pn:end_ts="1432293968" xil_pn:in_ck="6866337335256242392" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1432293964">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>

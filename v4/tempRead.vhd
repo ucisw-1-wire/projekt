@@ -314,7 +314,7 @@ begin
 				when captureByte_endOrNot =>
 					test_out <= x"A" ;
 					startRead <= '0';
-					tempDataBuffor ( (read_counter * 8 - 1) downto ( (read_counter -1) * 8 )) <= input_data;
+					tempDataBuffor ( (read_counter * 8 - 1) downto ( (read_counter -1) * 8 )) <= inputData;
 				when idle =>
 					test_out <= x"0" ;
 					read_counter <= 0;

@@ -2,8 +2,8 @@ Release 14.7 ngdbuild P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
-ise -dd _ngo -nt timestamp -uc LCD/LCD.ucf -uc GenIO (1)/GenIO.ucf -uc
-1-Wire/1-Wire.ucf -p xc3s500e-fg320-5 sequenceTestSchema.ngc
+ise -dd _ngo -sd LCD1x64 -nt timestamp -uc 1-Wire/1-Wire.ucf -uc GenIO
+(1)/GenIO.ucf -uc LCD/LCD.ucf -p xc3s500e-fg320-5 sequenceTestSchema.ngc
 sequenceTestSchema.ngd
 
 Reading NGO file
@@ -14,9 +14,9 @@ Loading design module
 Gathering constraint information from source properties...
 Done.
 
-Annotating constraints to design from ucf file "LCD/LCD.ucf" ...
-Annotating constraints to design from ucf file "GenIO (1)/GenIO.ucf" ...
 Annotating constraints to design from ucf file "1-Wire/1-Wire.ucf" ...
+Annotating constraints to design from ucf file "GenIO (1)/GenIO.ucf" ...
+Annotating constraints to design from ucf file "LCD/LCD.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
 INFO:ConstraintSystem - The Period constraint <NET "Clk_50MHz" PERIOD = 20.0ns
@@ -38,7 +38,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 115372 kilobytes
+Total memory usage is 122232 kilobytes
 
 Writing NGD file "sequenceTestSchema.ngd" ...
 Total REAL time to NGDBUILD completion:  3 sec
