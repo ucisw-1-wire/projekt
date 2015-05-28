@@ -20,6 +20,9 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
+use IEEE.NUMERIC_STD.ALL;
+use ieee.std_logic_arith.all;
+
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values

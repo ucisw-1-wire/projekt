@@ -1,0 +1,6 @@
+[Inputs]
+=column[9:0]=
+=row[8:0]=
+[Outputs]
+=rgb[2:0]=
+[BiDir]
