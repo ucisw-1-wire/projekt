@@ -1,0 +1,101 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : sequenceTestSchema.vf
+// /___/   /\     Timestamp : 06/02/2015 11:34:04
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/sequenceTestSchema.vf -w D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/sequenceTestSchema.sch
+//Design Name: sequenceTestSchema
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module sequenceTestSchema(Clk_50MHz, 
+                          start, 
+                          busy, 
+                          output_data, 
+                          test_out, 
+                          OW_DQ);
+
+    input Clk_50MHz;
+    input start;
+   output busy;
+   output [23:0] output_data;
+   output [3:0] test_out;
+    inout OW_DQ;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_8;
+   wire XLXN_10;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire [7:0] XLXN_16;
+   wire [7:0] XLXN_17;
+   wire XLXN_18;
+   wire XLXN_26;
+   wire XLXN_27;
+   wire XLXN_28;
+   
+   modul  XLXI_1 (.clk(Clk_50MHz), 
+                 .wire_in(XLXN_27), 
+                 .writeOne(XLXN_6), 
+                 .writeRead(XLXN_4), 
+                 .writeReset(XLXN_3), 
+                 .writeZero(XLXN_5), 
+                 .busy(XLXN_10), 
+                 .readBit_detecion(XLXN_8), 
+                 .wire_out(XLXN_26));
+   readByte  XLXI_2 (.clk(Clk_50MHz), 
+                    .isBusy(XLXN_10), 
+                    .readBit_detecion(XLXN_8), 
+                    .start(XLXN_2), 
+                    .busy(XLXN_15), 
+                    .data(XLXN_17[7:0]), 
+                    .read_bit(XLXN_4));
+   writeByte  XLXI_3 (.clk(Clk_50MHz), 
+                     .data(XLXN_16[7:0]), 
+                     .isBusy(XLXN_10), 
+                     .start(XLXN_1), 
+                     .busy(XLXN_14), 
+                     .writeOne(XLXN_6), 
+                     .writeZero(XLXN_5));
+   tempRead  XLXI_4 (.clk(Clk_50MHz), 
+                    .inputData(XLXN_17[7:0]), 
+                    .isBusy(XLXN_18), 
+                    .readBit_detection(XLXN_8), 
+                    .start(start), 
+                    .wire_in(), 
+                    .busy(busy), 
+                    .outputData(XLXN_16[7:0]), 
+                    .startRead(XLXN_2), 
+                    .startReset(XLXN_3), 
+                    .startWrite(XLXN_1), 
+                    .tempData(output_data[23:0]), 
+                    .test_out(test_out[3:0]));
+   OR3  XLXI_5 (.I0(XLXN_10), 
+               .I1(XLXN_15), 
+               .I2(XLXN_14), 
+               .O(XLXN_18));
+   (* IOSTANDARD = "DEFAULT" *) (* SLEW = "SLOW" *) (* DRIVE = "12" *) (* 
+         IBUF_DELAY_VALUE = "0" *) (* IFD_DELAY_VALUE = "AUTO" *) 
+   IOBUF  XLXI_7 (.I(XLXN_28), 
+                 .T(XLXN_26), 
+                 .O(XLXN_27), 
+                 .IO(OW_DQ));
+   GND  XLXI_8 (.G(XLXN_28));
+endmodule

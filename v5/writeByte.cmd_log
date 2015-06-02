@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/writeByte.xst" -ofn "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/writeByte.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 writeByte.ngc writeByte.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o writeByte_map.ncd writeByte.ngd writeByte.pcf 
+par -w -intstyle ise -ol high -t 1 writeByte_map.ncd writeByte.ncd writeByte.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml writeByte.twx writeByte.ncd -o writeByte.twr writeByte.pcf 
+bitgen -intstyle ise -f writeByte.ut writeByte.ncd 
+vhdtdtfi -lib work writeByte.vhd -prj v5 -o writeByte.spl -module writeByte -template d:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e writeByte.spl D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/writeByte.sym 

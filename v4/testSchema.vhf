@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : testSchema.vhf
--- /___/   /\     Timestamp : 05/15/2015 10:32:19
+-- /___/   /\     Timestamp : 06/02/2015 11:36:24
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema.vhf -w C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema.sch
+--Command: sch2hdl -sympath D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/LCD1x64 -intstyle ise -family spartan3e -flat -suppress -vhdl D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/testSchema.vhf -w D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/testSchema.sch
 --Design Name: testSchema
 --Device: spartan3e
 --Purpose:

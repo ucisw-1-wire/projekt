@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\!OneDriveCloud\OneDrive\Studia\Sem_VI\UCISW_2\svn\trunk\v5\Memory.ncd
+OUTFILE=D:\!OneDriveCloud\OneDrive\Studia\Sem_VI\UCISW_2\svn\trunk\v5\Memory.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=D:\!OneDriveCloud\OneDrive\Studia\Sem_VI\UCISW_2\svn\trunk\v5
+LICENSE=WebPack
+USER_INFO=210956680_0_0_818

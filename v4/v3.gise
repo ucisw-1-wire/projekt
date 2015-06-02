@@ -36,12 +36,16 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="controler.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="controler.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="controlerTB_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="controlerTB_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="controlerTB_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="displayControler.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="displayControler.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="memoryTB_isim_beh.exe"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="modul.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="modul.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="modul.bld"/>
@@ -237,9 +241,7 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="testSchema_envsettings.html"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testSchema_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="testSchema_summary.html"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testSchema_testSchema_sch_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testSchema_testSchema_sch_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testSchema_testSchema_sch_tb_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testSchema_testSchema_sch_tb_stx_beh.prj"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testSchema_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="testSchema_xst.xrpt"/>
@@ -259,14 +261,19 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1431678738" xil_pn:in_ck="1172324693567279358" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1431678738">
+    <transform xil_pn:end_ts="1433238958" xil_pn:in_ck="4809340450798750630" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1433238958">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="../sparta lab3 15_01_2015/ucisw/VGA.vhd"/>
+      <outfile xil_pn:name="Memory.vhd"/>
+      <outfile xil_pn:name="controler.vhd"/>
+      <outfile xil_pn:name="controlerTB.vhd"/>
+      <outfile xil_pn:name="displayControler.vhd"/>
+      <outfile xil_pn:name="memoryTB.vhd"/>
       <outfile xil_pn:name="modul.vhd"/>
       <outfile xil_pn:name="modulTB.vhd"/>
       <outfile xil_pn:name="readByte.vhd"/>
@@ -275,68 +282,70 @@
       <outfile xil_pn:name="testSchema_TB.vhd"/>
       <outfile xil_pn:name="writeByte.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1431678866" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-947840846072812202" xil_pn:start_ts="1431678866">
+    <transform xil_pn:end_ts="1433238958" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5175979059055769220" xil_pn:start_ts="1433238958">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1431678868" xil_pn:in_ck="-919146472159564237" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-3377826412019043112" xil_pn:start_ts="1431678866">
+    <transform xil_pn:end_ts="1433238961" xil_pn:in_ck="993718281075202679" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5421963816749851258" xil_pn:start_ts="1433238958">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="sequenceTestSchema.vhf"/>
       <outfile xil_pn:name="testSchema.vhf"/>
     </transform>
-    <transform xil_pn:end_ts="1431673472" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="3400280060771176832" xil_pn:start_ts="1431673472">
+    <transform xil_pn:end_ts="1433237785" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="9119353783828778953" xil_pn:start_ts="1433237785">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1433238961" xil_pn:in_ck="-8167446633119293339" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1433238961">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="../sparta lab3 15_01_2015/ucisw/VGA.vhd"/>
+      <outfile xil_pn:name="Memory.vhd"/>
+      <outfile xil_pn:name="controler.vhd"/>
+      <outfile xil_pn:name="controlerTB.vhd"/>
+      <outfile xil_pn:name="displayControler.vhd"/>
+      <outfile xil_pn:name="memoryTB.vhd"/>
+      <outfile xil_pn:name="modul.vhd"/>
+      <outfile xil_pn:name="modulTB.vhd"/>
+      <outfile xil_pn:name="readByte.vhd"/>
+      <outfile xil_pn:name="sequenceTB.vhd"/>
+      <outfile xil_pn:name="sequenceTestSchema.vhf"/>
+      <outfile xil_pn:name="tempRead.vhd"/>
+      <outfile xil_pn:name="testSchema.vhf"/>
+      <outfile xil_pn:name="testSchema_TB.vhd"/>
+      <outfile xil_pn:name="writeByte.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1433238965" xil_pn:in_ck="-8167446633119293339" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4960764167112852202" xil_pn:start_ts="1433238961">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
-    </transform>
-    <transform xil_pn:end_ts="1431678740" xil_pn:in_ck="4528188352472641981" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1431678740">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="modul.vhd"/>
-      <outfile xil_pn:name="modulTB.vhd"/>
-      <outfile xil_pn:name="readByte.vhd"/>
-      <outfile xil_pn:name="sequenceTB.vhd"/>
-      <outfile xil_pn:name="sequenceTestSchema.vhf"/>
-      <outfile xil_pn:name="tempRead.vhd"/>
-      <outfile xil_pn:name="testSchema.vhf"/>
-      <outfile xil_pn:name="testSchema_TB.vhd"/>
-      <outfile xil_pn:name="writeByte.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1431678872" xil_pn:in_ck="4528188352472641981" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7288613928308274399" xil_pn:start_ts="1431678868">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="controlerTB_beh.prj"/>
+      <outfile xil_pn:name="controlerTB_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="testSchema_testSchema_sch_tb_beh.prj"/>
-      <outfile xil_pn:name="testSchema_testSchema_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1431678872" xil_pn:in_ck="6344715967284483194" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2776866243852655531" xil_pn:start_ts="1431678872">
+    <transform xil_pn:end_ts="1433238966" xil_pn:in_ck="-4549657855091869643" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2561941360837324990" xil_pn:start_ts="1433238965">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="controlerTB_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="testSchema_testSchema_sch_tb_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1432889898" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1432889898">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -345,6 +354,8 @@
     <transform xil_pn:end_ts="1432889900" xil_pn:in_ck="993718281075202679" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="5614685618824434498" xil_pn:start_ts="1432889898">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="sequenceTestSchema.vhf"/>
       <outfile xil_pn:name="temperatureSystem.vhf"/>
       <outfile xil_pn:name="testSchema.vhf"/>
@@ -375,6 +386,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
       <status xil_pn:value="OutputRemoved"/>

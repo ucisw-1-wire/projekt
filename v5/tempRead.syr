@@ -1,0 +1,439 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: tempRead.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "tempRead.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "tempRead"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : tempRead
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/tempRead.vhd" in Library work.
+Entity <tempRead> compiled.
+Entity <tempRead> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <tempRead> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <tempRead> in library <work> (Architecture <Behavioral>).
+Entity <tempRead> analyzed. Unit <tempRead> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <tempRead>.
+    Related source file is "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/tempRead.vhd".
+WARNING:Xst:647 - Input <wire_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_0> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 32                                             |
+    | Transitions        | 63                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 14                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 24-bit register for signal <tempData>.
+    Found 8-bit register for signal <outputData>.
+    Found 1-bit register for signal <startRead>.
+    Found 1-bit register for signal <startWrite>.
+    Found 1-bit register for signal <startReset>.
+    Found 4-bit register for signal <test_out>.
+    Found 5-bit subtractor for signal <$sub0000> created at line 317.
+    Found 4-bit register for signal <read_counter>.
+    Found 4-bit adder for signal <read_counter$addsub0000> created at line 313.
+    Found 24-bit register for signal <tempDataBuffor>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  67 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <tempRead> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+# Registers                                            : 31
+ 1-bit register                                        : 27
+ 24-bit register                                       : 1
+ 4-bit register                                        : 2
+ 8-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <present_state/FSM> on signal <present_state[1:32]> with one-hot encoding.
+------------------------------------------------------------------
+ State                        | Encoding
+------------------------------------------------------------------
+ idle                         | 00000000000000000000000000000001
+ waitforbusy_reset_1          | 00000000000000000000000000000010
+ waitforbusy_reset_2          | 00000000000000000100000000000000
+ waitforbusy_reset_3          | 00010000000000000000000000000000
+ reset_1                      | 00000000000000000000000000000100
+ reset_2                      | 00000000000000001000000000000000
+ reset_3                      | 00100000000000000000000000000000
+ waitforreset_1               | 00000000000000000000000000001000
+ waitforreset_2               | 00000000000000010000000000000000
+ waitforreset_3               | 01000000000000000000000000000000
+ waitforbusy_skip_rom_1       | 00000000000000000000000000010000
+ waitforbusy_skip_rom_2       | 00000000000000100000000000000000
+ skip_rom_1                   | 00000000000000000000000000100000
+ skip_rom_2                   | 00000000000001000000000000000000
+ waitforskiprom_1             | 00000000000000000000000001000000
+ waitforskiprom_2             | 00000000000010000000000000000000
+ waitforbusy_convert_t        | 00000000000000000000000010000000
+ convert_t                    | 00000000000000000000000100000000
+ waitforconvert_t             | 00000000000000000000001000000000
+ waitforbusy_endofconvert     | 00000000000000000000010000000000
+ readbyteconvertt             | 00000000000000000000100000000000
+ waitforreadbyteconvertt      | 00000000000000000001000000000000
+ convert_t_endornot           | 00000000000000000010000000000000
+ waitforbusy_read_scetchpad   | 00000000000100000000000000000000
+ read_scetchpad               | 00000000001000000000000000000000
+ waitforbusyreadbytescetchpad | 00000000010000000000000000000000
+ readbytescetchpad            | 00000000100000000000000000000000
+ waitforreadbytescetchpad     | 00000001000000000000000000000000
+ increment                    | 00000010000000000000000000000000
+ waitforreadscetchpad         | 00000100000000000000000000000000
+ capturebyte_endornot         | 00001000000000000000000000000000
+ done                         | 10000000000000000000000000000000
+------------------------------------------------------------------
+WARNING:Xst:1710 - FF/Latch <outputData_0> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+# Registers                                            : 67
+ Flip-Flops                                            : 67
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <outputData_0> (without init value) has a constant value of 0 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <tempRead> ...
+WARNING:Xst:1710 - FF/Latch <outputData_2> (without init value) has a constant value of 1 in block <tempRead>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <outputData_1> in Unit <tempRead> is equivalent to the following 2 FFs/Latches, which will be removed : <outputData_4> <outputData_5> 
+Found area constraint ratio of 100 (+ 5) on block tempRead, actual ratio is 1.
+FlipFlop present_state_FSM_FFd5 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 96
+ Flip-Flops                                            : 96
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : tempRead.ngr
+Top Level Output File Name         : tempRead
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 53
+
+Cell Usage :
+# BELS                             : 76
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 8
+#      LUT2_L                      : 2
+#      LUT3                        : 41
+#      LUT3_L                      : 1
+#      LUT4                        : 15
+#      LUT4_D                      : 5
+#      LUT4_L                      : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 96
+#      FD                          : 20
+#      FDE                         : 48
+#      FDR                         : 6
+#      FDRS                        : 8
+#      FDS                         : 12
+#      FDSE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 51
+#      IBUF                        : 11
+#      OBUF                        : 40
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                       60  out of   4656     1%  
+ Number of Slice Flip Flops:             96  out of   9312     1%  
+ Number of 4 input LUTs:                 74  out of   9312     0%  
+ Number of IOs:                          53
+ Number of bonded IOBs:                  52  out of    232    22%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 96    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 3.871ns (Maximum Frequency: 258.304MHz)
+   Minimum input arrival time before clock: 4.780ns
+   Maximum output required time after clock: 5.295ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.871ns (frequency: 258.304MHz)
+  Total number of paths / destination ports: 357 / 166
+-------------------------------------------------------------------------
+Delay:               3.871ns (Levels of Logic = 2)
+  Source:            present_state_FSM_FFd30 (FF)
+  Destination:       test_out_3 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: present_state_FSM_FFd30 to test_out_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRS:C->Q             5   0.514   0.690  present_state_FSM_FFd30 (present_state_FSM_FFd30)
+     LUT4_D:I0->O          3   0.612   0.603  test_out_or00009 (test_out_or00009)
+     LUT2:I0->O            1   0.612   0.357  test_out_or000010 (test_out_or0000)
+     FDSE:CE                   0.483          test_out_3
+    ----------------------------------------
+    Total                      3.871ns (2.221ns logic, 1.650ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 78 / 58
+-------------------------------------------------------------------------
+Offset:              4.780ns (Levels of Logic = 4)
+  Source:            inputData<3> (PAD)
+  Destination:       present_state_FSM_FFd18 (FF)
+  Destination Clock: clk rising
+
+  Data Path: inputData<3> to present_state_FSM_FFd18
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.106   0.651  inputData_3_IBUF (inputData_3_IBUF)
+     LUT4:I0->O            2   0.612   0.532  present_state_cmp_eq00004 (present_state_cmp_eq00004)
+     LUT2:I0->O            1   0.612   0.387  present_state_cmp_eq000010 (present_state_cmp_eq0000)
+     LUT4:I2->O            1   0.612   0.000  present_state_FSM_FFd18-In1 (present_state_FSM_FFd18-In)
+     FD:D                      0.268          present_state_FSM_FFd18
+    ----------------------------------------
+    Total                      4.780ns (3.210ns logic, 1.570ns route)
+                                       (67.2% logic, 32.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 38 / 38
+-------------------------------------------------------------------------
+Offset:              5.295ns (Levels of Logic = 2)
+  Source:            present_state_FSM_FFd32 (FF)
+  Destination:       busy (PAD)
+  Source Clock:      clk rising
+
+  Data Path: present_state_FSM_FFd32 to busy
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              8   0.514   0.643  present_state_FSM_FFd32 (present_state_FSM_FFd32)
+     INV:I->O              1   0.612   0.357  present_state_FSM_Out131_INV_0 (busy_OBUF)
+     OBUF:I->O                 3.169          busy_OBUF (busy)
+    ----------------------------------------
+    Total                      5.295ns (4.295ns logic, 1.000ns route)
+                                       (81.1% logic, 18.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.49 secs
+ 
+--> 
+
+Total memory usage is 267452 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

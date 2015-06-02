@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/readByte.xst" -ofn "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/readByte.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 readByte.ngc readByte.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o readByte_map.ncd readByte.ngd readByte.pcf 
+par -w -intstyle ise -ol high -t 1 readByte_map.ncd readByte.ncd readByte.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml readByte.twx readByte.ncd -o readByte.twr readByte.pcf 
+bitgen -intstyle ise -f readByte.ut readByte.ncd 
+vhdtdtfi -lib work readByte.vhd -prj v5 -o readByte.spl -module readByte -template d:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e readByte.spl D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/readByte.sym 

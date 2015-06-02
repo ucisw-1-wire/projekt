@@ -1,31 +1,22 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema_testSchema_sch_tb_isim_beh.exe -prj C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema_testSchema_sch_tb_beh.prj work.testSchema_testSchema_sch_tb 
-ISim P.20131013 (signature 0x8ef4fb42)
-Number of CPUs detected in this system: 2
-Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/controlerTB_isim_beh.exe" -prj "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/controlerTB_beh.prj" "work.controlerTB" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/writeByte.vhd" into library work
-Parsing VHDL file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/readByte.vhd" into library work
-Parsing VHDL file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/modul.vhd" into library work
-Parsing VHDL file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema.vhf" into library work
-Parsing VHDL file "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema_TB.vhd" into library work
+Parsing VHDL file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/controler.vhd" into library work
+Parsing VHDL file "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/controlerTB.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 109256 KB
-Fuse CPU Usage: 374 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
-Compiling package vcomponents
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
-Compiling architecture behavioral of entity writeByte [writebyte_default]
-Compiling architecture behavioral of entity readByte [readbyte_default]
-Compiling architecture behavioral of entity modul [modul_default]
-Compiling architecture behavioral of entity testSchema [testschema_default]
-Compiling architecture behavioral of entity testschema_testschema_sch_tb
+Compiling architecture behavioral of entity controler [controler_default]
+Compiling architecture behavior of entity controlertb
 Time Resolution for simulation is 1ps.
-Waiting for 7 sub-compilation(s) to finish...
-Compiled 15 VHDL Units
-Built simulation executable C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema_testSchema_sch_tb_isim_beh.exe
-Fuse Memory Usage: 130296 KB
-Fuse CPU Usage: 639 ms
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 8 VHDL Units
+Built simulation executable D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/controlerTB_isim_beh.exe
+Fuse Memory Usage: 38196 KB
+Fuse CPU Usage: 685 ms

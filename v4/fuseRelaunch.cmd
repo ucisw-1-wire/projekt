@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema_testSchema_sch_tb_isim_beh.exe" -prj "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema_testSchema_sch_tb_beh.prj" "work.testSchema_testSchema_sch_tb" 
+-intstyle "ise" -incremental -o "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/controlerTB_isim_beh.exe" -prj "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/controlerTB_beh.prj" "work.controlerTB" 

@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/tempRead.xst" -ofn "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/tempRead.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 tempRead.ngc tempRead.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o tempRead_map.ncd tempRead.ngd tempRead.pcf 
+par -w -intstyle ise -ol high -t 1 tempRead_map.ncd tempRead.ncd tempRead.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml tempRead.twx tempRead.ncd -o tempRead.twr tempRead.pcf 
+bitgen -intstyle ise -f tempRead.ut tempRead.ncd 
+vhdtdtfi -lib work tempRead.vhd -prj v5 -o tempRead.spl -module tempRead -template d:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e tempRead.spl D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/tempRead.sym 

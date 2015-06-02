@@ -83,30 +83,31 @@ end process;
 
 action_process: process (clock, present_state, input_data)
 begin
-	
-	write_en <= '0';
-	start_read <= '0';
-	counter <= counter;
-	case present_state is
-		when startRead =>
-			start_read <= '1';
-		when saveData =>
-			
-			 -- skoro 0C to 0x00 to cokolwiek tu bêdzie da ró¿nicê wzglêdem zera
-			write_en <= '1';
-		when increment =>
-			if counter = X"4F" then
-				counter <= X"00";
-			else
-				counter <= counter + 1;
-			end if;	
-		when others =>
-			write_en <= '0';
-			start_read <= '0';
-			counter <= counter;
+	if rising_edge(clock) then
+		
+		write_en <= '0';
+		start_read <= '0';
+		counter <= counter;
+		case present_state is
+			when startRead =>
+				start_read <= '1';
+			when saveData =>
 				
-	end case;
-
+				 -- skoro 0C to 0x00 to cokolwiek tu bêdzie da ró¿nicê wzglêdem zera
+				write_en <= '1';
+			when increment =>
+				if counter = X"4F" then
+					counter <= X"00";
+				else
+					counter <= counter + 1;
+				end if;	
+			when others =>
+				write_en <= '0';
+				start_read <= '0';
+				counter <= counter;
+					
+		end case;
+	end if;
 end process;
 
 data_proc: process (clock, present_state) is

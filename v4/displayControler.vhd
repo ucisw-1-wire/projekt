@@ -56,7 +56,7 @@ begin
 		if disp_col /=640 and disp_row /= 480 then
 			mem_adres <= X"00";
 			mem_adres (6 downto 0) <= disp_col(9 downto 3); -- x wyswietlacza podzielony przez 8
-			if  disp_row > temporary 	then -- jak zrobic to mnozenie?
+			if  disp_row > temporary 	then 
 				rgb <= "111";
 			else
 				rgb <= "100";
