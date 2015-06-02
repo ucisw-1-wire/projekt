@@ -1,0 +1,4 @@
+#
+# 1-Wire device on J4 (Vcc - GND - E8)
+#
+NET "OW_DQ" LOC = "E8"  | IOSTANDARD = LVTTL | PULLUP;

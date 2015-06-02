@@ -1,0 +1,54 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : uklad.vf
+// /___/   /\     Timestamp : 05/29/2015 09:08:12
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/vga_1/uklad.vf" -w "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/uklad.sch"
+//Design Name: uklad
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module uklad(Clk_50MHz, 
+             VGA_B, 
+             VGA_G, 
+             VGA_HS, 
+             VGA_R, 
+             VGA_VS);
+
+    input Clk_50MHz;
+   output VGA_B;
+   output VGA_G;
+   output VGA_HS;
+   output VGA_R;
+   output VGA_VS;
+   
+   wire [2:0] XLXN_1;
+   wire [9:0] XLXN_2;
+   wire [8:0] XLXN_41;
+   
+   color_giver  XLXI_2 (.column(XLXN_2[9:0]), 
+                       .row(XLXN_41[8:0]), 
+                       .rgb(XLXN_1[2:0]));
+   VGA  XLXI_10 (.clk(Clk_50MHz), 
+                .colors_in(XLXN_1[2:0]), 
+                .reset(), 
+                .b(VGA_B), 
+                .column(XLXN_2[9:0]), 
+                .g(VGA_G), 
+                .hsync(VGA_HS), 
+                .r(VGA_R), 
+                .row(XLXN_41[8:0]), 
+                .vsync(VGA_VS));
+endmodule

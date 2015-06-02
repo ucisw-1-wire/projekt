@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema_testSchema_sch_tb_isim_beh.exe" -prj "C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema_testSchema_sch_tb_beh.prj" "work.testSchema_testSchema_sch_tb" 

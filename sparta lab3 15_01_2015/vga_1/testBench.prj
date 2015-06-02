@@ -1,0 +1,2 @@
+vhdl work "../ucisw/VGA.vhd"
+vhdl work "../ucisw/testBench.vhd"

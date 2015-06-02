@@ -17,24 +17,24 @@
         <signal name="XLXN_15" />
         <signal name="XLXN_16" />
         <signal name="XLXN_18" />
-        <signal name="D">
-        </signal>
-        <signal name="B">
-        </signal>
+        <signal name="D" />
+        <signal name="B" />
         <signal name="XLXN_26" />
         <signal name="start" />
         <signal name="OW_DQ" />
         <signal name="XLXN_27" />
-        <signal name="Output_Data(23:0)" />
-        <signal name="C">
-        </signal>
+        <signal name="C" />
         <signal name="Clk_50MHz" />
         <signal name="Busy" />
+        <signal name="XLXN_30" />
+        <signal name="test_out(3:0)" />
+        <signal name="output_data(23:0)" />
         <port polarity="Input" name="start" />
         <port polarity="BiDirectional" name="OW_DQ" />
-        <port polarity="Output" name="Output_Data(23:0)" />
         <port polarity="Input" name="Clk_50MHz" />
         <port polarity="Output" name="Busy" />
+        <port polarity="Output" name="test_out(3:0)" />
+        <port polarity="Output" name="output_data(23:0)" />
         <blockdef name="modul">
             <timestamp>2015-4-7T23:53:36</timestamp>
             <rect width="304" x="64" y="-384" height="384" />
@@ -187,9 +187,9 @@
             <blockpin signalname="XLXN_11" name="startRead" />
             <blockpin signalname="XLXN_10" name="startWrite" />
             <blockpin signalname="XLXN_8" name="startReset" />
-            <blockpin signalname="Output_Data(23:0)" name="tempData(23:0)" />
+            <blockpin signalname="output_data(23:0)" name="tempData(23:0)" />
             <blockpin signalname="XLXN_9(7:0)" name="outputData(7:0)" />
-            <blockpin name="test_out(3:0)" />
+            <blockpin signalname="test_out(3:0)" name="test_out(3:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -287,32 +287,12 @@
             <wire x2="2432" y1="1664" y2="1664" x1="2240" />
             <wire x2="2240" y1="1664" y2="1824" x1="2240" />
         </branch>
-        <branch name="Output_Data(23:0)">
-            <wire x2="1024" y1="1568" y2="1568" x1="832" />
-            <wire x2="1024" y1="1568" y2="2224" x1="1024" />
-            <wire x2="1328" y1="2224" y2="2224" x1="1024" />
-        </branch>
         <branch name="start">
             <wire x2="352" y1="1392" y2="1392" x1="176" />
         </branch>
         <iomarker fontsize="28" x="176" y="1392" name="start" orien="R180" />
         <instance x="352" y="1664" name="XLXI_24" orien="R0">
         </instance>
-        <branch name="Clk_50MHz">
-            <wire x2="352" y1="1312" y2="1312" x1="304" />
-            <wire x2="304" y1="1312" y2="2064" x1="304" />
-            <wire x2="448" y1="2064" y2="2064" x1="304" />
-            <wire x2="1040" y1="2064" y2="2064" x1="448" />
-            <wire x2="2144" y1="2064" y2="2064" x1="1040" />
-            <wire x2="448" y1="2064" y2="2288" x1="448" />
-            <wire x2="448" y1="2288" y2="2288" x1="304" />
-            <wire x2="1184" y1="672" y2="672" x1="1040" />
-            <wire x2="1040" y1="672" y2="1040" x1="1040" />
-            <wire x2="1152" y1="1040" y2="1040" x1="1040" />
-            <wire x2="1040" y1="1040" y2="2064" x1="1040" />
-            <wire x2="2256" y1="1072" y2="1072" x1="2144" />
-            <wire x2="2144" y1="1072" y2="2064" x1="2144" />
-        </branch>
         <branch name="C">
             <wire x2="240" y1="560" y2="848" x1="240" />
             <wire x2="1584" y1="560" y2="560" x1="240" />
@@ -343,7 +323,33 @@
             <wire x2="944" y1="1312" y2="2352" x1="944" />
             <wire x2="1072" y1="2352" y2="2352" x1="944" />
         </branch>
-        <iomarker fontsize="28" x="1328" y="2224" name="Output_Data(23:0)" orien="R0" />
         <iomarker fontsize="28" x="1072" y="2352" name="Busy" orien="R0" />
+        <branch name="test_out(3:0)">
+            <wire x2="928" y1="1760" y2="1760" x1="832" />
+            <wire x2="928" y1="1760" y2="2416" x1="928" />
+            <wire x2="960" y1="2416" y2="2416" x1="928" />
+        </branch>
+        <iomarker fontsize="28" x="960" y="2416" name="test_out(3:0)" orien="R0" />
+        <branch name="Clk_50MHz">
+            <wire x2="352" y1="1312" y2="1312" x1="304" />
+            <wire x2="304" y1="1312" y2="2064" x1="304" />
+            <wire x2="448" y1="2064" y2="2064" x1="304" />
+            <wire x2="1040" y1="2064" y2="2064" x1="448" />
+            <wire x2="2144" y1="2064" y2="2064" x1="1040" />
+            <wire x2="448" y1="2064" y2="2288" x1="448" />
+            <wire x2="448" y1="2288" y2="2288" x1="304" />
+            <wire x2="1184" y1="672" y2="672" x1="1040" />
+            <wire x2="1040" y1="672" y2="1040" x1="1040" />
+            <wire x2="1152" y1="1040" y2="1040" x1="1040" />
+            <wire x2="1040" y1="1040" y2="2064" x1="1040" />
+            <wire x2="2256" y1="1072" y2="1072" x1="2144" />
+            <wire x2="2144" y1="1072" y2="2064" x1="2144" />
+        </branch>
+        <branch name="output_data(23:0)">
+            <wire x2="1136" y1="1568" y2="1568" x1="832" />
+            <wire x2="1136" y1="1568" y2="2208" x1="1136" />
+            <wire x2="1184" y1="2208" y2="2208" x1="1136" />
+        </branch>
+        <iomarker fontsize="28" x="1184" y="2208" name="output_data(23:0)" orien="R0" />
     </sheet>
 </drawing>

@@ -1,0 +1,18 @@
+select figure at 2931 2475 8 -branches -sn=1
+select figure at 1402 2160 8 -branches -sn=1
+delete selection -sn=1
+select figure at 1631 2162 8 -branches -sn=1
+delete selection -sn=1
+select figure at 1554 2150 8 -branches -sn=1
+delete selection -sn=1
+select figure at 1562 2170 8 -branches -sn=1
+select figure at 1564 2165 8 -branches -all -sn=1
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+select figure at 1458 2440 8 -branches -sn=1
+select figure at 1432 2419 8 -branches -sn=1

@@ -2,3 +2,89 @@ sch2sym -intstyle ise -family spartan3e -refsym temperatureSystem C:/Users/lab/D
 sch2sym -intstyle ise -family spartan3e -refsym temperatureSystem C:/Users/lab/Downloads/projekt-master/projekt-master/v4/temperatureSystem.sch C:/Users/lab/Downloads/projekt-master/projekt-master/v4/temperatureSystem.sym 
 sch2sym -intstyle ise -family spartan3e -refsym temperatureSystem C:/Users/lab/Downloads/projekt-master/projekt-master/v4/temperatureSystem.sch C:/Users/lab/Downloads/projekt-master/projekt-master/v4/temperatureSystem.sym 
 sch2sym -intstyle ise -family spartan3e -refsym temperatureSystem C:/Users/lab/Downloads/projekt-master/projekt-master/v4/temperatureSystem.sch C:/Users/lab/Downloads/projekt-master/projekt-master/v4/temperatureSystem.sym 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 temperatureSystem.ngc temperatureSystem.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o temperatureSystem_map.ncd temperatureSystem.ngd temperatureSystem.pcf 
+par -w -intstyle ise -ol high -t 1 temperatureSystem_map.ncd temperatureSystem.ncd temperatureSystem.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml temperatureSystem.twx temperatureSystem.ncd -o temperatureSystem.twr temperatureSystem.pcf 
+bitgen -intstyle ise -f temperatureSystem.ut temperatureSystem.ncd 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 temperatureSystem.ngc temperatureSystem.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o temperatureSystem_map.ncd temperatureSystem.ngd temperatureSystem.pcf 
+par -w -intstyle ise -ol high -t 1 temperatureSystem_map.ncd temperatureSystem.ncd temperatureSystem.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml temperatureSystem.twx temperatureSystem.ncd -o temperatureSystem.twr temperatureSystem.pcf 
+bitgen -intstyle ise -f temperatureSystem.ut temperatureSystem.ncd 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 temperatureSystem.ngc temperatureSystem.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o temperatureSystem_map.ncd temperatureSystem.ngd temperatureSystem.pcf 
+par -w -intstyle ise -ol high -t 1 temperatureSystem_map.ncd temperatureSystem.ncd temperatureSystem.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml temperatureSystem.twx temperatureSystem.ncd -o temperatureSystem.twr temperatureSystem.pcf 
+bitgen -intstyle ise -f temperatureSystem.ut temperatureSystem.ncd 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 temperatureSystem.ngc temperatureSystem.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o temperatureSystem_map.ncd temperatureSystem.ngd temperatureSystem.pcf 
+par -w -intstyle ise -ol high -t 1 temperatureSystem_map.ncd temperatureSystem.ncd temperatureSystem.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml temperatureSystem.twx temperatureSystem.ncd -o temperatureSystem.twr temperatureSystem.pcf 
+bitgen -intstyle ise -f temperatureSystem.ut temperatureSystem.ncd 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 temperatureSystem.ngc temperatureSystem.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o temperatureSystem_map.ncd temperatureSystem.ngd temperatureSystem.pcf 
+par -w -intstyle ise -ol high -t 1 temperatureSystem_map.ncd temperatureSystem.ncd temperatureSystem.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml temperatureSystem.twx temperatureSystem.ncd -o temperatureSystem.twr temperatureSystem.pcf 
+bitgen -intstyle ise -f temperatureSystem.ut temperatureSystem.ncd 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 temperatureSystem.ngc temperatureSystem.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o temperatureSystem_map.ncd temperatureSystem.ngd temperatureSystem.pcf 
+par -w -intstyle ise -ol high -t 1 temperatureSystem_map.ncd temperatureSystem.ncd temperatureSystem.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml temperatureSystem.twx temperatureSystem.ncd -o temperatureSystem.twr temperatureSystem.pcf 
+bitgen -intstyle ise -f temperatureSystem.ut temperatureSystem.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 temperatureSystem.ngc temperatureSystem.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o temperatureSystem_map.ncd temperatureSystem.ngd temperatureSystem.pcf 
+par -w -intstyle ise -ol high -t 1 temperatureSystem_map.ncd temperatureSystem.ncd temperatureSystem.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml temperatureSystem.twx temperatureSystem.ncd -o temperatureSystem.twr temperatureSystem.pcf 
+bitgen -intstyle ise -f temperatureSystem.ut temperatureSystem.ncd 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 temperatureSystem.ngc temperatureSystem.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o temperatureSystem_map.ncd temperatureSystem.ngd temperatureSystem.pcf 
+par -w -intstyle ise -ol high -t 1 temperatureSystem_map.ncd temperatureSystem.ncd temperatureSystem.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml temperatureSystem.twx temperatureSystem.ncd -o temperatureSystem.twr temperatureSystem.pcf 
+bitgen -intstyle ise -f temperatureSystem.ut temperatureSystem.ncd 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 temperatureSystem.ngc temperatureSystem.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o temperatureSystem_map.ncd temperatureSystem.ngd temperatureSystem.pcf 
+par -w -intstyle ise -ol high -t 1 temperatureSystem_map.ncd temperatureSystem.ncd temperatureSystem.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml temperatureSystem.twx temperatureSystem.ncd -o temperatureSystem.twr temperatureSystem.pcf 
+bitgen -intstyle ise -f temperatureSystem.ut temperatureSystem.ncd 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 temperatureSystem.ngc temperatureSystem.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o temperatureSystem_map.ncd temperatureSystem.ngd temperatureSystem.pcf 
+par -w -intstyle ise -ol high -t 1 temperatureSystem_map.ncd temperatureSystem.ncd temperatureSystem.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml temperatureSystem.twx temperatureSystem.ncd -o temperatureSystem.twr temperatureSystem.pcf 
+bitgen -intstyle ise -f temperatureSystem.ut temperatureSystem.ncd 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 temperatureSystem.ngc temperatureSystem.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o temperatureSystem_map.ncd temperatureSystem.ngd temperatureSystem.pcf 
+par -w -intstyle ise -ol high -t 1 temperatureSystem_map.ncd temperatureSystem.ncd temperatureSystem.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml temperatureSystem.twx temperatureSystem.ncd -o temperatureSystem.twr temperatureSystem.pcf 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 temperatureSystem.ngc temperatureSystem.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o temperatureSystem_map.ncd temperatureSystem.ngd temperatureSystem.pcf 
+par -w -intstyle ise -ol high -t 1 temperatureSystem_map.ncd temperatureSystem.ncd temperatureSystem.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml temperatureSystem.twx temperatureSystem.ncd -o temperatureSystem.twr temperatureSystem.pcf 
+bitgen -intstyle ise -f temperatureSystem.ut temperatureSystem.ncd 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 temperatureSystem.ngc temperatureSystem.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o temperatureSystem_map.ncd temperatureSystem.ngd temperatureSystem.pcf 
+par -w -intstyle ise -ol high -t 1 temperatureSystem_map.ncd temperatureSystem.ncd temperatureSystem.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml temperatureSystem.twx temperatureSystem.ncd -o temperatureSystem.twr temperatureSystem.pcf 
+bitgen -intstyle ise -f temperatureSystem.ut temperatureSystem.ncd 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/temperatureSystem.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 temperatureSystem.ngc temperatureSystem.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o temperatureSystem_map.ncd temperatureSystem.ngd temperatureSystem.pcf 
+par -w -intstyle ise -ol high -t 1 temperatureSystem_map.ncd temperatureSystem.ncd temperatureSystem.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml temperatureSystem.twx temperatureSystem.ncd -o temperatureSystem.twr temperatureSystem.pcf 
+bitgen -intstyle ise -f temperatureSystem.ut temperatureSystem.ncd 

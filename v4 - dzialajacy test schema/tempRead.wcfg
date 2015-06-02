@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/lab/Downloads/projekt-master/projekt-master/v4/sequenceTestSchema_sequenceTestSchema_sch_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="sequencetestschema_sequencetestschema_sch_tb" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="group31" type="group">
+      <obj_property name="label">tempRead</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/start" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">start</obj_property>
+         <obj_property name="ObjectShortName">start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/tempdata" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">tempdata[23:0]</obj_property>
+         <obj_property name="ObjectShortName">tempdata[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/inputdata" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">inputdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">inputdata[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/isbusy" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">isbusy</obj_property>
+         <obj_property name="ObjectShortName">isbusy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/readbit_detection" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">readbit_detection</obj_property>
+         <obj_property name="ObjectShortName">readbit_detection</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/wire_in" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">wire_in</obj_property>
+         <obj_property name="ObjectShortName">wire_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/outputdata" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">outputdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">outputdata[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/busy" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">busy</obj_property>
+         <obj_property name="ObjectShortName">busy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/startread" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">startread</obj_property>
+         <obj_property name="ObjectShortName">startread</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/startwrite" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">startwrite</obj_property>
+         <obj_property name="ObjectShortName">startwrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/startreset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">startreset</obj_property>
+         <obj_property name="ObjectShortName">startreset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/present_state" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">present_state</obj_property>
+         <obj_property name="ObjectShortName">present_state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/tempdatabuffor" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">tempdatabuffor[23:0]</obj_property>
+         <obj_property name="ObjectShortName">tempdatabuffor[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/read_counter" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">read_counter</obj_property>
+         <obj_property name="ObjectShortName">read_counter</obj_property>
+      </wvobject>
+      <wvobject fp_name="divider37" type="divider">
+         <obj_property name="label">New Divider</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">128 128 255</obj_property>
+         <obj_property name="TextColor">230 230 230</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group30" type="group">
+      <obj_property name="label">modul</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_1/present_state" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">present_state</obj_property>
+         <obj_property name="ObjectShortName">present_state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_1/busy" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">busy</obj_property>
+         <obj_property name="ObjectShortName">busy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_1/wire_in" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">wire_in</obj_property>
+         <obj_property name="ObjectShortName">wire_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_1/wire_out" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">wire_out</obj_property>
+         <obj_property name="ObjectShortName">wire_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_1/readbit_detecion" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">readbit_detecion</obj_property>
+         <obj_property name="ObjectShortName">readbit_detecion</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group54" type="group">
+      <obj_property name="label">readByte</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_2/data" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_2/read_bit" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">read_bit</obj_property>
+         <obj_property name="ObjectShortName">read_bit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_2/busy" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">busy</obj_property>
+         <obj_property name="ObjectShortName">busy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_2/isbusy" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">isbusy</obj_property>
+         <obj_property name="ObjectShortName">isbusy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_2/readbit_detecion" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">readbit_detecion</obj_property>
+         <obj_property name="ObjectShortName">readbit_detecion</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_2/start" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">start</obj_property>
+         <obj_property name="ObjectShortName">start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_2/present_state" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">present_state</obj_property>
+         <obj_property name="ObjectShortName">present_state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_2/next_state" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">next_state</obj_property>
+         <obj_property name="ObjectShortName">next_state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_2/read_counter" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">read_counter</obj_property>
+         <obj_property name="ObjectShortName">read_counter</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_2/read_buffor" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">read_buffor[7:0]</obj_property>
+         <obj_property name="ObjectShortName">read_buffor[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group53" type="group">
+      <obj_property name="label">writeByte</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_3/data" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_3/isbusy" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">isbusy</obj_property>
+         <obj_property name="ObjectShortName">isbusy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_3/start" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">start</obj_property>
+         <obj_property name="ObjectShortName">start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_3/writeone" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">writeone</obj_property>
+         <obj_property name="ObjectShortName">writeone</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_3/writezero" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">writezero</obj_property>
+         <obj_property name="ObjectShortName">writezero</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_3/busy" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">busy</obj_property>
+         <obj_property name="ObjectShortName">busy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_3/present_state" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">present_state</obj_property>
+         <obj_property name="ObjectShortName">present_state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_3/next_state" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">next_state</obj_property>
+         <obj_property name="ObjectShortName">next_state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_3/write_counter" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">write_counter</obj_property>
+         <obj_property name="ObjectShortName">write_counter</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/present_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">present_state</obj_property>
+      <obj_property name="ObjectShortName">present_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/UUT/XLXI_8/next_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sequencetestschema_sequencetestschema_sch_tb/wire_inout" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wire_inout</obj_property>
+      <obj_property name="ObjectShortName">wire_inout</obj_property>
+   </wvobject>
+</wave_config>

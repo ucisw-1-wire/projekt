@@ -43,18 +43,23 @@ end displayControler;
 
 architecture Behavioral of displayControler is
 
-begin
-process(disp_col, disp_row, input_data, clk )
+signal temporary : STD_LOGIC_VECTOR (7 downto 0) := X"00";
 
+
+begin
+
+temporary <= 480 - (input_data(7 downto 3) & "000");
+
+process(disp_col, disp_row, input_data, clk )
 begin
 	if rising_edge(clk) then
 		if disp_col /=640 and disp_row /= 480 then
 			mem_adres <= X"00";
 			mem_adres (6 downto 0) <= disp_col(9 downto 3); -- x wyswietlacza podzielony przez 8
-			if  disp_row > (480 -  (input_data * 6) )	then -- jak zrobic to mnozenie?
+			if  disp_row > temporary 	then -- jak zrobic to mnozenie?
 				rgb <= "111";
 			else
-				rgb <= "000";
+				rgb <= "100";
 			end if;
 		else	
 			rgb<="000";
