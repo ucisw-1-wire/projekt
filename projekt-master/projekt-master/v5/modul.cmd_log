@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/modul.xst" -ofn "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/modul.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 modul.ngc modul.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o modul_map.ncd modul.ngd modul.pcf 
+par -w -intstyle ise -ol high -t 1 modul_map.ncd modul.ncd modul.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml modul.twx modul.ncd -o modul.twr modul.pcf 
+bitgen -intstyle ise -f modul.ut modul.ncd 
+vhdtdtfi -lib work modul.vhd -prj v5 -o modul.spl -module modul -template d:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e modul.spl D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v5/modul.sym 

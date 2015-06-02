@@ -1,0 +1,949 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: temperatureSystem.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "temperatureSystem.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "temperatureSystem"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : temperatureSystem
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/controler.vhd" in Library work.
+Architecture behavioral of Entity controler is up to date.
+Compiling vhdl file "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/displayControler.vhd" in Library work.
+Entity <displaycontroler> compiled.
+Entity <displaycontroler> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/Memory.vhd" in Library work.
+Architecture behavioral of Entity memory is up to date.
+Compiling vhdl file "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/VGA.vhd" in Library work.
+Architecture behavioral of Entity vga is up to date.
+Compiling vhdl file "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/modul.vhd" in Library work.
+Architecture behavioral of Entity modul is up to date.
+Compiling vhdl file "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/readByte.vhd" in Library work.
+Architecture behavioral of Entity readbyte is up to date.
+Compiling vhdl file "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/tempRead.vhd" in Library work.
+Architecture behavioral of Entity tempread is up to date.
+Compiling vhdl file "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/writeByte.vhd" in Library work.
+Architecture behavioral of Entity writebyte is up to date.
+Compiling verilog file "sequenceTestSchema.vf" in library work
+Compiling verilog file "temperatureSystem.vf" in library work
+Module <sequenceTestSchema> compiled
+Module <sequenceTestSchema_MUSER_temperatureSystem> compiled
+Module <temperatureSystem> compiled
+No errors in compilation
+Analysis of file <"temperatureSystem.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <temperatureSystem> in library <work>.
+
+Analyzing hierarchy for module <sequenceTestSchema_MUSER_temperatureSystem> in library <work>.
+
+Analyzing hierarchy for entity <controler> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <memory> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <displaycontroler> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <vga> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <modul> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <readbyte> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <writebyte> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <tempread> in library <work> (architecture <behavioral>).
+
+WARNING:Xst:2591 - "temperatureSystem.vf" line 96: attribute on instance <DRIVE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "temperatureSystem.vf" line 96: attribute on instance <IBUF_DELAY_VALUE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "temperatureSystem.vf" line 96: attribute on instance <IFD_DELAY_VALUE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "temperatureSystem.vf" line 96: attribute on instance <IOSTANDARD> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "temperatureSystem.vf" line 96: attribute on instance <SLEW> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <temperatureSystem>.
+WARNING:Xst:852 - "temperatureSystem.vf" line 164: Unconnected input port 'reset' of instance 'XLXI_5' is tied to GND.
+Module <temperatureSystem> is correct for synthesis.
+ 
+Analyzing module <sequenceTestSchema_MUSER_temperatureSystem> in library <work>.
+WARNING:Xst:852 - "temperatureSystem.vf" line 77: Unconnected input port 'wire_in' of instance 'XLXI_4' is tied to GND.
+Module <sequenceTestSchema_MUSER_temperatureSystem> is correct for synthesis.
+ 
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_7> in unit <sequenceTestSchema_MUSER_temperatureSystem>.
+    Set user-defined property "DRIVE =  12" for instance <XLXI_7> in unit <sequenceTestSchema_MUSER_temperatureSystem>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <XLXI_7> in unit <sequenceTestSchema_MUSER_temperatureSystem>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <XLXI_7> in unit <sequenceTestSchema_MUSER_temperatureSystem>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_7> in unit <sequenceTestSchema_MUSER_temperatureSystem>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_7> in unit <sequenceTestSchema_MUSER_temperatureSystem>.
+    Set user-defined property "SLEW =  SLOW" for instance <XLXI_7> in unit <sequenceTestSchema_MUSER_temperatureSystem>.
+Analyzing Entity <modul> in library <work> (Architecture <behavioral>).
+Entity <modul> analyzed. Unit <modul> generated.
+
+Analyzing Entity <readbyte> in library <work> (Architecture <behavioral>).
+Entity <readbyte> analyzed. Unit <readbyte> generated.
+
+Analyzing Entity <writebyte> in library <work> (Architecture <behavioral>).
+Entity <writebyte> analyzed. Unit <writebyte> generated.
+
+Analyzing Entity <tempread> in library <work> (Architecture <behavioral>).
+Entity <tempread> analyzed. Unit <tempread> generated.
+
+Analyzing Entity <controler> in library <work> (Architecture <behavioral>).
+Entity <controler> analyzed. Unit <controler> generated.
+
+Analyzing Entity <memory> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/Memory.vhd" line 62: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/Memory.vhd" line 64: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <memory> analyzed. Unit <memory> generated.
+
+Analyzing Entity <displaycontroler> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <mem_adres<7>> in unit <displaycontroler> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <displaycontroler> analyzed. Unit <displaycontroler> generated.
+
+Analyzing Entity <vga> in library <work> (Architecture <behavioral>).
+Entity <vga> analyzed. Unit <vga> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <controler>.
+    Related source file is "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/controler.vhd".
+WARNING:Xst:647 - Input <input_data<23:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_0> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clock                     (rising_edge)        |
+    | Power Up State     | waitforbusy                                    |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <adres>.
+    Found 8-bit register for signal <output_data>.
+    Found 1-bit register for signal <write_en>.
+    Found 1-bit register for signal <start_read>.
+    Found 8-bit up counter for signal <counter>.
+    Found 8-bit subtractor for signal <output_data$sub0000> created at line 117.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <controler> synthesized.
+
+
+Synthesizing Unit <memory>.
+    Related source file is "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/Memory.vhd".
+WARNING:Xst:647 - Input <adres_rd<7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <adres_wr<7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 80x8-bit dual-port RAM <Mram_RAM> for signal <RAM>.
+    Found 8-bit register for signal <output_data>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <memory> synthesized.
+
+
+Synthesizing Unit <displaycontroler>.
+    Related source file is "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/displayControler.vhd".
+WARNING:Xst:647 - Input <input_data<7:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 7-bit register for signal <mem_adres<6:0>>.
+    Found 3-bit register for signal <rgb>.
+    Found 9-bit comparator greater for signal <rgb$cmp_gt0000> created at line 59.
+    Found 8-bit adder for signal <temporary>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <displaycontroler> synthesized.
+
+
+Synthesizing Unit <vga>.
+    Related source file is "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/VGA.vhd".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 9-bit register for signal <row>.
+    Found 10-bit register for signal <column>.
+    Found 11-bit comparator greatequal for signal <b$cmp_ge0000> created at line 99.
+    Found 11-bit comparator greatequal for signal <b$cmp_ge0001> created at line 99.
+    Found 11-bit comparator lessequal for signal <b$cmp_le0000> created at line 99.
+    Found 11-bit comparator lessequal for signal <b$cmp_le0001> created at line 99.
+    Found 10-bit subtractor for signal <column$sub0000> created at line 67.
+    Found 10-bit up counter for signal <hcounter>.
+    Found 11-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 83.
+    Found 1-bit register for signal <nasz_clock>.
+    Found 9-bit subtractor for signal <row$sub0000> created at line 73.
+    Found 10-bit up counter for signal <vcounter>.
+    Found 11-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 90.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+Unit <vga> synthesized.
+
+
+Synthesizing Unit <modul>.
+    Related source file is "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/modul.vhd".
+    Found finite state machine <FSM_1> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 13                                             |
+    | Transitions        | 27                                             |
+    | Inputs             | 11                                             |
+    | Outputs            | 5                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <readBit_detecion>.
+    Found 16-bit up counter for signal <clock_counter>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <modul> synthesized.
+
+
+Synthesizing Unit <readbyte>.
+    Related source file is "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/readByte.vhd".
+    Found finite state machine <FSM_2> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <read_bit>.
+    Found 8-bit register for signal <data>.
+    Found 8-bit register for signal <read_buffor>.
+    Found 5-bit comparator greatequal for signal <read_buffor_0$cmp_ge0000> created at line 129.
+    Found 5-bit register for signal <read_counter>.
+    Found 4-bit adder for signal <read_counter$add0000> created at line 135.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <readbyte> synthesized.
+
+
+Synthesizing Unit <writebyte>.
+    Related source file is "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/writeByte.vhd".
+    Found finite state machine <FSM_3> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <writeZero>.
+    Found 1-bit register for signal <writeOne>.
+    Found 1-bit 8-to-1 multiplexer for signal <data$mux0000> created at line 112.
+    Found 32-bit register for signal <write_counter>.
+    Found 32-bit adder for signal <write_counter$addsub0000> created at line 122.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <writebyte> synthesized.
+
+
+Synthesizing Unit <tempread>.
+    Related source file is "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/tempRead.vhd".
+WARNING:Xst:647 - Input <wire_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_4> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 32                                             |
+    | Transitions        | 63                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 14                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit register for signal <test_out>.
+    Found 8-bit register for signal <outputData>.
+    Found 1-bit register for signal <startReset>.
+    Found 24-bit register for signal <tempData>.
+    Found 1-bit register for signal <startRead>.
+    Found 1-bit register for signal <startWrite>.
+    Found 5-bit subtractor for signal <$sub0000> created at line 319.
+    Found 4-bit register for signal <read_counter>.
+    Found 4-bit adder for signal <read_counter$addsub0000> created at line 315.
+    Found 24-bit register for signal <tempDataBuffor>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  67 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <tempread> synthesized.
+
+
+Synthesizing Unit <sequenceTestSchema_MUSER_temperatureSystem>.
+    Related source file is "temperatureSystem.vf".
+Unit <sequenceTestSchema_MUSER_temperatureSystem> synthesized.
+
+
+Synthesizing Unit <temperatureSystem>.
+    Related source file is "temperatureSystem.vf".
+Unit <temperatureSystem> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 80x8-bit dual-port RAM                                : 1
+# Adders/Subtractors                                   : 8
+ 10-bit subtractor                                     : 1
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 2
+ 5-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 16-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 62
+ 1-bit register                                        : 49
+ 10-bit register                                       : 1
+ 24-bit register                                       : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 1
+ 4-bit register                                        : 2
+ 5-bit register                                        : 1
+ 8-bit register                                        : 5
+ 9-bit register                                        : 1
+# Comparators                                          : 8
+ 11-bit comparator greatequal                          : 4
+ 11-bit comparator lessequal                           : 2
+ 5-bit comparator greatequal                           : 1
+ 9-bit comparator greater                              : 1
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_4> for best encoding.
+Optimizing FSM <XLXI_1/XLXI_4/present_state/FSM> on signal <present_state[1:32]> with one-hot encoding.
+------------------------------------------------------------------
+ State                        | Encoding
+------------------------------------------------------------------
+ idle                         | 00000000000000000000000000000001
+ waitforbusy_reset_1          | 00000000000000000000000000000010
+ waitforbusy_reset_2          | 00000000000000000100000000000000
+ waitforbusy_reset_3          | 00010000000000000000000000000000
+ reset_1                      | 00000000000000000000000000000100
+ reset_2                      | 00000000000000001000000000000000
+ reset_3                      | 00100000000000000000000000000000
+ waitforreset_1               | 00000000000000000000000000001000
+ waitforreset_2               | 00000000000000010000000000000000
+ waitforreset_3               | 01000000000000000000000000000000
+ waitforbusy_skip_rom_1       | 00000000000000000000000000010000
+ waitforbusy_skip_rom_2       | 00000000000000100000000000000000
+ skip_rom_1                   | 00000000000000000000000000100000
+ skip_rom_2                   | 00000000000001000000000000000000
+ waitforskiprom_1             | 00000000000000000000000001000000
+ waitforskiprom_2             | 00000000000010000000000000000000
+ waitforbusy_convert_t        | 00000000000000000000000010000000
+ convert_t                    | 00000000000000000000000100000000
+ waitforconvert_t             | 00000000000000000000001000000000
+ waitforbusy_endofconvert     | 00000000000000000000010000000000
+ readbyteconvertt             | 00000000000000000000100000000000
+ waitforreadbyteconvertt      | 00000000000000000001000000000000
+ convert_t_endornot           | 00000000000000000010000000000000
+ waitforbusy_read_scetchpad   | 00000000000100000000000000000000
+ read_scetchpad               | 00000000001000000000000000000000
+ waitforbusyreadbytescetchpad | 00000000010000000000000000000000
+ readbytescetchpad            | 00000000100000000000000000000000
+ waitforreadbytescetchpad     | 00000001000000000000000000000000
+ increment                    | 00000010000000000000000000000000
+ waitforreadscetchpad         | 00000100000000000000000000000000
+ capturebyte_endornot         | 00001000000000000000000000000000
+ done                         | 10000000000000000000000000000000
+------------------------------------------------------------------
+Analyzing FSM <FSM_3> for best encoding.
+Optimizing FSM <XLXI_1/XLXI_3/present_state/FSM> on signal <present_state[1:2]> with user encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ idle        | 00
+ waitforbusy | 01
+ writebit    | 10
+ increment   | 11
+-------------------------
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <XLXI_1/XLXI_2/present_state/FSM> on signal <present_state[1:5]> with one-hot encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ idle        | 00001
+ readbit     | 01000
+ waitforbusy | 00010
+ waitforread | 10000
+ done        | 00100
+-------------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <XLXI_1/XLXI_1/present_state/FSM> on signal <present_state[1:4]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ idle     | 0000
+ write_1a | 0001
+ write_1b | 0010
+ write_0a | 0011
+ write_0b | 0100
+ read_a   | 0101
+ read_b   | 0110
+ read_c   | 0111
+ read_d   | 1000
+ reset_a  | 1001
+ reset_b  | 1010
+ reset_c  | 1011
+ reset_d  | 1100
+----------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <XLXI_2/present_state/FSM> on signal <present_state[1:3]> with gray encoding.
+----------------------------
+ State          | Encoding
+----------------------------
+ waitforbusy    | 000
+ startread      | 001
+ waitforendread | 011
+ savedata       | 010
+ increment      | 110
+----------------------------
+INFO:Xst:2261 - The FF/Latch <rgb_0> in Unit <XLXI_4> is equivalent to the following FF/Latch, which will be removed : <rgb_1> 
+WARNING:Xst:1710 - FF/Latch <outputData_0> (without init value) has a constant value of 0 in block <XLXI_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <tempDataBuffor_8> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempDataBuffor_9> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempDataBuffor_10> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempDataBuffor_11> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempDataBuffor_12> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempDataBuffor_13> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempDataBuffor_14> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempDataBuffor_15> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempDataBuffor_20> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempDataBuffor_21> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempDataBuffor_16> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempDataBuffor_22> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempDataBuffor_17> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempDataBuffor_23> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempDataBuffor_18> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempDataBuffor_19> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_8> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_9> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_10> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_11> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_12> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_13> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_14> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_15> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_16> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_17> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_18> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_19> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_20> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_21> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_22> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <tempData_23> of sequential type is unconnected in block <XLXI_4>.
+WARNING:Xst:2677 - Node <adres_7> of sequential type is unconnected in block <XLXI_2>.
+WARNING:Xst:2677 - Node <output_data_5> of sequential type is unconnected in block <XLXI_3>.
+WARNING:Xst:2677 - Node <output_data_6> of sequential type is unconnected in block <XLXI_3>.
+WARNING:Xst:2677 - Node <output_data_7> of sequential type is unconnected in block <XLXI_3>.
+
+Synthesizing (advanced) Unit <temperatureSystem>.
+INFO:Xst:3226 - The RAM <XLXI_3/Mram_RAM> will be implemented as a BLOCK RAM, absorbing the following register(s): <XLXI_3/output_data>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 80-word x 8-bit                     |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <Clk_50MHz>     | rise     |
+    |     weA            | connected to signal <XLXN_5>        | high     |
+    |     addrA          | connected to signal <XLXN_4>        |          |
+    |     diA            | connected to signal <XLXN_3>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 80-word x 8-bit                     |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <Clk_50MHz>     | rise     |
+    |     addrB          | connected to signal <XLXN_8>        |          |
+    |     doB            | connected to signal <XLXN_6>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <temperatureSystem> synthesized (advanced).
+WARNING:Xst:2677 - Node <XLXI_2/adres_7> of sequential type is unconnected in block <temperatureSystem>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 80x8-bit dual-port block RAM                          : 1
+# Adders/Subtractors                                   : 8
+ 10-bit subtractor                                     : 1
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 2
+ 5-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 16-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 217
+ Flip-Flops                                            : 217
+# Comparators                                          : 8
+ 11-bit comparator greatequal                          : 4
+ 11-bit comparator lessequal                           : 2
+ 5-bit comparator greatequal                           : 1
+ 9-bit comparator greater                              : 1
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <outputData_0> (without init value) has a constant value of 0 in block <tempread>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <rgb_0> in Unit <displaycontroler> is equivalent to the following FF/Latch, which will be removed : <rgb_1> 
+
+Optimizing unit <temperatureSystem> ...
+
+Optimizing unit <displaycontroler> ...
+
+Optimizing unit <vga> ...
+
+Optimizing unit <modul> ...
+
+Optimizing unit <readbyte> ...
+
+Optimizing unit <writebyte> ...
+
+Optimizing unit <tempread> ...
+WARNING:Xst:1710 - FF/Latch <outputData_2> (without init value) has a constant value of 1 in block <tempread>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_23> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_22> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_21> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_20> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_19> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_18> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_17> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_16> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_15> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_14> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_13> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_12> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_11> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_10> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_9> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempData_8> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_19> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_18> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_23> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_17> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_22> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_16> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_21> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_15> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_14> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_20> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_13> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_12> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_11> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_10> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_9> of sequential type is unconnected in block <temperatureSystem>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_4/tempDataBuffor_8> of sequential type is unconnected in block <temperatureSystem>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <XLXI_1/XLXI_4/outputData_5> in Unit <temperatureSystem> is equivalent to the following 2 FFs/Latches, which will be removed : <XLXI_1/XLXI_4/outputData_4> <XLXI_1/XLXI_4/outputData_1> 
+Found area constraint ratio of 100 (+ 5) on block temperatureSystem, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 224
+ Flip-Flops                                            : 224
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : temperatureSystem.ngr
+Top Level Output File Name         : temperatureSystem
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 12
+
+Cell Usage :
+# BELS                             : 580
+#      GND                         : 1
+#      INV                         : 17
+#      LUT1                        : 76
+#      LUT2                        : 32
+#      LUT2_D                      : 1
+#      LUT2_L                      : 4
+#      LUT3                        : 68
+#      LUT3_D                      : 1
+#      LUT4                        : 175
+#      LUT4_D                      : 4
+#      LUT4_L                      : 8
+#      MUXCY                       : 86
+#      MUXF5                       : 19
+#      MUXF6                       : 1
+#      OR3                         : 1
+#      VCC                         : 1
+#      XORCY                       : 85
+# FlipFlops/Latches                : 224
+#      FD                          : 75
+#      FDE                         : 48
+#      FDR                         : 41
+#      FDRE                        : 18
+#      FDRS                        : 10
+#      FDS                         : 30
+#      FDSE                        : 2
+# RAMS                             : 1
+#      RAMB16_S9_S9                : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 11
+#      IOBUF                       : 1
+#      OBUF                        : 10
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      209  out of   4656     4%  
+ Number of Slice Flip Flops:            224  out of   9312     2%  
+ Number of 4 input LUTs:                386  out of   9312     4%  
+ Number of IOs:                          12
+ Number of bonded IOBs:                  12  out of    232     5%  
+ Number of BRAMs:                         1  out of     20     5%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk_50MHz                          | BUFGP                  | 186   |
+XLXI_5/nasz_clock1                 | BUFG                   | 39    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 8.455ns (Maximum Frequency: 118.271MHz)
+   Minimum input arrival time before clock: 2.495ns
+   Maximum output required time after clock: 8.110ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk_50MHz'
+  Clock period: 8.455ns (frequency: 118.271MHz)
+  Total number of paths / destination ports: 5306 / 325
+-------------------------------------------------------------------------
+Delay:               8.455ns (Levels of Logic = 6)
+  Source:            XLXI_1/XLXI_1/clock_counter_5 (FF)
+  Destination:       XLXI_1/XLXI_1/clock_counter_15 (FF)
+  Source Clock:      Clk_50MHz rising
+  Destination Clock: Clk_50MHz rising
+
+  Data Path: XLXI_1/XLXI_1/clock_counter_5 to XLXI_1/XLXI_1/clock_counter_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.514   0.651  XLXI_1/XLXI_1/clock_counter_5 (XLXI_1/XLXI_1/clock_counter_5)
+     LUT4:I0->O            1   0.612   0.360  XLXI_1/XLXI_1/present_state_cmp_eq0004124 (XLXI_1/XLXI_1/present_state_cmp_eq0004124)
+     LUT4:I3->O            3   0.612   0.454  XLXI_1/XLXI_1/present_state_cmp_eq0004126 (XLXI_1/XLXI_1/N5)
+     LUT4:I3->O            1   0.612   0.387  XLXI_1/XLXI_1/present_state_FSM_FFd4-In144 (XLXI_1/XLXI_1/present_state_FSM_FFd4-In144)
+     LUT4:I2->O            1   0.612   0.360  XLXI_1/XLXI_1/present_state_FSM_FFd4-In166 (XLXI_1/XLXI_1/present_state_FSM_FFd4-In166)
+     LUT4:I3->O            2   0.612   0.383  XLXI_1/XLXI_1/present_state_FSM_FFd4-In173 (XLXI_1/XLXI_1/present_state_FSM_FFd4-In)
+     LUT4:I3->O           16   0.612   0.879  XLXI_1/XLXI_1/present_state_FSM_Out2141 (XLXI_1/XLXI_1/present_state_cmp_eq0009)
+     FDR:R                     0.795          XLXI_1/XLXI_1/clock_counter_0
+    ----------------------------------------
+    Total                      8.455ns (4.981ns logic, 3.474ns route)
+                                       (58.9% logic, 41.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_5/nasz_clock1'
+  Clock period: 6.483ns (frequency: 154.241MHz)
+  Total number of paths / destination ports: 829 / 75
+-------------------------------------------------------------------------
+Delay:               6.483ns (Levels of Logic = 3)
+  Source:            XLXI_5/hcounter_8 (FF)
+  Destination:       XLXI_5/vcounter_9 (FF)
+  Source Clock:      XLXI_5/nasz_clock1 rising
+  Destination Clock: XLXI_5/nasz_clock1 rising
+
+  Data Path: XLXI_5/hcounter_8 to XLXI_5/vcounter_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.514   0.969  XLXI_5/hcounter_8 (XLXI_5/hcounter_8)
+     LUT4:I0->O            1   0.612   0.509  XLXI_5/vcounter_and0000112 (XLXI_5/vcounter_and0000112)
+     LUT4:I0->O           21   0.612   1.111  XLXI_5/vcounter_and0000124 (XLXI_5/vcounter_cmp_eq0000)
+     LUT4:I0->O           10   0.612   0.750  XLXI_5/vcounter_and0000 (XLXI_5/vcounter_and0000)
+     FDRE:R                    0.795          XLXI_5/vcounter_0
+    ----------------------------------------
+    Total                      6.483ns (3.145ns logic, 3.338ns route)
+                                       (48.5% logic, 51.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.495ns (Levels of Logic = 2)
+  Source:            OW_DQ (PAD)
+  Destination:       XLXI_1/XLXI_1/readBit_detecion (FF)
+  Destination Clock: Clk_50MHz rising
+
+  Data Path: OW_DQ to XLXI_1/XLXI_1/readBit_detecion
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           1   1.106   0.509  XLXI_1/XLXI_7 (XLXI_1/XLXN_27)
+     LUT4:I0->O            1   0.612   0.000  XLXI_1/XLXI_1/readBit_detecion_mux00011 (XLXI_1/XLXI_1/readBit_detecion_mux0001)
+     FDE:D                     0.268          XLXI_1/XLXI_1/readBit_detecion
+    ----------------------------------------
+    Total                      2.495ns (1.986ns logic, 0.509ns route)
+                                       (79.6% logic, 20.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
+  Total number of paths / destination ports: 12 / 9
+-------------------------------------------------------------------------
+Offset:              5.726ns (Levels of Logic = 2)
+  Source:            XLXI_1/XLXI_1/present_state_FSM_FFd1 (FF)
+  Destination:       OW_DQ (PAD)
+  Source Clock:      Clk_50MHz rising
+
+  Data Path: XLXI_1/XLXI_1/present_state_FSM_FFd1 to OW_DQ
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             19   0.514   1.074  XLXI_1/XLXI_1/present_state_FSM_FFd1 (XLXI_1/XLXI_1/present_state_FSM_FFd1)
+     LUT4:I0->O            1   0.612   0.357  XLXI_1/XLXI_1/present_state_FSM_Out31 (XLXI_1/XLXN_26)
+     IOBUF:T->IO               3.169          XLXI_1/XLXI_7 (OW_DQ)
+    ----------------------------------------
+    Total                      5.726ns (4.295ns logic, 1.431ns route)
+                                       (75.0% logic, 25.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_5/nasz_clock1'
+  Total number of paths / destination ports: 116 / 5
+-------------------------------------------------------------------------
+Offset:              8.110ns (Levels of Logic = 5)
+  Source:            XLXI_5/hcounter_9 (FF)
+  Destination:       VGA_G (PAD)
+  Source Clock:      XLXI_5/nasz_clock1 rising
+
+  Data Path: XLXI_5/hcounter_9 to VGA_G
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.514   0.886  XLXI_5/hcounter_9 (XLXI_5/hcounter_9)
+     LUT4:I1->O            2   0.612   0.410  XLXI_5/b134_SW0 (N89)
+     LUT4:I2->O            1   0.612   0.000  XLXI_5/b1402 (XLXI_5/b1401)
+     MUXF5:I0->O           6   0.278   0.638  XLXI_5/b140_f5 (XLXI_5/N01)
+     LUT4:I1->O            2   0.612   0.380  XLXI_5/r1 (VGA_G_OBUF)
+     OBUF:I->O                 3.169          VGA_G_OBUF (VGA_G)
+    ----------------------------------------
+    Total                      8.110ns (5.797ns logic, 2.313ns route)
+                                       (71.5% logic, 28.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.92 secs
+ 
+--> 
+
+Total memory usage is 211724 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   87 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/XilinxPrj/PROJEKT/v3/modulTB_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="modultb" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/modultb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modultb/writeone" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">writeone</obj_property>
+      <obj_property name="ObjectShortName">writeone</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modultb/writezero" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">writezero</obj_property>
+      <obj_property name="ObjectShortName">writezero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modultb/writeread" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">writeread</obj_property>
+      <obj_property name="ObjectShortName">writeread</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modultb/writereset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">writereset</obj_property>
+      <obj_property name="ObjectShortName">writereset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modultb/wire_in" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wire_in</obj_property>
+      <obj_property name="ObjectShortName">wire_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modultb/busy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modultb/readbit_detecion" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">readbit_detecion</obj_property>
+      <obj_property name="ObjectShortName">readbit_detecion</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modultb/wire_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wire_out</obj_property>
+      <obj_property name="ObjectShortName">wire_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modultb/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modultb/uut/next_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modultb/uut/present_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">present_state</obj_property>
+      <obj_property name="ObjectShortName">present_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modultb/uut/clock_counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">clock_counter[15:0]</obj_property>
+      <obj_property name="ObjectShortName">clock_counter[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

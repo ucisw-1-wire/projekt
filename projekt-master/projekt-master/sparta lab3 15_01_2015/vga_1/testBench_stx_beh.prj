@@ -1,0 +1,2 @@
+vhdl isim_temp "../ucisw/VGA.vhd"
+vhdl isim_temp "../ucisw/testBench.vhd"

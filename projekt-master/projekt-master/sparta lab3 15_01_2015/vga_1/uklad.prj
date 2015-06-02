@@ -1,0 +1,3 @@
+vhdl work "../ucisw/VGA.vhd"
+vhdl work "../ucisw/color_giver.vhd"
+verilog work "uklad.vf"

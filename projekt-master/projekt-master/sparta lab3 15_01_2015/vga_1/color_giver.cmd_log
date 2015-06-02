@@ -1,0 +1,2 @@
+vhdtdtfi -lib work ../ucisw/color_giver.vhd -prj vga_1 -o color_giver.spl -module color_giver -template d:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e color_giver.spl {D:/Studia/UCiSW/sparta lab3 15_01_2015/vga_1/color_giver.sym} 

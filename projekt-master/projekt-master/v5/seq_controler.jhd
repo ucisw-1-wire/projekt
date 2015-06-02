@@ -1,0 +1,7 @@
+MODULE seq_controler
+	SUBMODULE controler
+		INSTANCE XLXI_4
+	SUBMODULE sequenceTestSchema
+		INSTANCE XLXI_3
+	SUBMODULE Memory
+		INSTANCE XLXI_5

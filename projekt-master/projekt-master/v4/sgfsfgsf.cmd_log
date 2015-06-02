@@ -1,0 +1,21 @@
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/sgfsfgsf.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/sgfsfgsf.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 sgfsfgsf.ngc sgfsfgsf.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o sgfsfgsf_map.ncd sgfsfgsf.ngd sgfsfgsf.pcf 
+par -w -intstyle ise -ol high -t 1 sgfsfgsf_map.ncd sgfsfgsf.ncd sgfsfgsf.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sgfsfgsf.twx sgfsfgsf.ncd -o sgfsfgsf.twr sgfsfgsf.pcf 
+bitgen -intstyle ise -f sgfsfgsf.ut sgfsfgsf.ncd 
+bitgen -intstyle ise -f sgfsfgsf.ut sgfsfgsf.ncd 
+bitgen -intstyle ise -f sgfsfgsf.ut sgfsfgsf.ncd 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/sgfsfgsf.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/sgfsfgsf.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 sgfsfgsf.ngc sgfsfgsf.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o sgfsfgsf_map.ncd sgfsfgsf.ngd sgfsfgsf.pcf 
+par -w -intstyle ise -ol high -t 1 sgfsfgsf_map.ncd sgfsfgsf.ncd sgfsfgsf.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sgfsfgsf.twx sgfsfgsf.ncd -o sgfsfgsf.twr sgfsfgsf.pcf 
+bitgen -intstyle ise -f sgfsfgsf.ut sgfsfgsf.ncd 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/sgfsfgsf.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/sgfsfgsf.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd LCD1x64 -nt timestamp -i -p xc3s500e-fg320-5 sgfsfgsf.ngc sgfsfgsf.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o sgfsfgsf_map.ncd sgfsfgsf.ngd sgfsfgsf.pcf 
+par -w -intstyle ise -ol high -t 1 sgfsfgsf_map.ncd sgfsfgsf.ncd sgfsfgsf.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sgfsfgsf.twx sgfsfgsf.ncd -o sgfsfgsf.twr sgfsfgsf.pcf 
+bitgen -intstyle ise -f sgfsfgsf.ut sgfsfgsf.ncd 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/sgfsfgsf.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/v4/sgfsfgsf.syr" 

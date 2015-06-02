@@ -1,0 +1,5 @@
+vhdl isim_temp "writeByte.vhd"
+vhdl isim_temp "readByte.vhd"
+vhdl isim_temp "modul.vhd"
+vhdl isim_temp "testSchema.vhf"
+vhdl isim_temp "testSchema_TB.vhd"

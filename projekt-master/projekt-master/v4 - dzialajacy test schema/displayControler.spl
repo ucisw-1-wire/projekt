@@ -1,0 +1,9 @@
+[Inputs]
+clk
+=input_data[7:0]=
+=disp_row[8:0]=
+=disp_col[9:0]=
+[Outputs]
+=rgb[2:0]=
+=mem_adres[7:0]=
+[BiDir]

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/controlerTB_isim_beh.exe" -prj "D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/controlerTB_beh.prj" "work.controlerTB" 

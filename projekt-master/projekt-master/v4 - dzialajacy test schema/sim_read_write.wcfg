@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/lab/Downloads/projekt-master/projekt-master/v4/testSchema_testSchema_sch_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="testschema_testschema_sch_tb" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/testschema_testschema_sch_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/start_read" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start_read</obj_property>
+      <obj_property name="ObjectShortName">start_read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/wire_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wire_out</obj_property>
+      <obj_property name="ObjectShortName">wire_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/busy_read" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">busy_read</obj_property>
+      <obj_property name="ObjectShortName">busy_read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/UUT/XLXI_2/read_counter" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">read_counter</obj_property>
+      <obj_property name="ObjectShortName">read_counter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/UUT/XLXI_2/present_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">present_state</obj_property>
+      <obj_property name="ObjectShortName">present_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/UUT/XLXI_2/isbusy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isbusy</obj_property>
+      <obj_property name="ObjectShortName">isbusy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/start_write" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start_write</obj_property>
+      <obj_property name="ObjectShortName">start_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/wire_in" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wire_in</obj_property>
+      <obj_property name="ObjectShortName">wire_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/busy_write" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">busy_write</obj_property>
+      <obj_property name="ObjectShortName">busy_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/UUT/XLXI_1/write_counter" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">write_counter</obj_property>
+      <obj_property name="ObjectShortName">write_counter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/UUT/XLXI_1/present_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">present_state</obj_property>
+      <obj_property name="ObjectShortName">present_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/UUT/XLXI_3/present_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">present_state</obj_property>
+      <obj_property name="ObjectShortName">present_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/UUT/XLXI_2/read_buffor" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">read_buffor[7:0]</obj_property>
+      <obj_property name="ObjectShortName">read_buffor[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/UUT/XLXI_3/busy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/UUT/XLXI_2/data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testschema_testschema_sch_tb/UUT/XLXI_3/readbit_detecion" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">readbit_detecion</obj_property>
+      <obj_property name="ObjectShortName">readbit_detecion</obj_property>
+   </wvobject>
+</wave_config>

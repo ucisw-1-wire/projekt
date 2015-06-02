@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/Studia/UCiSW/sparta lab3 15_01_2015/vga_1/testBench_isim_beh.exe" -prj "D:/Studia/UCiSW/sparta lab3 15_01_2015/vga_1/testBench_beh.prj" "work.testBench" 

@@ -1,0 +1,24 @@
+V3 10
+FL "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/color_giver.vhd" 2015/05/28.22:51:49 P.20131013
+EN work/color_giver 1432886249 \
+      FL "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/color_giver.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/color_giver/Behavioral 1432886250 \
+      FL "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/color_giver.vhd" \
+      EN work/color_giver 1432886249
+FL "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/testBench.vhd" 2015/05/28.22:51:49 P.20131013
+EN work/testBench 0 \
+      FL "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/testBench.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/testBench/behavior 0 \
+      FL "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/testBench.vhd" \
+      EN work/testBench 0 CP VGA
+FL "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/VGA.vhd" 2015/05/28.22:51:49 P.20131013
+EN work/VGA 1432886251 \
+      FL "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/VGA.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/VGA/Behavioral 1432886252 \
+      FL "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/VGA.vhd" \
+      EN work/VGA 1432886251

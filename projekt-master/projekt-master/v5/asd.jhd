@@ -1,0 +1,3 @@
+MODULE asd
+	SUBMODULE sequenceTestSchema
+		INSTANCE XLXI_1

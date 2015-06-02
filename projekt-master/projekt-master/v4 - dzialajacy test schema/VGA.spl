@@ -1,0 +1,13 @@
+[Inputs]
+clk
+reset
+=colors_in[2:0]=
+[Outputs]
+r
+g
+b
+hsync
+vsync
+=row[8:0]=
+=column[9:0]=
+[BiDir]

@@ -1,0 +1,10 @@
+[Inputs]
+clock
+is_read_busy
+=input_data[23:0]=
+[Outputs]
+start_read
+write_en
+=output_data[7:0]=
+=adres[7:0]=
+[BiDir]

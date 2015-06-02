@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/!OneDriveCloud/OneDrive/Studia/Sem_VI/UCISW_2/svn/trunk/v4/memoryTB_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="memorytb" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="6" />
+   <wvobject fp_name="/memorytb/clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memorytb/input_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">input_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">input_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memorytb/write_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">write_en</obj_property>
+      <obj_property name="ObjectShortName">write_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memorytb/adres_rd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">adres_rd[7:0]</obj_property>
+      <obj_property name="ObjectShortName">adres_rd[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memorytb/adres_wr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">adres_wr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">adres_wr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memorytb/output_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">output_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">output_data[7:0]</obj_property>
+   </wvobject>
+</wave_config>

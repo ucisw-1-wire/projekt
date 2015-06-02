@@ -1,0 +1,6 @@
+AR color_giver behavioral "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/color_giver.vhd" sub00/vhpl04 1432886250
+MO uklad NULL uklad.vf vlg39/uklad.bin 1432886250
+AR vga behavioral "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/VGA.vhd" sub00/vhpl01 1432886252
+EN vga NULL "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/VGA.vhd" sub00/vhpl00 1432886251
+EN testbench NULL "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/testBench.vhd" sub00/vhpl02 1432883280
+EN color_giver NULL "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/color_giver.vhd" sub00/vhpl03 1432886249

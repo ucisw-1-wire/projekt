@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/vga_1/testBench.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/vga_1/testBench.syr" 

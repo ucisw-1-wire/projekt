@@ -1,0 +1,6 @@
+vhdl work "writeByte.vhd"
+vhdl work "tempRead.vhd"
+vhdl work "readByte.vhd"
+vhdl work "modul.vhd"
+verilog work "sequenceTestSchema.vf"
+verilog work "asd.vf"

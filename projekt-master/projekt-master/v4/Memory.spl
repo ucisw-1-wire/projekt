@@ -1,0 +1,9 @@
+[Inputs]
+clock
+write_en
+=input_data[7:0]=
+=adres_rd[7:0]=
+=adres_wr[7:0]=
+[Outputs]
+=output_data[7:0]=
+[BiDir]

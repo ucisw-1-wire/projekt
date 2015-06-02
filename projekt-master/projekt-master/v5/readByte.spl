@@ -1,0 +1,10 @@
+[Inputs]
+clk
+isBusy
+readBit_detecion
+start
+[Outputs]
+read_bit
+busy
+=data[7:0]=
+[BiDir]

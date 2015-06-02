@@ -1,0 +1,12 @@
+[Inputs]
+clk
+writeOne
+writeZero
+writeRead
+writeReset
+wire_in
+[Outputs]
+busy
+readBit_detecion
+wire_out
+[BiDir]

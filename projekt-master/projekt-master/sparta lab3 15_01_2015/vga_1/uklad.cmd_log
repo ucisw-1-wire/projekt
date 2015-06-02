@@ -1,0 +1,17 @@
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/vga_1/uklad.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/vga_1/uklad.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/GenIO.ucf" -p xc3s100e-vq100-5 "uklad.ngc" uklad.ngd  
+map -intstyle ise -p xc3s100e-vq100-5 -cm area -ir off -pr off -c 100 -o uklad_map.ncd uklad.ngd uklad.pcf 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/vga_1/uklad.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/vga_1/uklad.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/GenIO.ucf" -p xc3s500e-vq100-5 "uklad.ngc" uklad.ngd  
+map -intstyle ise -p xc3s500e-vq100-5 -cm area -ir off -pr off -c 100 -o uklad_map.ncd uklad.ngd uklad.pcf 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/vga_1/uklad.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/vga_1/uklad.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/GenIO.ucf" -p xc3s500e-vq100-5 "uklad.ngc" uklad.ngd  
+map -intstyle ise -p xc3s500e-vq100-5 -cm area -ir off -pr off -c 100 -o uklad_map.ncd uklad.ngd uklad.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/GenIO.ucf" -p xc3s500e-vq100-5 "uklad.ngc" uklad.ngd  
+map -intstyle ise -p xc3s500e-vq100-5 -cm area -ir off -pr off -c 100 -o uklad_map.ncd uklad.ngd uklad.pcf 
+xst -intstyle ise -ifn "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/vga_1/uklad.xst" -ofn "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/vga_1/uklad.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/XilinxPrj/~~projekt-master/projekt-master/sparta lab3 15_01_2015/ucisw/GenIO.ucf" -p xc3s500e-fg320-5 "uklad.ngc" uklad.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o uklad_map.ncd uklad.ngd uklad.pcf 
+par -w -intstyle ise -ol high -t 1 uklad_map.ncd uklad.ncd uklad.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml uklad.twx uklad.ncd -o uklad.twr uklad.pcf 
+bitgen -intstyle ise -f uklad.ut uklad.ncd 

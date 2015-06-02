@@ -1,0 +1,20 @@
+xst -intstyle ise -ifn "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/seq_controler.xst" -ofn "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/seq_controler.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 seq_controler.ngc seq_controler.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o seq_controler_map.ncd seq_controler.ngd seq_controler.pcf 
+par -w -intstyle ise -ol high -t 1 seq_controler_map.ncd seq_controler.ncd seq_controler.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml seq_controler.twx seq_controler.ncd -o seq_controler.twr seq_controler.pcf 
+bitgen -intstyle ise -f seq_controler.ut seq_controler.ncd 
+xst -intstyle ise -ifn "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/seq_controler.xst" -ofn "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/seq_controler.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -uc 1-Wire.ucf -p xc3s500e-fg320-5 seq_controler.ngc seq_controler.ngd  
+xst -intstyle ise -ifn "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/seq_controler.xst" -ofn "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/seq_controler.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -uc 1-Wire.ucf -p xc3s500e-fg320-5 seq_controler.ngc seq_controler.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o seq_controler_map.ncd seq_controler.ngd seq_controler.pcf 
+par -w -intstyle ise -ol high -t 1 seq_controler_map.ncd seq_controler.ncd seq_controler.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml seq_controler.twx seq_controler.ncd -o seq_controler.twr seq_controler.pcf -ucf GenIO.ucf -ucf 1-Wire.ucf 
+bitgen -intstyle ise -f seq_controler.ut seq_controler.ncd 
+xst -intstyle ise -ifn "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/seq_controler.xst" -ofn "C:/Users/admin/Downloads/1WIRETEMP/projekt-master/v5/seq_controler.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -uc 1-Wire.ucf -p xc3s500e-fg320-5 seq_controler.ngc seq_controler.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o seq_controler_map.ncd seq_controler.ngd seq_controler.pcf 
+par -w -intstyle ise -ol high -t 1 seq_controler_map.ncd seq_controler.ncd seq_controler.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml seq_controler.twx seq_controler.ncd -o seq_controler.twr seq_controler.pcf -ucf GenIO.ucf -ucf 1-Wire.ucf 
+bitgen -intstyle ise -f seq_controler.ut seq_controler.ncd 
